@@ -1,0 +1,31 @@
+const fs = require('fs');
+const path = require('path');
+
+/**
+ * Chụp ảnh màn hình và lưu vào thư mục 'screenshots'.
+ * Đảm bảo thư mục tồn tại trước khi lưu.
+ * @param {import('selenium-webdriver').WebDriver} driver - The WebDriver instance.
+ * @param {string} testTitle - Tiêu đề của test case, dùng để đặt tên file.
+ * @returns {Promise<string>} - Trả về đường dẫn tương đối của file ảnh đã lưu.
+ */
+async function takeScreenshot(driver, testTitle) {
+    // Tạo tên file hợp lệ từ tiêu đề test
+    const sanitizedTitle = testTitle.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    const fileName = `${sanitizedTitle}_${Date.now()}.png`;
+    const screenshotDir = 'screenshots';
+    const screenshotPath = path.join(screenshotDir, fileName);
+
+    // Đảm bảo thư mục screenshots tồn tại
+    if (!fs.existsSync(screenshotDir)) {
+        fs.mkdirSync(screenshotDir);
+    }
+
+    // Chụp ảnh và lưu file
+    const image = await driver.takeScreenshot();
+    fs.writeFileSync(screenshotPath, image, 'base64');
+
+    console.log(`Screenshot saved to: ${screenshotPath}`);
+    return screenshotPath; // Trả về đường dẫn tương đối
+}
+
+module.exports = { takeScreenshot };
