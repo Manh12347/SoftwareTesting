@@ -1,5 +1,5 @@
-// Chạy tất cả test trong testModule2
-// Command: npx mocha testModule2/*.test.js --reporter mochawesome
+// Chạy tất cả test trong Module 2
+// Command: npx mocha "tests/Module 2/*.test.js" --reporter mochawesome
 
 module.exports = {
     // Các test case:

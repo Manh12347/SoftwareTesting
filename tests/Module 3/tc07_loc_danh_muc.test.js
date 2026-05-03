@@ -2,7 +2,7 @@ const { Builder, By, until } = require('selenium-webdriver');
 const assert = require('assert');
 const addContext = require('mochawesome/addContext');
 const { takeScreenshot } = require('../../function/screenshotHelper');
-const { closeCookieBanner } = require('../../function/module2/filterHelper');
+const { closeCookieBanner } = require('../../function/module3/filterHelper');
 
 describe('TC007: Kiểm tra lọc sản phẩm theo danh mục', function () {
     this.timeout(60000);
