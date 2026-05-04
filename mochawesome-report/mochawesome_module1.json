@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-04T13:31:18.616Z",
+    "end": "2026-05-04T13:31:38.565Z",
+    "duration": 19949,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9cb73ef1-ed6f-47d2-b738-4df78197938d",
+      "title": "",
+      "fullFile": "C:\\code\\SoftwareTesting\\tests\\Module 1\\tc1_login.test.js",
+      "file": "\\tests\\Module 1\\tc1_login.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "beac160f-bab9-4efb-bdad-0fbfc46a2557",
+          "title": "TC1: Login",
+          "fullFile": "C:\\code\\SoftwareTesting\\tests\\Module 1\\tc1_login.test.js",
+          "file": "\\tests\\Module 1\\tc1_login.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"TC1: Login\"",
+              "fullTitle": "TC1: Login \"before each\" hook in \"TC1: Login\"",
+              "timedOut": false,
+              "duration": 1117,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await initializeDriver();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "3492df95-04f1-45b5-8446-e394934aa03d",
+              "parentUUID": "beac160f-bab9-4efb-bdad-0fbfc46a2557",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"TC1: Login\"",
+              "fullTitle": "TC1: Login \"after each\" hook in \"TC1: Login\"",
+              "timedOut": false,
+              "duration": 6272,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (this.currentTest.state === 'failed' && driver) {\n    const screenshotPath = await takeScreenshot(driver, this.currentTest.title);\n    addContext(this, {\n        title: 'Screenshot khi thất bại.',\n        value: `../${screenshotPath}`\n    });\n}\nif (driver && this.currentTest.state !== 'failed') {\n    try {\n        await handleLogout(driver);\n    } catch (error) {\n        console.log('Không thể đăng xuất tự động sau TC1:', error.message);\n    }\n}\nif (driver) {\n    await driver.quit();\n}",
+              "err": {},
+              "uuid": "d2d9080c-8647-4541-92dc-a2f34c56a0cc",
+              "parentUUID": "beac160f-bab9-4efb-bdad-0fbfc46a2557",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Đăng nhập thành công",
+              "fullTitle": "TC1: Login Đăng nhập thành công",
+              "timedOut": false,
+              "duration": 12552,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"Đăng nhập thành công\",\n  \"value\": \"../screenshots/__ng_nh_p_th_nh_c_ng_1777901491883.png\"\n}",
+              "code": "await openWeb(driver);\nawait driver.wait(until.elementLocated(By.tagName('body')), 10000);\nawait handleLogin(driver);\n// Confirm login successful by checking page title\nconst pageTitle = await driver.getTitle();\nexpect(pageTitle).to.include('Fptshop');\nconst screenshotPath = await takeScreenshot(driver, this.test.title);\naddContext(this, {\n    title: 'Đăng nhập thành công',\n    value: `../${screenshotPath}`\n});",
+              "err": {},
+              "uuid": "aab2f5bd-b785-4298-a39f-d128540f2d49",
+              "parentUUID": "beac160f-bab9-4efb-bdad-0fbfc46a2557",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aab2f5bd-b785-4298-a39f-d128540f2d49"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12552,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 120000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 120000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome_module1",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "reportFilename": "mochawesome_module1",
+        "overwrite": "true",
+        "html": "true",
+        "json": "true"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
