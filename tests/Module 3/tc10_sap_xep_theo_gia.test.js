@@ -3,6 +3,7 @@ const assert = require('assert');
 const addContext = require('mochawesome/addContext');
 const { takeScreenshot } = require('../../function/screenshotHelper');
 const { closeCookieBanner } = require('../../function/module3/filterHelper');
+const data = require('../../data/data.json');
 
 describe('TC010: Kiểm tra sắp xếp sản phẩm theo giá', function () {
     this.timeout(60000);
@@ -17,11 +18,11 @@ describe('TC010: Kiểm tra sắp xếp sản phẩm theo giá', function () {
         if (driver) await driver.quit();
     });
 
-    it('TC010 - Nhấn "Giá giảm dần" - sản phẩm hiển thị đúng thứ tự', async function () {
-        await driver.get('https://fptshop.com.vn/dien-thoai');
+    it(`TC010 - Nhấn "${data.sortText}" - sản phẩm hiển thị đúng thứ tự`, async function () {
+        await driver.get(data.urlDienThoai);
 
         const sortBtn = await driver.wait(
-            until.elementLocated(By.xpath("//div[@class='mb-2 flex w-full items-center mb:mt-5 mt-4 pc:my-5 justify-between']//span[contains(text(),'Giá giảm dần')]")),
+            until.elementLocated(By.xpath(`//span[contains(text(),'${data.sortText}')]`)),
             10000
         );
         await driver.executeScript("arguments[0].scrollIntoView({ block: 'center' });", sortBtn);
@@ -30,8 +31,8 @@ describe('TC010: Kiểm tra sắp xếp sản phẩm theo giá', function () {
 
         await driver.wait(until.elementLocated(By.xpath("//h3")), 10000);
 
-        const bodyText = await driver.findElement(By.tagName('body')).getText();
-        assert.ok(bodyText.includes('Giá giảm dần'), 'Không hiển thị sắp xếp "Giá giảm dần".');
+        const bodyText = await driver.findElement(By.css('body')).getText();
+        assert.ok(bodyText.includes(data.sortText), `Không hiển thị sắp xếp "${data.sortText}".`);
 
         await closeCookieBanner(driver);
         let filename = await takeScreenshot(driver, 'TC010');
