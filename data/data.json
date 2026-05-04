@@ -30,6 +30,10 @@
       "description": "Từ khóa rỗng - không tìm kiếm được"
     }
   ],
+  "checkoutData": {
+    "name": "Automation Test",
+    "phonePrefix": "093",
+    "emailDomain": "@example.com"
   "module1": {
     "url": "https://fptshop.com.vn/",
     "selectors": {

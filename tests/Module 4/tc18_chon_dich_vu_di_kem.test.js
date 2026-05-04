@@ -2,8 +2,7 @@ const { Builder, By, until } = require('selenium-webdriver');
 const { expect } = require('chai');
 const addContext = require('mochawesome/addContext');
 const { takeScreenshot } = require('../../function/screenshotHelper');
-
-const totalPriceXPath = "//*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'cần thanh toán')]/following-sibling::* | //strong[contains(text(), 'đ') or contains(text(), '₫')] | //span[contains(text(), 'đ') and contains(@class, 'text-red')]";
+const { getPrice, waitForPriceChange, addProductToCart } = require('../../function/module4/cartHelper');
 
 describe('TC018: Chọn dịch vụ đi kèm cùng sản phẩm', function () {
     this.timeout(180000);
@@ -11,74 +10,16 @@ describe('TC018: Chọn dịch vụ đi kèm cùng sản phẩm', function () {
     let priceBefore = '0đ';
     let priceAfter  = '0đ';
 
-    // --- Hàm hỗ trợ ---
-
-    async function getPrice() {
-        try {
-            const elems = await driver.findElements(By.xpath(totalPriceXPath));
-            for (let i = elems.length - 1; i >= 0; i--) {
-                const text = (await elems[i].getText()).trim();
-                if (/^[0-9.,\s]+[đ₫]$/i.test(text)) return text;
-            }
-        } catch (e) {}
-        return '0đ';
-    }
-
-    async function waitForPriceChange(oldPrice, timeout = 10000) {
-        let cur = oldPrice;
-        try {
-            await driver.wait(async () => {
-                cur = await getPrice();
-                return cur !== oldPrice;
-            }, timeout);
-            await driver.sleep(500);
-            cur = await getPrice();
-        } catch (e) {}
-        return cur;
-    }
-
-    async function addProductToCart() {
-        // Dùng máy tính xách tay để có dịch vụ bảo hành đi kèm
-        await driver.get('https://fptshop.com.vn/may-tinh-xach-tay');
-        await driver.wait(until.elementLocated(By.tagName('body')), 10000);
-        await driver.sleep(2000);
-
-        const productXPath = "(//div[contains(@class, 'product-info')]//h3 | //h3[contains(@class,'line-clamp')])[1]";
-        const product = await driver.wait(until.elementLocated(By.xpath(productXPath)), 15000);
-        await driver.executeScript('arguments[0].click();', product);
-        await driver.sleep(3000);
-        await driver.executeScript('window.scrollTo(0, 800);');
-        await driver.sleep(1000);
-
-        const buyBtnXPath = "//button[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'mua ngay')] | //a[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'mua ngay')]";
-        try {
-            await driver.wait(until.elementLocated(By.xpath(buyBtnXPath)), 10000);
-            const btns = await driver.findElements(By.xpath(buyBtnXPath));
-            for (let btn of btns) {
-                if (await btn.isDisplayed()) {
-                    await driver.executeScript('arguments[0].click();', btn);
-                    break;
-                }
-            }
-        } catch (e) {}
-
-        await driver.sleep(3000);
-        const currentUrl = await driver.getCurrentUrl();
-        if (!currentUrl.includes('gio-hang')) {
-            await driver.get('https://fptshop.com.vn/gio-hang');
-            await driver.wait(until.urlContains('gio-hang'), 10000);
-        }
-        await driver.sleep(2000);
-    }
-
     before(async function () {
         driver = await new Builder().forBrowser('chrome').build();
         await driver.manage().window().maximize();
-        await addProductToCart();
+
+        // Dùng máy tính xách tay để có dịch vụ bảo hành đi kèm
+        await addProductToCart(driver, 'https://fptshop.com.vn/may-tinh-xach-tay');
 
         // Đọc giá ban đầu trong giỏ hàng
         for (let i = 0; i < 10; i++) {
-            priceBefore = await getPrice();
+            priceBefore = await getPrice(driver);
             if (priceBefore !== '0đ') break;
             await driver.sleep(1000);
         }
@@ -108,7 +49,6 @@ describe('TC018: Chọn dịch vụ đi kèm cùng sản phẩm', function () {
 
     it('2. Chọn dịch vụ đi kèm (gói bảo hành / combo) và kiểm tra giá thay đổi', async function () {
         // Dịch vụ đi kèm trong FPTShop dùng input[type='radio'] với dynamic ID "-undefined"
-        // Đây là pattern giống Chọn tất cả nhưng là radio (không phải checkbox)
         const serviceXPaths = [
             "(//input[contains(@id, '-undefined') and @type='radio'])[1]",
             '/html/body/main/section/div[2]/div/div[1]/div/div[2]/div[2]/div[3]/div[2]/div[1]/div/input',
@@ -142,7 +82,7 @@ describe('TC018: Chọn dịch vụ đi kèm cùng sản phẩm', function () {
         await driver.sleep(1500);
 
         // Giá phải thay đổi sau khi chọn dịch vụ
-        priceAfter = await waitForPriceChange(priceBefore, 10000);
+        priceAfter = await waitForPriceChange(driver, priceBefore, 10000);
         console.log(`Giá trước: ${priceBefore} | Giá sau khi chọn dịch vụ: ${priceAfter}`);
 
         expect(priceAfter).to.not.equal(priceBefore, 'Giá đơn hàng không thay đổi sau khi chọn dịch vụ đi kèm');
