@@ -1,0 +1,453 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-04T17:15:54.564Z",
+    "end": "2026-05-04T17:17:07.200Z",
+    "duration": 72636,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e0a94c6d-d24d-4b57-8014-95b0976787c0",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d95617cb-4b50-48f0-b8b0-b812712dfab5",
+          "title": "TC006: Xác minh danh mục sản phẩm hiển thị đầy đủ",
+          "fullFile": "D:\\SoftwareTesting\\tests\\Module 3\\tc06_xac_minh_danh_muc.test.js",
+          "file": "\\tests\\Module 3\\tc06_xac_minh_danh_muc.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"TC006: Xác minh danh mục sản phẩm hiển thị đầy đủ\"",
+              "fullTitle": "TC006: Xác minh danh mục sản phẩm hiển thị đầy đủ \"before all\" hook in \"TC006: Xác minh danh mục sản phẩm hiển thị đầy đủ\"",
+              "timedOut": false,
+              "duration": 639,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "7722c29b-ca3e-425b-ad49-9237784cf8b1",
+              "parentUUID": "d95617cb-4b50-48f0-b8b0-b812712dfab5",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"TC006: Xác minh danh mục sản phẩm hiển thị đầy đủ\"",
+              "fullTitle": "TC006: Xác minh danh mục sản phẩm hiển thị đầy đủ \"after all\" hook in \"TC006: Xác minh danh mục sản phẩm hiển thị đầy đủ\"",
+              "timedOut": false,
+              "duration": 72,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "cd83b255-7a19-49c8-9ce5-899154bbca00",
+              "parentUUID": "d95617cb-4b50-48f0-b8b0-b812712dfab5",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC006 - Hover vào \"Danh mục\", xác minh có chữ \"Điện thoại\"",
+              "fullTitle": "TC006: Xác minh danh mục sản phẩm hiển thị đầy đủ TC006 - Hover vào \"Danh mục\", xác minh có chữ \"Điện thoại\"",
+              "timedOut": false,
+              "duration": 14631,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"../../screenshots/TC006_1777914969601.png\"",
+              "code": "await driver.get(data.shared.url);\nawait closeBanner(driver);\nawait closeCookieBanner(driver);\nconst danhMucBtn = await driver.wait(\n    until.elementLocated(By.xpath(`//button[@aria-label='${data.module3.danhMucAriaLabel}']`)),\n    10000\n);\nconst actions = driver.actions({ async: true });\nawait actions.move({ origin: danhMucBtn }).perform();\nconst danhMucItem = await driver.wait(\n    until.elementLocated(By.xpath(`//a[@href='${data.module3.danhMucHref}']`)),\n    10000\n);\nawait driver.wait(until.elementIsVisible(danhMucItem), 5000);\nawait driver.executeScript(\"arguments[0].style.border='3px solid red'\", danhMucItem);\nconst bodyText = await driver.findElement(By.css('body')).getText();\nassert.ok(bodyText.includes(data.module3.danhMucText), `Text \"${data.module3.danhMucText}\" không xuất hiện trong danh mục.`);\nlet filename = await takeScreenshot(driver, 'TC006');\naddContext(this, \"../../\" + filename);",
+              "err": {},
+              "uuid": "28dfb702-2e41-4911-8afd-26a7c4637693",
+              "parentUUID": "d95617cb-4b50-48f0-b8b0-b812712dfab5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "28dfb702-2e41-4911-8afd-26a7c4637693"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14631,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        },
+        {
+          "uuid": "aa58260b-c09c-42c6-97ee-c98704cb7404",
+          "title": "TC007: Kiểm tra lọc sản phẩm theo danh mục",
+          "fullFile": "D:\\SoftwareTesting\\tests\\Module 3\\tc07_loc_danh_muc.test.js",
+          "file": "\\tests\\Module 3\\tc07_loc_danh_muc.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"TC007: Kiểm tra lọc sản phẩm theo danh mục\"",
+              "fullTitle": "TC007: Kiểm tra lọc sản phẩm theo danh mục \"before all\" hook in \"TC007: Kiểm tra lọc sản phẩm theo danh mục\"",
+              "timedOut": false,
+              "duration": 693,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "5370c078-8c02-4131-9ca8-2063b4c6562f",
+              "parentUUID": "aa58260b-c09c-42c6-97ee-c98704cb7404",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"TC007: Kiểm tra lọc sản phẩm theo danh mục\"",
+              "fullTitle": "TC007: Kiểm tra lọc sản phẩm theo danh mục \"after all\" hook in \"TC007: Kiểm tra lọc sản phẩm theo danh mục\"",
+              "timedOut": false,
+              "duration": 76,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "ff5a3b31-02ee-41d3-b136-05ffd694321a",
+              "parentUUID": "aa58260b-c09c-42c6-97ee-c98704cb7404",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC007 - Hover vào \"Danh mục\" rồi click \"Điện thoại\"",
+              "fullTitle": "TC007: Kiểm tra lọc sản phẩm theo danh mục TC007 - Hover vào \"Danh mục\" rồi click \"Điện thoại\"",
+              "timedOut": false,
+              "duration": 11855,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"../../screenshots/TC007_1777914981938.png\"",
+              "code": "await driver.get(data.shared.url);\nawait closeBanner(driver);\nawait closeCookieBanner(driver);\nconst danhMucBtn = await driver.wait(\n    until.elementLocated(By.xpath(`//button[@aria-label='${data.module3.danhMucAriaLabel}']`)),\n    10000\n);\nconst actions = driver.actions({ async: true });\nawait actions.move({ origin: danhMucBtn }).perform();\nconst danhMucItem = await driver.wait(\n    until.elementLocated(By.xpath(`//a[@href='${data.module3.danhMucHref}']`)),\n    10000\n);\nawait driver.executeScript(\"arguments[0].style.border='3px solid red'\", danhMucItem);\nawait driver.executeScript(\"arguments[0].click();\", danhMucItem);\nawait driver.wait(until.elementLocated(By.xpath(\"//h3\")), 10000);\nconst bodyText = await driver.findElement(By.css('body')).getText();\nassert.ok(bodyText.includes(data.module3.danhMucText), `Trang danh mục ${data.module3.danhMucText} không hiển thị.`);\nlet filename = await takeScreenshot(driver, 'TC007');\naddContext(this, \"../../\" + filename);",
+              "err": {},
+              "uuid": "79265039-ae9f-41f1-8615-e745f6618464",
+              "parentUUID": "aa58260b-c09c-42c6-97ee-c98704cb7404",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "79265039-ae9f-41f1-8615-e745f6618464"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11855,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        },
+        {
+          "uuid": "8f7f1f7e-9f99-41fb-b091-c21487ee2912",
+          "title": "TC008: Kiểm tra lọc theo hãng sản xuất",
+          "fullFile": "D:\\SoftwareTesting\\tests\\Module 3\\tc08_loc_hang_san_xuat.test.js",
+          "file": "\\tests\\Module 3\\tc08_loc_hang_san_xuat.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"TC008: Kiểm tra lọc theo hãng sản xuất\"",
+              "fullTitle": "TC008: Kiểm tra lọc theo hãng sản xuất \"before all\" hook in \"TC008: Kiểm tra lọc theo hãng sản xuất\"",
+              "timedOut": false,
+              "duration": 688,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "ba36d03b-0a56-4262-904a-82d2db4bbcb1",
+              "parentUUID": "8f7f1f7e-9f99-41fb-b091-c21487ee2912",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"TC008: Kiểm tra lọc theo hãng sản xuất\"",
+              "fullTitle": "TC008: Kiểm tra lọc theo hãng sản xuất \"after all\" hook in \"TC008: Kiểm tra lọc theo hãng sản xuất\"",
+              "timedOut": false,
+              "duration": 103,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "4a773f17-1325-4ded-9e29-755fdd0433a3",
+              "parentUUID": "8f7f1f7e-9f99-41fb-b091-c21487ee2912",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC008 - Ấn chọn logo hãng \"OPPO\"",
+              "fullTitle": "TC008: Kiểm tra lọc theo hãng sản xuất TC008 - Ấn chọn logo hãng \"OPPO\"",
+              "timedOut": false,
+              "duration": 11248,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"../../screenshots/TC008_1777914994273.png\"",
+              "code": "await driver.get(data.shared.urlDienThoai);\nawait closeBanner(driver);\nawait closeCookieBanner(driver);\nconst brandLogo = await driver.wait(\n    until.elementLocated(By.xpath(`//img[@alt='${data.module3.brandName}']`)),\n    10000\n);\nawait driver.executeScript(\"arguments[0].scrollIntoView({ block: 'center' });\", brandLogo);\nawait driver.executeScript(\"arguments[0].style.border='3px solid red'\", brandLogo);\nawait driver.executeScript(\"arguments[0].click();\", brandLogo);\nawait driver.wait(until.elementLocated(By.xpath(\"//h3\")), 10000);\nconst bodyText = await driver.findElement(By.css('body')).getText();\nassert.ok(bodyText.includes(data.module3.brandName), `Sản phẩm ${data.module3.brandName} không hiển thị sau khi lọc.`);\nlet filename = await takeScreenshot(driver, 'TC008');\naddContext(this, \"../../\" + filename);",
+              "err": {},
+              "uuid": "fa925391-d433-4e8a-9fd1-d2fc63614dd2",
+              "parentUUID": "8f7f1f7e-9f99-41fb-b091-c21487ee2912",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fa925391-d433-4e8a-9fd1-d2fc63614dd2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11248,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        },
+        {
+          "uuid": "f6678263-0b41-4698-91ee-64cf626290e6",
+          "title": "TC009: Kiểm tra lọc đa điều kiện",
+          "fullFile": "D:\\SoftwareTesting\\tests\\Module 3\\tc09_loc_da_dieu_kien.test.js",
+          "file": "\\tests\\Module 3\\tc09_loc_da_dieu_kien.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"TC009: Kiểm tra lọc đa điều kiện\"",
+              "fullTitle": "TC009: Kiểm tra lọc đa điều kiện \"before all\" hook in \"TC009: Kiểm tra lọc đa điều kiện\"",
+              "timedOut": false,
+              "duration": 640,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "5f75d7b7-7c34-4bd1-8078-51d7e00d76ad",
+              "parentUUID": "f6678263-0b41-4698-91ee-64cf626290e6",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"TC009: Kiểm tra lọc đa điều kiện\"",
+              "fullTitle": "TC009: Kiểm tra lọc đa điều kiện \"after all\" hook in \"TC009: Kiểm tra lọc đa điều kiện\"",
+              "timedOut": false,
+              "duration": 130,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "0fcbcbf5-323e-4809-942f-b8528795b746",
+              "parentUUID": "f6678263-0b41-4698-91ee-64cf626290e6",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC009 - Chọn Pin trâu: trên 5500 mAh, RAM 12 GB, Hỗ trợ mạng 5G",
+              "fullTitle": "TC009: Kiểm tra lọc đa điều kiện TC009 - Chọn Pin trâu: trên 5500 mAh, RAM 12 GB, Hỗ trợ mạng 5G",
+              "timedOut": false,
+              "duration": 19775,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"../../screenshots/TC009_1777915014841.png\"",
+              "code": "await driver.get(data.shared.urlDienThoai);\nawait closeBanner(driver);\nawait closeCookieBanner(driver);\nconst pinCheckbox = await driver.wait(\n    until.elementLocated(By.xpath(`//label[contains(@for, '${data.module3.filterPin}')]`)),\n    10000\n);\nawait driver.executeScript(\"arguments[0].scrollIntoView({ block: 'center' });\", pinCheckbox);\nawait driver.executeScript(\"arguments[0].click();\", pinCheckbox);\nawait driver.sleep(1500);\nconst btn5G = await driver.wait(\n    until.elementLocated(By.xpath(`//button[contains(text(),'${data.module3.filter5G}')]`)),\n    10000\n);\nawait driver.executeScript(\"arguments[0].scrollIntoView({ block: 'center' });\", btn5G);\nawait driver.executeScript(\"arguments[0].click();\", btn5G);\nawait driver.sleep(1500);\nconst ramBtn = await driver.wait(\n    until.elementLocated(By.xpath(`//button[normalize-space()='${data.module3.filterRam}']`)),\n    10000\n);\nawait driver.executeScript(\"arguments[0].scrollIntoView({ block: 'center' });\", ramBtn);\nawait driver.executeScript(\"arguments[0].click();\", ramBtn);\nawait driver.sleep(2000);\nconst bodyText = await driver.findElement(By.css('body')).getText();\nassert.ok(bodyText.includes(data.module3.filter5G), `Không hiển thị sản phẩm ${data.module3.filter5G} sau khi lọc đa điều kiện.`);\nlet filename = await takeScreenshot(driver, 'TC009');\naddContext(this, \"../../\" + filename);",
+              "err": {},
+              "uuid": "d7a1acea-0501-45b6-84e9-4116ff1fb5fc",
+              "parentUUID": "f6678263-0b41-4698-91ee-64cf626290e6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d7a1acea-0501-45b6-84e9-4116ff1fb5fc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19775,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 120000
+        },
+        {
+          "uuid": "61ccf662-5f70-42b6-a3ef-8b4b19d6a8c8",
+          "title": "TC010: Kiểm tra sắp xếp sản phẩm theo giá",
+          "fullFile": "D:\\SoftwareTesting\\tests\\Module 3\\tc10_sap_xep_theo_gia.test.js",
+          "file": "\\tests\\Module 3\\tc10_sap_xep_theo_gia.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"TC010: Kiểm tra sắp xếp sản phẩm theo giá\"",
+              "fullTitle": "TC010: Kiểm tra sắp xếp sản phẩm theo giá \"before all\" hook in \"TC010: Kiểm tra sắp xếp sản phẩm theo giá\"",
+              "timedOut": false,
+              "duration": 647,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "35512aba-bfe5-40c7-ac0c-e8493a92bf3f",
+              "parentUUID": "61ccf662-5f70-42b6-a3ef-8b4b19d6a8c8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"TC010: Kiểm tra sắp xếp sản phẩm theo giá\"",
+              "fullTitle": "TC010: Kiểm tra sắp xếp sản phẩm theo giá \"after all\" hook in \"TC010: Kiểm tra sắp xếp sản phẩm theo giá\"",
+              "timedOut": false,
+              "duration": 113,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "b0d36d8c-b646-4225-bf53-62375b2737f9",
+              "parentUUID": "61ccf662-5f70-42b6-a3ef-8b4b19d6a8c8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "TC010 - Nhấn \"Giá giảm dần\" - sản phẩm hiển thị đúng thứ tự",
+              "fullTitle": "TC010: Kiểm tra sắp xếp sản phẩm theo giá TC010 - Nhấn \"Giá giảm dần\" - sản phẩm hiển thị đúng thứ tự",
+              "timedOut": false,
+              "duration": 11311,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"../../screenshots/TC010_1777915026953.png\"",
+              "code": "await driver.get(data.shared.urlDienThoai);\nawait closeBanner(driver);\nawait closeCookieBanner(driver);\nconst sortBtn = await driver.wait(\n    until.elementLocated(By.xpath(`//span[contains(text(),'${data.module3.sortText}')]`)),\n    10000\n);\nawait driver.executeScript(\"arguments[0].scrollIntoView({ block: 'center' });\", sortBtn);\nawait driver.executeScript(\"arguments[0].style.border='3px solid red'\", sortBtn);\nawait driver.executeScript(\"arguments[0].click();\", sortBtn);\nawait driver.wait(until.elementLocated(By.xpath(\"//h3\")), 10000);\nconst bodyText = await driver.findElement(By.css('body')).getText();\nassert.ok(bodyText.includes(data.module3.sortText), `Không hiển thị sắp xếp \"${data.module3.sortText}\".`);\nlet filename = await takeScreenshot(driver, 'TC010');\naddContext(this, \"../../\" + filename);",
+              "err": {},
+              "uuid": "faf0cf5a-0af2-494f-a2eb-7ceb64a3990d",
+              "parentUUID": "61ccf662-5f70-42b6-a3ef-8b4b19d6a8c8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "faf0cf5a-0af2-494f-a2eb-7ceb64a3990d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11311,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "full_report_module3_ultimate",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report/module3",
+        "reportFilename": "full_report_module3_ultimate",
+        "quiet": "true",
+        "overwrite": "true",
+        "html": "true",
+        "json": "true"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

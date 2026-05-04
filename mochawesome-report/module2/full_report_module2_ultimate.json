@@ -1,0 +1,457 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-04T17:03:07.768Z",
+    "end": "2026-05-04T17:04:35.458Z",
+    "duration": 87690,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a59cd842-4f66-463f-9568-01033d12ca27",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2cbd4258-6bc7-4c43-86a0-66a40bb6fc82",
+          "title": "TC1: Tìm kiếm sản phẩm",
+          "fullFile": "D:\\SoftwareTesting\\tests\\Module 2\\tc11_timkiem_laptop.test.js",
+          "file": "\\tests\\Module 2\\tc11_timkiem_laptop.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"TC1: Tìm kiếm sản phẩm\"",
+              "fullTitle": "TC1: Tìm kiếm sản phẩm \"before each\" hook in \"TC1: Tìm kiếm sản phẩm\"",
+              "timedOut": false,
+              "duration": 635,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "3cd27894-72fe-42fc-ad25-53463c6a15da",
+              "parentUUID": "2cbd4258-6bc7-4c43-86a0-66a40bb6fc82",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"TC1: Tìm kiếm sản phẩm\"",
+              "fullTitle": "TC1: Tìm kiếm sản phẩm \"after each\" hook in \"TC1: Tìm kiếm sản phẩm\"",
+              "timedOut": false,
+              "duration": 84,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (this.currentTest.state === 'failed') {\n    const screenshotPath = await takeScreenshot(driver, this.currentTest.title);\n    addContext(this, {\n        title: 'Screenshot khi thất bại.',\n        value: `../${screenshotPath}`\n    });\n}\nif (driver) {\n    await driver.quit();\n}",
+              "err": {},
+              "uuid": "0326b1c0-cae6-40bf-924f-a59835084a1b",
+              "parentUUID": "2cbd4258-6bc7-4c43-86a0-66a40bb6fc82",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Tìm kiếm với từ khóa \"Laptop\" - có ít nhất 1 sản phẩm laptop",
+              "fullTitle": "TC1: Tìm kiếm sản phẩm Tìm kiếm với từ khóa \"Laptop\" - có ít nhất 1 sản phẩm laptop",
+              "timedOut": false,
+              "duration": 17198,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"Kết quả: 17 sản phẩm chứa \\\"laptop\\\"\",\n  \"value\": \"../../screenshots/t_m_ki_m_v_i_t__kh_a__laptop____c___t_nh_t_1_s_n_ph_m_laptop_1777914205349.png\"\n}",
+              "code": "await driver.get(data.shared.url);\nawait driver.wait(until.elementLocated(By.tagName('body')), 10000);\nawait closeBanner(driver);\nawait closeCookieBanner(driver);\nawait driver.sleep(2000);\nconst result = await search(driver, data.module2.testData[0].keyword);\nexpect(result.hasProducts).to.be.true;\n\n// KIỂM TRA: Có ít nhất 1 sản phẩm chứa từ khóa \"Laptop\"\nconst keyword = data.module2.testData[0].keyword.toLowerCase();\nconst matchedProducts = result.productTexts.filter(p => \n    p.toLowerCase().includes(keyword)\n);\n\nconsole.log(`Tìm thấy ${matchedProducts.length} sản phẩm chứa \"${keyword}\":`, matchedProducts);\n\n// Phải có ít nhất 1 sản phẩm chứa từ khóa\nexpect(matchedProducts.length, `Không tìm thấy sản phẩm nào chứa \"${keyword}\"`).to.be.at.least(1);\n// Scroll xuống sản phẩm đầu tiên có chứa từ khóa laptop để chụp ảnh\nconst productTitleElements = await driver.findElements(By.xpath(\"//h3[contains(@class,'line-clamp')]\"));\nfor (const el of productTitleElements) {\n    const text = (await el.getText()).toLowerCase();\n    if (text.includes(keyword)) {\n        await driver.executeScript(\"arguments[0].scrollIntoView({ block: 'center' });\", el);\n        await driver.sleep(600);\n        break;\n    }\n}        \nconst screenshotPath = await takeScreenshot(driver, this.test.title);\naddContext(this, {\n    title: `Kết quả: ${matchedProducts.length} sản phẩm chứa \"${keyword}\"`,\n    value: `../../${screenshotPath}`\n});",
+              "err": {},
+              "uuid": "ef1bbbe4-9670-453e-a4ad-3be124e80198",
+              "parentUUID": "2cbd4258-6bc7-4c43-86a0-66a40bb6fc82",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ef1bbbe4-9670-453e-a4ad-3be124e80198"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17198,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        },
+        {
+          "uuid": "beac9425-b985-4761-b897-69367391e0e0",
+          "title": "TC2: Tìm kiếm không có kết quả",
+          "fullFile": "D:\\SoftwareTesting\\tests\\Module 2\\tc12_timkiem_khong_tim_thay.test.js",
+          "file": "\\tests\\Module 2\\tc12_timkiem_khong_tim_thay.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"TC2: Tìm kiếm không có kết quả\"",
+              "fullTitle": "TC2: Tìm kiếm không có kết quả \"before each\" hook in \"TC2: Tìm kiếm không có kết quả\"",
+              "timedOut": false,
+              "duration": 671,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "f1acb0b7-c521-4bdd-9420-8c4cefaf0752",
+              "parentUUID": "beac9425-b985-4761-b897-69367391e0e0",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"TC2: Tìm kiếm không có kết quả\"",
+              "fullTitle": "TC2: Tìm kiếm không có kết quả \"after each\" hook in \"TC2: Tìm kiếm không có kết quả\"",
+              "timedOut": false,
+              "duration": 110,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (this.currentTest.state === 'failed') {\n    const screenshotPath = await takeScreenshot(driver, this.currentTest.title);\n    addContext(this, {\n        title: 'Screenshot khi thất bại.',\n        value: `../${screenshotPath}`\n    });\n}\nif (driver) {\n    await driver.quit();\n}",
+              "err": {},
+              "uuid": "db459dd7-ab2a-468b-91ed-8ec795f0370a",
+              "parentUUID": "beac9425-b985-4761-b897-69367391e0e0",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Tìm kiếm với từ khóa \"123123\" - hiển thị thông báo không tìm thấy",
+              "fullTitle": "TC2: Tìm kiếm không có kết quả Tìm kiếm với từ khóa \"123123\" - hiển thị thông báo không tìm thấy",
+              "timedOut": false,
+              "duration": 12374,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"Thông báo: Không tìm thấy kết quả cho 123123\",\n  \"value\": \"../../screenshots/t_m_ki_m_v_i_t__kh_a__123123____hi_n_th__th_ng_b_o_kh_ng_t_m_th_y_1777914218616.png\"\n}",
+              "code": "await driver.get(data.shared.url);\nawait driver.wait(until.elementLocated(By.tagName('body')), 10000);\nawait closeBanner(driver);\nawait closeCookieBanner(driver);\nconst result = await search(driver, data.module2.testData[1].keyword);\nexpect(result.found).to.be.false;\nif (result.message) {\n    expect(result.message).to.include('Không tìm thấy');\n}\nconst screenshotPath = await takeScreenshot(driver, this.test.title);\naddContext(this, {\n    title: 'Thông báo: ' + (result.message || 'Không tìm thấy'),\n    value: `../../${screenshotPath}`\n});",
+              "err": {},
+              "uuid": "4e0c6c4c-fc0c-40f5-af26-f1c5fde3881c",
+              "parentUUID": "beac9425-b985-4761-b897-69367391e0e0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4e0c6c4c-fc0c-40f5-af26-f1c5fde3881c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12374,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        },
+        {
+          "uuid": "23000fe8-cc49-46b0-beb3-1a81aa737af7",
+          "title": "TC3: Validation tìm kiếm",
+          "fullFile": "D:\\SoftwareTesting\\tests\\Module 2\\tc13_validation_tim_kiem.test.js",
+          "file": "\\tests\\Module 2\\tc13_validation_tim_kiem.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"TC3: Validation tìm kiếm\"",
+              "fullTitle": "TC3: Validation tìm kiếm \"before each\" hook in \"TC3: Validation tìm kiếm\"",
+              "timedOut": false,
+              "duration": 648,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "218cb015-f5a6-4871-b4e2-8eb33d2c5020",
+              "parentUUID": "23000fe8-cc49-46b0-beb3-1a81aa737af7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"TC3: Validation tìm kiếm\"",
+              "fullTitle": "TC3: Validation tìm kiếm \"after each\" hook in \"TC3: Validation tìm kiếm\"",
+              "timedOut": false,
+              "duration": 492,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (this.currentTest.state === 'failed') {\n    const screenshotPath = await takeScreenshot(driver, this.currentTest.title);\n    addContext(this, {\n        title: 'Screenshot khi thất bại.',\n        value: `../${screenshotPath}`\n    });\n}\nif (driver) {\n    await driver.quit();\n}",
+              "err": {},
+              "uuid": "b30f002e-0ad2-4dde-a92f-c6ad01cfd6f4",
+              "parentUUID": "23000fe8-cc49-46b0-beb3-1a81aa737af7",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Click vào ô tìm kiếm rồi bấm nút tìm kiếm - kiểm tra thông báo validation",
+              "fullTitle": "TC3: Validation tìm kiếm Click vào ô tìm kiếm rồi bấm nút tìm kiếm - kiểm tra thông báo validation",
+              "timedOut": false,
+              "duration": 13260,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"Screenshot khi thất bại.\",\n  \"value\": \"../screenshots/click_v_o___t_m_ki_m_r_i_b_m_n_t_t_m_ki_m___ki_m_tra_th_ng_b_o_validation_1777914232759.png\"\n}",
+              "code": "await driver.get(data.shared.url);\nawait driver.wait(until.elementLocated(By.tagName('body')), 10000);\nawait closeBanner(driver);\nawait closeCookieBanner(driver);\nconst result = await search(driver, data.module2.testData[2].keyword);\nif (result.validationMessage) {\n    expect(result.validationMessage).to.match(/nhập|vui lòng|cần|tìm kiếm/i);\n} else {\n    throw new Error('BUG: Website không hiển thị thông báo \"Vui lòng nhập từ khóa\" khi bỏ trống ô tìm kiếm');\n}\nconst screenshotPath = await takeScreenshot(driver, this.test.title);\naddContext(this, {\n    title: 'Thông báo: ' + result.validationMessage,\n    value: `../../${screenshotPath}`\n});",
+              "err": {
+                "message": "Error: BUG: Website không hiển thị thông báo \"Vui lòng nhập từ khóa\" khi bỏ trống ô tìm kiếm",
+                "estack": "Error: BUG: Website không hiển thị thông báo \"Vui lòng nhập từ khóa\" khi bỏ trống ô tìm kiếm\n    at Context.<anonymous> (tests\\Module 2\\tc13_validation_tim_kiem.test.js:42:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "94de7c71-a67c-4e34-8af2-d8da2b69aa36",
+              "parentUUID": "23000fe8-cc49-46b0-beb3-1a81aa737af7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "94de7c71-a67c-4e34-8af2-d8da2b69aa36"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13260,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        },
+        {
+          "uuid": "9b823ddb-5e7d-4207-8600-392e7994b0e9",
+          "title": "TC4: Thêm sản phẩm vào giỏ hàng",
+          "fullFile": "D:\\SoftwareTesting\\tests\\Module 2\\tc14_them_san_pham_gio_hang.test.js",
+          "file": "\\tests\\Module 2\\tc14_them_san_pham_gio_hang.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"TC4: Thêm sản phẩm vào giỏ hàng\"",
+              "fullTitle": "TC4: Thêm sản phẩm vào giỏ hàng \"before each\" hook in \"TC4: Thêm sản phẩm vào giỏ hàng\"",
+              "timedOut": false,
+              "duration": 660,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "0c8fb921-1a73-4477-8b39-2c51a195d752",
+              "parentUUID": "9b823ddb-5e7d-4207-8600-392e7994b0e9",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"TC4: Thêm sản phẩm vào giỏ hàng\"",
+              "fullTitle": "TC4: Thêm sản phẩm vào giỏ hàng \"after each\" hook in \"TC4: Thêm sản phẩm vào giỏ hàng\"",
+              "timedOut": false,
+              "duration": 173,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (this.currentTest.state === 'failed') {\n    const screenshotPath = await takeScreenshot(driver, this.currentTest.title);\n    addContext(this, {\n        title: 'Screenshot khi thất bại.',\n        value: `../${screenshotPath}`\n    });\n}\nif (driver) {\n    await driver.quit();\n}",
+              "err": {},
+              "uuid": "5b8bdd61-65f0-47ae-84a2-542880d861f4",
+              "parentUUID": "9b823ddb-5e7d-4207-8600-392e7994b0e9",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Thêm sản phẩm vào giỏ hàng thành công",
+              "fullTitle": "TC4: Thêm sản phẩm vào giỏ hàng Thêm sản phẩm vào giỏ hàng thành công",
+              "timedOut": false,
+              "duration": 13730,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"Thêm sản phẩm vào giỏ hàng thành công\",\n  \"value\": \"../../screenshots/th_m_s_n_ph_m_v_o_gi__h_ng_th_nh_c_ng_1777914247511.png\"\n}",
+              "code": "await driver.get(data.shared.url);\nawait driver.wait(until.elementLocated(By.tagName('body')), 10000);\nawait closeBanner(driver);\nawait closeCookieBanner(driver);\n// Bước 1: Click vào sản phẩm trên trang chủ\n// XPath nâng cao: tìm sản phẩm\nconst productXPath = \"//h3[contains(@class,'line-clamp')]\";\nconst productElement = await driver.wait(\n    until.elementLocated(By.xpath(productXPath)),\n    10000,\n    'Không tìm thấy sản phẩm'\n);\nconst productName = await productElement.getText();\nconsole.log('Product clicked:', productName);\nawait driver.executeScript('arguments[0].click();', productElement);\n// Bước 2: Đợi URL thay đổi sang trang detail\nawait driver.wait(function() {\n    return driver.getCurrentUrl().then(function(url) {\n        return url.includes('/p/') || url.includes('product') || url !== data.shared.url;\n    });\n}, 10000, 'Không chuyển sang trang detail');\n\nconst firstWord = productName.split(' ')[0];\nconst detailTitleXPath = `//h1[contains(text(),'${firstWord}')]`;\nawait driver.wait(until.elementLocated(By.xpath(detailTitleXPath)), 10000, 'Title không load');\n\nconst detailTitle = await driver.findElement(By.xpath(detailTitleXPath));\nconst detailProductName = await detailTitle.getText();\nconsole.log('Detail product name:', detailProductName);\n// Bước 3: Click nút thêm vào giỏ hàng\n// XPath nâng cao: tìm button Thêm\nawait driver.executeScript('window.scrollTo(0, document.body.scrollHeight);');\nawait driver.sleep(500);\nconst addButtonXPath = \"//button[@aria-label='Thêm sản phẩm vào giỏ hàng']\";\nconst addButton = await driver.wait(until.elementLocated(By.xpath(addButtonXPath)), 10000, 'Không tìm thấy nút thêm');\nawait driver.executeScript('arguments[0].click();', addButton);\nconsole.log('Clicked add to cart button');\n// Bước 4: Click vào giỏ hàng\n// XPath nâng cao: tìm link giỏ hàng\nconst cartLinkXPath = \"//a[@aria-label='giỏ hàng']\";\nconst cartLink = await driver.wait(\n    until.elementLocated(By.xpath(cartLinkXPath)),\n    5000,\n    'Không tìm thấy giỏ hàng'\n);\nawait driver.executeScript('arguments[0].click();', cartLink);\n// Bước 5: Verify sản phẩm trong giỏ hàng\n// XPath nâng cao: tìm sản phẩm trong giỏ\nconst cartProductXPath = `//span[contains(@title,'${detailProductName}')]`;\nlet productInCart = false;\n\ntry {\n    await driver.wait(until.elementLocated(By.xpath(cartProductXPath)), 5000);\n    productInCart = true;\n    console.log('Product found in cart');\n    const quantityInput = await driver.findElement(\n        By.xpath(`//span[contains(@title,'${detailProductName}')]/ancestor::div[contains(@class,'item')]//input[@type='number']`)\n    );\n    const quantity = await quantityInput.getAttribute('value');\n    console.log('Quantity:', quantity);\n    expect(quantity).to.equal('1');\n} catch (e) {\n    console.log('Product not found in cart');\n}\nexpect(productInCart).to.be.true;\nconst screenshotPath = await takeScreenshot(driver, this.test.title);\naddContext(this, {\n    title: 'Thêm sản phẩm vào giỏ hàng thành công',\n    value: `../../${screenshotPath}`\n});",
+              "err": {},
+              "uuid": "c08e4d2d-f320-4875-a449-2a0d634a047f",
+              "parentUUID": "9b823ddb-5e7d-4207-8600-392e7994b0e9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c08e4d2d-f320-4875-a449-2a0d634a047f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13730,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        },
+        {
+          "uuid": "12896daf-c884-4ade-9501-438373cd1029",
+          "title": "TC5: Bình luận sản phẩm",
+          "fullFile": "D:\\SoftwareTesting\\tests\\Module 2\\tc15_binh_luan.test.js",
+          "file": "\\tests\\Module 2\\tc15_binh_luan.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"TC5: Bình luận sản phẩm\"",
+              "fullTitle": "TC5: Bình luận sản phẩm \"before each\" hook in \"TC5: Bình luận sản phẩm\"",
+              "timedOut": false,
+              "duration": 687,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "e2cc2692-6dd7-4528-a2dd-6257d960abe2",
+              "parentUUID": "12896daf-c884-4ade-9501-438373cd1029",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"TC5: Bình luận sản phẩm\"",
+              "fullTitle": "TC5: Bình luận sản phẩm \"after each\" hook in \"TC5: Bình luận sản phẩm\"",
+              "timedOut": false,
+              "duration": 155,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (this.currentTest.state === 'failed') {\n    const screenshotPath = await takeScreenshot(driver, this.currentTest.title);\n    addContext(this, {\n        title: 'Screenshot khi thất bại.',\n        value: `../${screenshotPath}`\n    });\n}\nif (driver) {\n    await driver.quit();\n}",
+              "err": {},
+              "uuid": "8b2d11d9-4df7-4f24-9b31-eb8c8b870f62",
+              "parentUUID": "12896daf-c884-4ade-9501-438373cd1029",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Gửi bình luận sản phẩm thành công",
+              "fullTitle": "TC5: Bình luận sản phẩm Gửi bình luận sản phẩm thành công",
+              "timedOut": false,
+              "duration": 26797,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"Bình luận sản phẩm\",\n  \"value\": \"../../screenshots/g_i_b_nh_lu_n_s_n_ph_m_th_nh_c_ng_1777914275173.png\"\n}",
+              "code": "await driver.get(data.shared.url);\nawait driver.wait(until.elementLocated(By.tagName('body')), 10000);\nawait closeBanner(driver);\nawait closeCookieBanner(driver);\n// Bước 1: Click vào sản phẩm trên trang chủ\n// XPath nâng cao: tìm sản phẩm\nconst productXPath = \"//h3[contains(@class,'line-clamp')]\";\nconst productElement = await driver.wait(\n    until.elementLocated(By.xpath(productXPath)),\n    10000,\n    'Không tìm thấy sản phẩm'\n);\nconst productName = await productElement.getText();\nconsole.log('Product clicked:', productName);\nawait driver.executeScript('arguments[0].click();', productElement);\n// Bước 2: Đợi trang detail load\nawait driver.wait(function() {\n    return driver.getCurrentUrl().then(function(url) {\n        return url.includes('/p/') || url.includes('product') || url !== data.shared.url;\n    });\n}, 10000, 'Không chuyển sang trang detail');\n\nconst firstWord = productName.split(' ')[0];\nconst detailTitleXPath = `//h1[contains(text(),'${firstWord}')]`;\nawait driver.wait(until.elementLocated(By.xpath(detailTitleXPath)), 10000, 'Title không load');\nawait driver.sleep(500);\n\nconst detailTitle = await driver.findElement(By.xpath(detailTitleXPath));\nconst detailProductName = await detailTitle.getText();\nconsole.log('Detail product name:', detailProductName);\n// Bước 3: Scroll xuống dưới để tìm phần bình luận\nawait driver.executeScript('window.scrollTo(0, document.body.scrollHeight);');\nawait driver.sleep(1000);\n// Tìm textarea để nhập bình luận - tìm tất cả textarea rồi lọc\nconst allTextareas = await driver.findElements(By.xpath(\"//textarea\"));\nconsole.log('Found textareas:', allTextareas.length);\n\nlet commentTextarea = null;\nfor (let textarea of allTextareas) {\n    const placeholder = await textarea.getAttribute('placeholder');\n    console.log('Textarea placeholder:', placeholder);\n    if (placeholder && placeholder.includes('bình luận')) {\n        commentTextarea = textarea;\n        break;\n    }\n}\n\nif (!commentTextarea) {\n    throw new Error('Không tìm thấy textarea bình luận');\n}\n\nawait driver.executeScript('arguments[0].scrollIntoView({block: \"center\"});', commentTextarea);\nawait driver.sleep(500);\n// Click để focus vào textarea\nawait commentTextarea.click();\nawait driver.sleep(300);\n\n// Nhập bình luận\nawait commentTextarea.sendKeys(data.module2.commentData.comment);\nconsole.log('Đã nhập nội dung bình luận:', data.module2.commentData.comment);\n// Đợi 3 giây sau khi nhập nội dung\nawait driver.sleep(3000);\n// Bước 4: Tìm nút gửi bình luận - tìm tất cả button gần textarea\nawait driver.sleep(500);\n// Tìm button trong cùng container với textarea\nconst submitButtonXPath = \"(//textarea[contains(@placeholder,'Nhập')]/ancestor::*[contains(@class,'flex')]//button)[last()]\";\nlet submitButton;\ntry {\n    submitButton = await driver.wait(\n        until.elementLocated(By.xpath(submitButtonXPath)),\n        5000\n    );\n} catch (e) {\n    // Thử XPath khác - tìm button bất kỳ gần textarea\n    console.log('Thử XPath khác...');\n    const allButtons = await driver.findElements(By.xpath(\"//button\"));\n    console.log('Tổng số button trên trang:', allButtons.length);\n    for (let i = 0; i < allButtons.length; i++) {\n        const text = await allButtons[i].getText();\n        console.log(`Button ${i}: \"${text}\"`);\n        if (text && text.includes('Gửi')) {\n            submitButton = allButtons[i];\n            break;\n        }\n    }\n}\nif (!submitButton) {\n    throw new Error('Không tìm thấy nút gửi bình luận');\n}\nawait driver.executeScript('arguments[0].scrollIntoView({block: \"center\"});', submitButton);\nawait driver.sleep(500);\nawait driver.executeScript('arguments[0].click();', submitButton);\nconsole.log('Đã click nút gửi bình luận');\n// Bước 5: Đợi form thông tin người gửi xuất hiện (modal/popup) - đợi 5s\nawait driver.sleep(5000);\n// Tìm form thông tin người gửi (class fixed)\nconst formXPath = \"//span[contains(text(),'Thông tin người gửi')]\";\nconst formTitle = await driver.wait(\n    until.elementLocated(By.xpath(formXPath)),\n    10000,\n    'Form thông tin người gửi không xuất hiện'\n);\nconsole.log('Form thông tin người gửi đã mở');\n// Bước 6: Nhập họ và tên\n// XPath nâng cao: tìm input họ tên trong modal\nconst nameInput = await driver.wait(\n    until.elementLocated(By.xpath(\n        \"//input[@placeholder='Nhập họ và tên']\"\n    )),\n    5000,\n    'Không tìm thấy input họ tên'\n);\nawait driver.executeScript('arguments[0].scrollIntoView({block: \"center\"});', nameInput);\nawait driver.sleep(300);\nawait nameInput.sendKeys(data.module2.commentData.name);\nconsole.log('Đã nhập họ tên:', data.module2.commentData.name);\n// Bước 7: Nhập số điện thoại\n// XPath nâng cao: tìm input SDT\nconst phoneInput = await driver.wait(\n    until.elementLocated(By.xpath(\n        \"//input[@placeholder='Nhập số điện thoại']\"\n    )),\n    5000,\n    'Không tìm thấy input số điện thoại'\n);\nawait phoneInput.sendKeys(data.module2.commentData.phone);\nconsole.log('Đã nhập SDT:', data.module2.commentData.phone);\n// Bước 8: Nhập Email\n// XPath nâng cao: tìm input email\nconst emailInput = await driver.wait(\n    until.elementLocated(By.xpath(\n        \"//input[@placeholder='Nhập Email (nhận thông báo phản hồi)']\"\n    )),\n    5000,\n    'Không tìm thấy input email'\n);\nawait emailInput.sendKeys(data.module2.commentData.email);\nconsole.log('Đã nhập email:', data.module2.commentData.email);\n// Bước 9: Check checkbox đồng ý điều khoản\n// XPath nâng cao: tìm checkbox\nconst checkbox = await driver.wait(\n    until.elementLocated(By.xpath(\n        \"//input[@type='checkbox']\"\n    )),\n    5000,\n    'Không tìm thấy checkbox'\n);\nawait checkbox.click();\nconsole.log('Đã check checkbox đồng ý điều khoản');\n// Bước 10: Click nút Hoàn tất\n// XPath nâng cao: tìm button Hoàn tất\nconst completeButton = await driver.wait(\n    until.elementLocated(By.xpath(\n        \"//button[normalize-space(.)='Hoàn tất']\"\n    )),\n    5000,\n    'Không tìm thấy nút Hoàn tất'\n);\nawait driver.executeScript('arguments[0].scrollIntoView({block: \"center\"});', completeButton);\nawait driver.sleep(300);\nawait driver.executeScript('arguments[0].click();', completeButton);\nconsole.log('Đã click nút Hoàn tất');\n// Bước 11: Verify bình luận đã được gửi thành công\nawait driver.sleep(2000);\n// Verify bình luận đã xuất hiện\nexpect(\n    await driver.getPageSource().then(src => src.includes(data.module2.commentData.comment)),\n    'Bình luận không được gửi thành công'\n).to.be.true;\n// Scroll lên chỗ nhập bình luận để chụp hình bình luận đã gửi\nawait driver.executeScript('arguments[0].scrollIntoView({block: \"center\"});', commentTextarea);\nawait driver.sleep(500);\n// Scroll thêm một chút để thấy bình luận đã gửi bên dưới\nawait driver.executeScript('window.scrollBy(0, 200);');\nawait driver.sleep(300);\nconst screenshotPath = await takeScreenshot(driver, this.test.title);\naddContext(this, {\n    title: 'Bình luận sản phẩm',\n    value: `../../${screenshotPath}`\n});",
+              "err": {},
+              "uuid": "6cc52c39-7f20-4c56-8c2c-4832767f2fbd",
+              "parentUUID": "12896daf-c884-4ade-9501-438373cd1029",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6cc52c39-7f20-4c56-8c2c-4832767f2fbd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26797,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 90000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "full_report_module2_ultimate",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report/module2",
+        "reportFilename": "full_report_module2_ultimate",
+        "quiet": "true",
+        "overwrite": "true",
+        "html": "true",
+        "json": "true"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

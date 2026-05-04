@@ -2,7 +2,7 @@ const { Builder, By, until } = require('selenium-webdriver');
 const assert = require('assert');
 const addContext = require('mochawesome/addContext');
 const { takeScreenshot } = require('../../function/screenshotHelper');
-const { closeCookieBanner } = require('../../function/module3/filterHelper');
+const { closeBanner, closeCookieBanner } = require('../../function/functions/helper');
 const data = require('../../data/data.json');
 
 describe('TC010: Kiểm tra sắp xếp sản phẩm theo giá', function () {
@@ -18,11 +18,13 @@ describe('TC010: Kiểm tra sắp xếp sản phẩm theo giá', function () {
         if (driver) await driver.quit();
     });
 
-    it(`TC010 - Nhấn "${data.sortText}" - sản phẩm hiển thị đúng thứ tự`, async function () {
-        await driver.get(data.urlDienThoai);
+    it(`TC010 - Nhấn "${data.module3.sortText}" - sản phẩm hiển thị đúng thứ tự`, async function () {
+        await driver.get(data.shared.urlDienThoai);
+        await closeBanner(driver);
+        await closeCookieBanner(driver);
 
         const sortBtn = await driver.wait(
-            until.elementLocated(By.xpath(`//span[contains(text(),'${data.sortText}')]`)),
+            until.elementLocated(By.xpath(`//span[contains(text(),'${data.module3.sortText}')]`)),
             10000
         );
         await driver.executeScript("arguments[0].scrollIntoView({ block: 'center' });", sortBtn);
@@ -32,10 +34,9 @@ describe('TC010: Kiểm tra sắp xếp sản phẩm theo giá', function () {
         await driver.wait(until.elementLocated(By.xpath("//h3")), 10000);
 
         const bodyText = await driver.findElement(By.css('body')).getText();
-        assert.ok(bodyText.includes(data.sortText), `Không hiển thị sắp xếp "${data.sortText}".`);
+        assert.ok(bodyText.includes(data.module3.sortText), `Không hiển thị sắp xếp "${data.module3.sortText}".`);
 
-        await closeCookieBanner(driver);
         let filename = await takeScreenshot(driver, 'TC010');
-        addContext(this, "../" + filename);
+        addContext(this, "../../" + filename);
     });
 });

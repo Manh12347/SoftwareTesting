@@ -1,14 +1,6 @@
 const { By, until } = require('selenium-webdriver');
+const { closeCookieBanner } = require('../functions/helper');
 
-async function closeCookieBanner(driver) {
-    try {
-        const acceptBtn = await driver.wait(
-            until.elementLocated(By.xpath("//button[contains(text(),'Chấp nhận')]")),
-            5000
-        );
-        await acceptBtn.click();
-    } catch (e) {}
-}
 
 async function clickBrand(driver, brandName) {
     await closeCookieBanner(driver);

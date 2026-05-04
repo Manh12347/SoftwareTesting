@@ -2,22 +2,6 @@ const { By, until } = require('selenium-webdriver');
 const data = require('../../data/data.json');
 
 /**
- * Đóng banner nếu có
- * @param {import('selenium-webdriver').WebDriver} driver
- */
-async function closeBanner(driver) {
-    try {
-        const bannerCloseXPath = data.bannerCloseXPath;
-        await driver.wait(until.elementLocated(By.xpath(bannerCloseXPath)), 5000);
-        const closeBtn = await driver.findElement(By.xpath(bannerCloseXPath));
-        await driver.executeScript('arguments[0].click();', closeBtn);
-        await driver.sleep(500);
-    } catch (e) {
-        // Banner không tồn tại, bỏ qua
-    }
-}
-
-/**
  * Thực hiện tìm kiếm sản phẩm trên trang web.
  * @param {import('selenium-webdriver').WebDriver} driver - The WebDriver instance.
  * @param {string|null} keyword - Từ khóa tìm kiếm.
@@ -117,9 +101,35 @@ async function search(driver, keyword) {
     
     try {
         await driver.wait(until.elementLocated(By.xpath(productXPath)), 3000);
-        const productElements = await driver.findElements(By.xpath(productXPath));
+        
+        // Scroll xuống để render tất cả sản phẩm
+        let prevCount = 0;
+        let currentCount = 0;
+        let scrollAttempts = 0;
+        const maxScrollAttempts = 10;
+        
+        while (scrollAttempts < maxScrollAttempts) {
+            const currentElements = await driver.findElements(By.xpath(productXPath));
+            currentCount = currentElements.length;
+            
+            // Nếu số lượng sản phẩm không thay đổi, dừng scroll
+            if (currentCount === prevCount && scrollAttempts > 0) {
+                break;
+            }
+            
+            prevCount = currentCount;
+            
+            // Scroll đến sản phẩm cuối cùng
+            if (currentElements.length > 0) {
+                await driver.executeScript("arguments[0].scrollIntoView({ block: 'end' });", currentElements[currentElements.length - 1]);
+                await driver.sleep(500);
+            }
+            
+            scrollAttempts++;
+        }
         
         // Lấy text của tất cả sản phẩm
+        const productElements = await driver.findElements(By.xpath(productXPath));
         for (const el of productElements) {
             try {
                 const text = await el.getText();
@@ -143,4 +153,4 @@ async function search(driver, keyword) {
     return { found, message, hasProducts, productTexts, validationMessage: null };
 }
 
-module.exports = { search, closeBanner };
+module.exports = { search };

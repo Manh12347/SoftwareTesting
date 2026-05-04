@@ -2,7 +2,7 @@ const { Builder, By, until } = require('selenium-webdriver');
 const assert = require('assert');
 const addContext = require('mochawesome/addContext');
 const { takeScreenshot } = require('../../function/screenshotHelper');
-const { closeCookieBanner } = require('../../function/module3/filterHelper');
+const { closeBanner, closeCookieBanner } = require('../../function/functions/helper');
 const data = require('../../data/data.json');
 
 describe('TC007: Kiểm tra lọc sản phẩm theo danh mục', function () {
@@ -19,17 +19,19 @@ describe('TC007: Kiểm tra lọc sản phẩm theo danh mục', function () {
     });
 
     it('TC007 - Hover vào "Danh mục" rồi click "Điện thoại"', async function () {
-        await driver.get(data.url);
+        await driver.get(data.shared.url);
+        await closeBanner(driver);
+        await closeCookieBanner(driver);
 
         const danhMucBtn = await driver.wait(
-            until.elementLocated(By.xpath(`//button[@aria-label='${data.danhMucAriaLabel}']`)),
+            until.elementLocated(By.xpath(`//button[@aria-label='${data.module3.danhMucAriaLabel}']`)),
             10000
         );
         const actions = driver.actions({ async: true });
         await actions.move({ origin: danhMucBtn }).perform();
 
         const danhMucItem = await driver.wait(
-            until.elementLocated(By.xpath(`//a[@href='${data.danhMucHref}']`)),
+            until.elementLocated(By.xpath(`//a[@href='${data.module3.danhMucHref}']`)),
             10000
         );
         await driver.executeScript("arguments[0].style.border='3px solid red'", danhMucItem);
@@ -38,10 +40,9 @@ describe('TC007: Kiểm tra lọc sản phẩm theo danh mục', function () {
         await driver.wait(until.elementLocated(By.xpath("//h3")), 10000);
 
         const bodyText = await driver.findElement(By.css('body')).getText();
-        assert.ok(bodyText.includes(data.danhMucText), `Trang danh mục ${data.danhMucText} không hiển thị.`);
+        assert.ok(bodyText.includes(data.module3.danhMucText), `Trang danh mục ${data.module3.danhMucText} không hiển thị.`);
 
-        await closeCookieBanner(driver);
         let filename = await takeScreenshot(driver, 'TC007');
-        addContext(this, "../" + filename);
+        addContext(this, "../../" + filename);
     });
 });

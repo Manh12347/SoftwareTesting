@@ -95,7 +95,7 @@ describe('TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (Q
         await clickVisible(driver, expect, checkoutBtnXPath, 15000, 'Tiến hành đặt hàng');
         await driver.sleep(2000);
 
-        const { name, phonePrefix, emailDomain } = data.checkoutData;
+        const { name, phonePrefix, emailDomain } = data.module4.checkoutData;
         await setInputIfPresent(driver, "//*[@id='order-form']//input[@placeholder='Nhập họ tên'] | //input[contains(@placeholder,'Họ và tên')] | //input[@id='name']", name);
         const phoneXPath = "//input[@placeholder='Số điện thoại' or contains(@placeholder,'Số điện thoại') or @id='phone' or @type='tel'][not(ancestor::*[@id='address-form']) and not(ancestor::div[contains(@class,'fixed')])]";
         await setInputRequired(driver, expect, phoneXPath, `${phonePrefix}${randomDigits(7)}`, 'Số điện thoại', 9);

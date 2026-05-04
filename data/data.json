@@ -1,39 +1,12 @@
 {
-  "url": "https://fptshop.com.vn/",
-  "urlDienThoai": "https://fptshop.com.vn/dien-thoai",
-  "danhMucAriaLabel": "Danh mục",
-  "danhMucHref": "/dien-thoai",
-  "danhMucText": "Điện thoại",
-  "brandName": "OPPO",
-  "sortText": "Giá giảm dần",
-  "filterPin": "pin-trau-tren-5500-mah",
-  "filter5G": "5G",
-  "filterRam": "12 GB",
-  "bannerCloseXPath": "//button[@aria-label='Đóng']",
-  "commentData": {
-    "comment": "Sản phẩm tốt, giá cả hợp lý",
-    "name": "Nguyen Van A",
-    "phone": "0123456789",
-    "email": "test@example.com"
-  },
-  "testData": [
-    {
-      "keyword": "Laptop",
-      "description": "Từ khóa đúng - có kết quả"
-    },
-    {
-      "keyword": "123123",
-      "description": "Từ khóa không có trong hệ thống - hiển thị thông báo không tìm thấy"
-    },
-    {
-      "keyword": "",
-      "description": "Từ khóa rỗng - không tìm kiếm được"
+  "shared": {
+    "url": "https://fptshop.com.vn/",
+    "urlDienThoai": "https://fptshop.com.vn/dien-thoai",
+    "ui": {
+      "bannerCloseXPath": "//button[@aria-label='Đóng']",
+      "acceptCookieXPath": "//button[contains(text(),'Chấp nhận')]"
     }
-  ],
-  "checkoutData": {
-    "name": "Automation Test",
-    "phonePrefix": "093",
-    "emailDomain": "@example.com"
+  },
   "module1": {
     "url": "https://fptshop.com.vn/",
     "selectors": {
@@ -76,6 +49,45 @@
       "MonthOfBirth": "Tháng 10",
       "YearOfBirth": "1901",
       "gender": "Nữ"
+    }
+  },
+  "module2": {
+    "testData": [
+      {
+        "keyword": "Laptop",
+        "description": "Từ khóa đúng - có kết quả"
+      },
+      {
+        "keyword": "123123",
+        "description": "Từ khóa không có trong hệ thống - hiển thị thông báo không tìm thấy"
+      },
+      {
+        "keyword": "",
+        "description": "Từ khóa rỗng - không tìm kiếm được"
+      }
+    ],
+    "commentData": {
+      "comment": "Sản phẩm tốt, giá cả hợp lý",
+      "name": "Nguyen Van A",
+      "phone": "0123456789",
+      "email": "test@example.com"
+    }
+  },
+  "module3": {
+    "danhMucAriaLabel": "Danh mục",
+    "danhMucHref": "/dien-thoai",
+    "danhMucText": "Điện thoại",
+    "brandName": "OPPO",
+    "sortText": "Giá giảm dần",
+    "filterPin": "pin-trau-tren-5500-mah",
+    "filter5G": "5G",
+    "filterRam": "12 GB"
+  },
+  "module4": {
+    "checkoutData": {
+      "name": "Automation Test",
+      "phonePrefix": "093",
+      "emailDomain": "@example.com"
     }
   }
 }
