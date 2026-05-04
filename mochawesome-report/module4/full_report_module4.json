@@ -28,13 +28,13 @@
       "suites": [
         {
           "uuid": "9218fc28-e787-4431-ab81-aa604ca54057",
-          "title": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)",
-          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc017.js",
-          "file": "\\tests\\testModule4\\tc017.js",
+          "title": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js",
+          "file": "\\tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) \"before all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)\"",
+              "title": "\"before all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) \"before all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)\"",
               "timedOut": false,
               "duration": 18182,
               "state": null,
@@ -53,8 +53,8 @@
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) \"after all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)\"",
+              "title": "\"after all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) \"after all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)\"",
               "timedOut": false,
               "duration": 73,
               "state": null,
@@ -71,8 +71,8 @@
               "skipped": false
             },
             {
-              "title": "\"after each\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) \"after each\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)\"",
+              "title": "\"after each\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) \"after each\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại)\"",
               "timedOut": false,
               "duration": 95,
               "state": null,
@@ -81,7 +81,7 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// Chụp màn hình cho mỗi step (cho cả pass và fail để lấy bằng chứng)\nconst screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc017');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
+              "code": "// Chụp màn hình cho mỗi step (cho cả pass và fail để lấy bằng chứng)\nconst screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc016');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
               "err": {},
               "uuid": "8ba70d92-edf3-4dcc-b92a-6effd03f0fdd",
               "parentUUID": "9218fc28-e787-4431-ab81-aa604ca54057",
@@ -92,7 +92,7 @@
           "tests": [
             {
               "title": "1. Thay đổi số lượng bằng dấu +",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) 1. Thay đổi số lượng bằng dấu +",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) 1. Thay đổi số lượng bằng dấu +",
               "timedOut": false,
               "duration": 3075,
               "state": "passed",
@@ -100,7 +100,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/1__thay___i_s__l__ng_b_ng_d_u___1777845684424.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/1__thay___i_s__l__ng_b_ng_d_u___1777845684424.png\"\n}",
               "code": "let plusBtn;\ntry {\n    plusBtn = await driver.findElement(By.xpath(plusButtonXPath));\n} catch (e) {\n    console.log(\"Không tìm thấy nút cộng, bỏ qua step này.\");\n    this.skip();\n}\nconst qtyBefore = await getQuantity();\nconst priceBefore = await getPrice();\nawait driver.executeScript('arguments[0].click();', plusBtn);\nconst priceAfterPlus = await waitForPriceChange(priceBefore, 10000);\nconst qtyAfter = await getQuantity();\nconsole.log(`Số lượng: ${qtyBefore} -> ${qtyAfter}`);\nconsole.log(`Giá trị: ${priceBefore} -> ${priceAfterPlus}`);\nexpect(qtyBefore).to.not.equal(qtyAfter, 'Số lượng sản phẩm không tăng lên sau khi nhấn [+]');\nexpect(priceBefore).to.not.equal(priceAfterPlus, 'Giá tiền không cập nhật sau khi nhấn [+]');",
               "err": {},
               "uuid": "6dfeeb6c-4758-4fae-bcb4-6b3e518f3aa5",
@@ -110,7 +110,7 @@
             },
             {
               "title": "2. Thay đổi số lượng bằng dấu -",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) 2. Thay đổi số lượng bằng dấu -",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) 2. Thay đổi số lượng bằng dấu -",
               "timedOut": false,
               "duration": 3097,
               "state": "passed",
@@ -118,7 +118,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/2__thay___i_s__l__ng_b_ng_d_u___1777845687635.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/2__thay___i_s__l__ng_b_ng_d_u___1777845687635.png\"\n}",
               "code": "let minusBtn;\ntry {\n    minusBtn = await driver.findElement(By.xpath(minusButtonXPath));\n} catch (e) {\n    console.log(\"Không tìm thấy nút trừ, bỏ qua step này.\");\n    this.skip();\n}\nconst qtyBefore = await getQuantity();\nconst priceBefore = await getPrice();\nif (parseInt(qtyBefore) <= 1) {\n    console.log(\"Số lượng đang là 1, bỏ qua step trừ để tránh xoá sản phẩm khỏi giỏ.\");\n    this.skip();\n}\nawait driver.executeScript('arguments[0].click();', minusBtn);\nconst priceAfterMinus = await waitForPriceChange(priceBefore, 10000);\nconst qtyAfter = await getQuantity();\nconsole.log(`Số lượng: ${qtyBefore} -> ${qtyAfter}`);\nconsole.log(`Giá trị: ${priceBefore} -> ${priceAfterMinus}`);\nexpect(qtyBefore).to.not.equal(qtyAfter, 'Số lượng sản phẩm không giảm đi sau khi nhấn [-]');\nexpect(priceBefore).to.not.equal(priceAfterMinus, 'Giá tiền không cập nhật sau khi nhấn [-]');",
               "err": {},
               "uuid": "bbc49cca-55a6-41e8-ba4b-0c2c39e10ee4",
@@ -128,7 +128,7 @@
             },
             {
               "title": "3. Thay đổi số lượng bằng nhập trực tiếp 30",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) 3. Thay đổi số lượng bằng nhập trực tiếp 30",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) 3. Thay đổi số lượng bằng nhập trực tiếp 30",
               "timedOut": false,
               "duration": 2670,
               "state": "passed",
@@ -136,7 +136,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/3__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_30_1777845690414.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/3__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_30_1777845690414.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('30', priceBefore);\nexpect(priceBefore).to.not.equal(currentPrice, 'Giá tiền không cập nhật sau khi nhập 30');",
               "err": {},
               "uuid": "53d3839b-39fa-4709-995f-1bba5a4e61b2",
@@ -146,7 +146,7 @@
             },
             {
               "title": "4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) 4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) 4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
               "timedOut": false,
               "duration": 3104,
               "state": "passed",
@@ -154,7 +154,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/4__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_300000__1777845693613.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/4__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_300000__1777845693613.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('300000', priceBefore);\nif (currentPrice === priceBefore) {\n    // Nếu giá không load/cập nhật -> Hệ thống ngầm từ chối (hết hàng), lúc này BẮT BUỘC phải có cảnh báo\n    const hasAlert = await driver.executeScript(`\n    const alerts = document.querySelectorAll('.toast, .alert, .notification, .message, .error');\n    for(let a of alerts) {\n        let text = a.innerText.toLowerCase();\n        if(text.includes('tồn kho') || text.includes('hết hàng') || text.includes('không đủ') || text.includes('vượt quá')) {\n            return true;\n        }\n    }\n    return false;\n`);\n    expect(hasAlert).to.equal(true, 'Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho');\n} else {\n    // Nếu giá vẫn load bình thường -> Vẫn còn hàng, cho phép vượt qua\n    expect(priceBefore).to.not.equal(currentPrice);\n}",
               "err": {},
               "uuid": "99788ff4-0e0f-4c45-921b-98317cc4ef89",
@@ -164,7 +164,7 @@
             },
             {
               "title": "5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) 5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 1 (Điện thoại) 5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
               "timedOut": false,
               "duration": 2746,
               "state": "failed",
@@ -172,11 +172,11 @@
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc017/5__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_99999999999999_1777845696454.png\"\n}",
+              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc016/5__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_99999999999999_1777845696454.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('99999999999999', priceBefore, 2000);\nexpect(priceBefore).to.not.equal(\n    currentPrice,\n    'Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.'\n);",
               "err": {
                 "message": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '837.000.000.000đ' to not equal '837.000.000.000đ'",
-                "estack": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '837.000.000.000đ' to not equal '837.000.000.000đ'\n    at Context.<anonymous> (tests\\testModule4\\tc017.js:309:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "estack": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '837.000.000.000đ' to not equal '837.000.000.000đ'\n    at Context.<anonymous> (tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js:309:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": ""
               },
               "uuid": "cead3f78-e4ac-4804-9882-2087a15bfc87",
@@ -204,13 +204,13 @@
         },
         {
           "uuid": "b5c1584e-1182-4761-be67-948bda075486",
-          "title": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)",
-          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc017.js",
-          "file": "\\tests\\testModule4\\tc017.js",
+          "title": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js",
+          "file": "\\tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) \"before all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)\"",
+              "title": "\"before all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) \"before all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)\"",
               "timedOut": false,
               "duration": 14151,
               "state": null,
@@ -229,8 +229,8 @@
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) \"after all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)\"",
+              "title": "\"after all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) \"after all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)\"",
               "timedOut": false,
               "duration": 46,
               "state": null,
@@ -247,8 +247,8 @@
               "skipped": false
             },
             {
-              "title": "\"after each\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) \"after each\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)\"",
+              "title": "\"after each\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) \"after each\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay)\"",
               "timedOut": false,
               "duration": 98,
               "state": null,
@@ -257,7 +257,7 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// Chụp màn hình cho mỗi step (cho cả pass và fail để lấy bằng chứng)\nconst screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc017');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
+              "code": "// Chụp màn hình cho mỗi step (cho cả pass và fail để lấy bằng chứng)\nconst screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc016');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
               "err": {},
               "uuid": "6a2a5282-7106-4d4e-a221-529bd4c87cc7",
               "parentUUID": "b5c1584e-1182-4761-be67-948bda075486",
@@ -268,7 +268,7 @@
           "tests": [
             {
               "title": "1. Thay đổi số lượng bằng dấu +",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) 1. Thay đổi số lượng bằng dấu +",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) 1. Thay đổi số lượng bằng dấu +",
               "timedOut": false,
               "duration": 2694,
               "state": "passed",
@@ -276,7 +276,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/1__thay___i_s__l__ng_b_ng_d_u___1777845713469.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/1__thay___i_s__l__ng_b_ng_d_u___1777845713469.png\"\n}",
               "code": "let plusBtn;\ntry {\n    plusBtn = await driver.findElement(By.xpath(plusButtonXPath));\n} catch (e) {\n    console.log(\"Không tìm thấy nút cộng, bỏ qua step này.\");\n    this.skip();\n}\nconst qtyBefore = await getQuantity();\nconst priceBefore = await getPrice();\nawait driver.executeScript('arguments[0].click();', plusBtn);\nconst priceAfterPlus = await waitForPriceChange(priceBefore, 10000);\nconst qtyAfter = await getQuantity();\nconsole.log(`Số lượng: ${qtyBefore} -> ${qtyAfter}`);\nconsole.log(`Giá trị: ${priceBefore} -> ${priceAfterPlus}`);\nexpect(qtyBefore).to.not.equal(qtyAfter, 'Số lượng sản phẩm không tăng lên sau khi nhấn [+]');\nexpect(priceBefore).to.not.equal(priceAfterPlus, 'Giá tiền không cập nhật sau khi nhấn [+]');",
               "err": {},
               "uuid": "a3ed1934-3d0f-442a-a85f-04fc2309bb1d",
@@ -286,7 +286,7 @@
             },
             {
               "title": "2. Thay đổi số lượng bằng dấu -",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) 2. Thay đổi số lượng bằng dấu -",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) 2. Thay đổi số lượng bằng dấu -",
               "timedOut": false,
               "duration": 3069,
               "state": "passed",
@@ -294,7 +294,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/2__thay___i_s__l__ng_b_ng_d_u___1777845716660.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/2__thay___i_s__l__ng_b_ng_d_u___1777845716660.png\"\n}",
               "code": "let minusBtn;\ntry {\n    minusBtn = await driver.findElement(By.xpath(minusButtonXPath));\n} catch (e) {\n    console.log(\"Không tìm thấy nút trừ, bỏ qua step này.\");\n    this.skip();\n}\nconst qtyBefore = await getQuantity();\nconst priceBefore = await getPrice();\nif (parseInt(qtyBefore) <= 1) {\n    console.log(\"Số lượng đang là 1, bỏ qua step trừ để tránh xoá sản phẩm khỏi giỏ.\");\n    this.skip();\n}\nawait driver.executeScript('arguments[0].click();', minusBtn);\nconst priceAfterMinus = await waitForPriceChange(priceBefore, 10000);\nconst qtyAfter = await getQuantity();\nconsole.log(`Số lượng: ${qtyBefore} -> ${qtyAfter}`);\nconsole.log(`Giá trị: ${priceBefore} -> ${priceAfterMinus}`);\nexpect(qtyBefore).to.not.equal(qtyAfter, 'Số lượng sản phẩm không giảm đi sau khi nhấn [-]');\nexpect(priceBefore).to.not.equal(priceAfterMinus, 'Giá tiền không cập nhật sau khi nhấn [-]');",
               "err": {},
               "uuid": "b97c7865-eca0-4aa1-a0e2-56f7035849a8",
@@ -304,7 +304,7 @@
             },
             {
               "title": "3. Thay đổi số lượng bằng nhập trực tiếp 30",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) 3. Thay đổi số lượng bằng nhập trực tiếp 30",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) 3. Thay đổi số lượng bằng nhập trực tiếp 30",
               "timedOut": false,
               "duration": 3038,
               "state": "passed",
@@ -312,7 +312,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/3__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_30_1777845719798.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/3__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_30_1777845719798.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('30', priceBefore);\nexpect(priceBefore).to.not.equal(currentPrice, 'Giá tiền không cập nhật sau khi nhập 30');",
               "err": {},
               "uuid": "7df32233-9145-421a-96af-af56577be98c",
@@ -322,7 +322,7 @@
             },
             {
               "title": "4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) 4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) 4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
               "timedOut": false,
               "duration": 15460,
               "state": "failed",
@@ -330,11 +330,11 @@
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc017/4__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_300000__1777845735370.png\"\n}",
+              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc016/4__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_300000__1777845735370.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('300000', priceBefore);\nif (currentPrice === priceBefore) {\n    // Nếu giá không load/cập nhật -> Hệ thống ngầm từ chối (hết hàng), lúc này BẮT BUỘC phải có cảnh báo\n    const hasAlert = await driver.executeScript(`\n    const alerts = document.querySelectorAll('.toast, .alert, .notification, .message, .error');\n    for(let a of alerts) {\n        let text = a.innerText.toLowerCase();\n        if(text.includes('tồn kho') || text.includes('hết hàng') || text.includes('không đủ') || text.includes('vượt quá')) {\n            return true;\n        }\n    }\n    return false;\n`);\n    expect(hasAlert).to.equal(true, 'Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho');\n} else {\n    // Nếu giá vẫn load bình thường -> Vẫn còn hàng, cho phép vượt qua\n    expect(priceBefore).to.not.equal(currentPrice);\n}",
               "err": {
                 "message": "AssertionError: Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho: expected false to equal true",
-                "estack": "AssertionError: Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho: expected false to equal true\n    at Context.<anonymous> (tests\\testModule4\\tc017.js:299:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "estack": "AssertionError: Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho: expected false to equal true\n    at Context.<anonymous> (tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js:299:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": "- false\n+ true\n"
               },
               "uuid": "1b63fba4-5f0d-4407-bd13-3f37b3cfdbd7",
@@ -344,7 +344,7 @@
             },
             {
               "title": "5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) 5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 2 (Máy tính xách tay) 5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
               "timedOut": false,
               "duration": 2725,
               "state": "failed",
@@ -352,11 +352,11 @@
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc017/5__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_99999999999999_1777845738197.png\"\n}",
+              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc016/5__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_99999999999999_1777845738197.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('99999999999999', priceBefore, 2000);\nexpect(priceBefore).to.not.equal(\n    currentPrice,\n    'Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.'\n);",
               "err": {
                 "message": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '491.700.000đ' to not equal '491.700.000đ'",
-                "estack": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '491.700.000đ' to not equal '491.700.000đ'\n    at Context.<anonymous> (tests\\testModule4\\tc017.js:309:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "estack": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '491.700.000đ' to not equal '491.700.000đ'\n    at Context.<anonymous> (tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js:309:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": ""
               },
               "uuid": "0e98b445-040c-46a4-9b3c-f708272b232c",
@@ -384,13 +384,13 @@
         },
         {
           "uuid": "44cecc4c-6d3f-4992-af65-d6865c9c266f",
-          "title": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)",
-          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc017.js",
-          "file": "\\tests\\testModule4\\tc017.js",
+          "title": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js",
+          "file": "\\tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) \"before all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)\"",
+              "title": "\"before all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) \"before all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)\"",
               "timedOut": false,
               "duration": 13027,
               "state": null,
@@ -409,8 +409,8 @@
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) \"after all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)\"",
+              "title": "\"after all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) \"after all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)\"",
               "timedOut": false,
               "duration": 43,
               "state": null,
@@ -427,8 +427,8 @@
               "skipped": false
             },
             {
-              "title": "\"after each\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) \"after each\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)\"",
+              "title": "\"after each\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) \"after each\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng)\"",
               "timedOut": false,
               "duration": 92,
               "state": null,
@@ -437,7 +437,7 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// Chụp màn hình cho mỗi step (cho cả pass và fail để lấy bằng chứng)\nconst screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc017');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
+              "code": "// Chụp màn hình cho mỗi step (cho cả pass và fail để lấy bằng chứng)\nconst screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc016');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
               "err": {},
               "uuid": "6f8314b8-d21e-4744-98fa-5c3e18376e1c",
               "parentUUID": "44cecc4c-6d3f-4992-af65-d6865c9c266f",
@@ -448,7 +448,7 @@
           "tests": [
             {
               "title": "1. Thay đổi số lượng bằng dấu +",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) 1. Thay đổi số lượng bằng dấu +",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) 1. Thay đổi số lượng bằng dấu +",
               "timedOut": false,
               "duration": 3208,
               "state": "passed",
@@ -456,7 +456,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/1__thay___i_s__l__ng_b_ng_d_u___1777845754577.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/1__thay___i_s__l__ng_b_ng_d_u___1777845754577.png\"\n}",
               "code": "let plusBtn;\ntry {\n    plusBtn = await driver.findElement(By.xpath(plusButtonXPath));\n} catch (e) {\n    console.log(\"Không tìm thấy nút cộng, bỏ qua step này.\");\n    this.skip();\n}\nconst qtyBefore = await getQuantity();\nconst priceBefore = await getPrice();\nawait driver.executeScript('arguments[0].click();', plusBtn);\nconst priceAfterPlus = await waitForPriceChange(priceBefore, 10000);\nconst qtyAfter = await getQuantity();\nconsole.log(`Số lượng: ${qtyBefore} -> ${qtyAfter}`);\nconsole.log(`Giá trị: ${priceBefore} -> ${priceAfterPlus}`);\nexpect(qtyBefore).to.not.equal(qtyAfter, 'Số lượng sản phẩm không tăng lên sau khi nhấn [+]');\nexpect(priceBefore).to.not.equal(priceAfterPlus, 'Giá tiền không cập nhật sau khi nhấn [+]');",
               "err": {},
               "uuid": "e81ec44e-f92d-4166-87bc-058e08c648d4",
@@ -466,7 +466,7 @@
             },
             {
               "title": "2. Thay đổi số lượng bằng dấu -",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) 2. Thay đổi số lượng bằng dấu -",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) 2. Thay đổi số lượng bằng dấu -",
               "timedOut": false,
               "duration": 2972,
               "state": "passed",
@@ -474,7 +474,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/2__thay___i_s__l__ng_b_ng_d_u___1777845757659.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/2__thay___i_s__l__ng_b_ng_d_u___1777845757659.png\"\n}",
               "code": "let minusBtn;\ntry {\n    minusBtn = await driver.findElement(By.xpath(minusButtonXPath));\n} catch (e) {\n    console.log(\"Không tìm thấy nút trừ, bỏ qua step này.\");\n    this.skip();\n}\nconst qtyBefore = await getQuantity();\nconst priceBefore = await getPrice();\nif (parseInt(qtyBefore) <= 1) {\n    console.log(\"Số lượng đang là 1, bỏ qua step trừ để tránh xoá sản phẩm khỏi giỏ.\");\n    this.skip();\n}\nawait driver.executeScript('arguments[0].click();', minusBtn);\nconst priceAfterMinus = await waitForPriceChange(priceBefore, 10000);\nconst qtyAfter = await getQuantity();\nconsole.log(`Số lượng: ${qtyBefore} -> ${qtyAfter}`);\nconsole.log(`Giá trị: ${priceBefore} -> ${priceAfterMinus}`);\nexpect(qtyBefore).to.not.equal(qtyAfter, 'Số lượng sản phẩm không giảm đi sau khi nhấn [-]');\nexpect(priceBefore).to.not.equal(priceAfterMinus, 'Giá tiền không cập nhật sau khi nhấn [-]');",
               "err": {},
               "uuid": "afe62d6b-f6c4-4a8d-8fae-4587faacd0bf",
@@ -484,7 +484,7 @@
             },
             {
               "title": "3. Thay đổi số lượng bằng nhập trực tiếp 30",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) 3. Thay đổi số lượng bằng nhập trực tiếp 30",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) 3. Thay đổi số lượng bằng nhập trực tiếp 30",
               "timedOut": false,
               "duration": 2938,
               "state": "passed",
@@ -492,7 +492,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/3__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_30_1777845760691.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/3__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_30_1777845760691.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('30', priceBefore);\nexpect(priceBefore).to.not.equal(currentPrice, 'Giá tiền không cập nhật sau khi nhập 30');",
               "err": {},
               "uuid": "74a99ffb-6f75-4343-86c0-97208b459530",
@@ -502,7 +502,7 @@
             },
             {
               "title": "4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) 4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) 4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
               "timedOut": false,
               "duration": 15543,
               "state": "failed",
@@ -510,11 +510,11 @@
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc017/4__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_300000__1777845776327.png\"\n}",
+              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc016/4__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_300000__1777845776327.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('300000', priceBefore);\nif (currentPrice === priceBefore) {\n    // Nếu giá không load/cập nhật -> Hệ thống ngầm từ chối (hết hàng), lúc này BẮT BUỘC phải có cảnh báo\n    const hasAlert = await driver.executeScript(`\n    const alerts = document.querySelectorAll('.toast, .alert, .notification, .message, .error');\n    for(let a of alerts) {\n        let text = a.innerText.toLowerCase();\n        if(text.includes('tồn kho') || text.includes('hết hàng') || text.includes('không đủ') || text.includes('vượt quá')) {\n            return true;\n        }\n    }\n    return false;\n`);\n    expect(hasAlert).to.equal(true, 'Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho');\n} else {\n    // Nếu giá vẫn load bình thường -> Vẫn còn hàng, cho phép vượt qua\n    expect(priceBefore).to.not.equal(currentPrice);\n}",
               "err": {
                 "message": "AssertionError: Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho: expected false to equal true",
-                "estack": "AssertionError: Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho: expected false to equal true\n    at Context.<anonymous> (tests\\testModule4\\tc017.js:299:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "estack": "AssertionError: Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho: expected false to equal true\n    at Context.<anonymous> (tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js:299:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": "- false\n+ true\n"
               },
               "uuid": "b0c70779-3e4b-4a26-97ea-2e53c99cf5bf",
@@ -524,7 +524,7 @@
             },
             {
               "title": "5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) 5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 3 (Máy tính bảng) 5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
               "timedOut": false,
               "duration": 2617,
               "state": "failed",
@@ -532,11 +532,11 @@
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc017/5__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_99999999999999_1777845779056.png\"\n}",
+              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc016/5__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_99999999999999_1777845779056.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('99999999999999', priceBefore, 2000);\nexpect(priceBefore).to.not.equal(\n    currentPrice,\n    'Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.'\n);",
               "err": {
                 "message": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '284.700.000đ' to not equal '284.700.000đ'",
-                "estack": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '284.700.000đ' to not equal '284.700.000đ'\n    at Context.<anonymous> (tests\\testModule4\\tc017.js:309:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "estack": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '284.700.000đ' to not equal '284.700.000đ'\n    at Context.<anonymous> (tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js:309:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": ""
               },
               "uuid": "2b7e5fbd-e830-4c44-9e7a-0f21953501b9",
@@ -564,13 +564,13 @@
         },
         {
           "uuid": "92253620-ba06-479a-b306-6bc65bccf2d3",
-          "title": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)",
-          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc017.js",
-          "file": "\\tests\\testModule4\\tc017.js",
+          "title": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js",
+          "file": "\\tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) \"before all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)\"",
+              "title": "\"before all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) \"before all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)\"",
               "timedOut": false,
               "duration": 13973,
               "state": null,
@@ -589,8 +589,8 @@
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) \"after all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)\"",
+              "title": "\"after all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) \"after all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)\"",
               "timedOut": false,
               "duration": 48,
               "state": null,
@@ -607,8 +607,8 @@
               "skipped": false
             },
             {
-              "title": "\"after each\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) \"after each\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)\"",
+              "title": "\"after each\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) \"after each\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính)\"",
               "timedOut": false,
               "duration": 93,
               "state": null,
@@ -617,7 +617,7 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// Chụp màn hình cho mỗi step (cho cả pass và fail để lấy bằng chứng)\nconst screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc017');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
+              "code": "// Chụp màn hình cho mỗi step (cho cả pass và fail để lấy bằng chứng)\nconst screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc016');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
               "err": {},
               "uuid": "8abbc225-01f3-4a25-94c4-128da49c609f",
               "parentUUID": "92253620-ba06-479a-b306-6bc65bccf2d3",
@@ -628,7 +628,7 @@
           "tests": [
             {
               "title": "1. Thay đổi số lượng bằng dấu +",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) 1. Thay đổi số lượng bằng dấu +",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) 1. Thay đổi số lượng bằng dấu +",
               "timedOut": false,
               "duration": 2219,
               "state": "passed",
@@ -636,7 +636,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/1__thay___i_s__l__ng_b_ng_d_u___1777845795384.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/1__thay___i_s__l__ng_b_ng_d_u___1777845795384.png\"\n}",
               "code": "let plusBtn;\ntry {\n    plusBtn = await driver.findElement(By.xpath(plusButtonXPath));\n} catch (e) {\n    console.log(\"Không tìm thấy nút cộng, bỏ qua step này.\");\n    this.skip();\n}\nconst qtyBefore = await getQuantity();\nconst priceBefore = await getPrice();\nawait driver.executeScript('arguments[0].click();', plusBtn);\nconst priceAfterPlus = await waitForPriceChange(priceBefore, 10000);\nconst qtyAfter = await getQuantity();\nconsole.log(`Số lượng: ${qtyBefore} -> ${qtyAfter}`);\nconsole.log(`Giá trị: ${priceBefore} -> ${priceAfterPlus}`);\nexpect(qtyBefore).to.not.equal(qtyAfter, 'Số lượng sản phẩm không tăng lên sau khi nhấn [+]');\nexpect(priceBefore).to.not.equal(priceAfterPlus, 'Giá tiền không cập nhật sau khi nhấn [+]');",
               "err": {},
               "uuid": "7011fa0f-6d96-4798-a185-5eb6bf8ba163",
@@ -646,7 +646,7 @@
             },
             {
               "title": "2. Thay đổi số lượng bằng dấu -",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) 2. Thay đổi số lượng bằng dấu -",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) 2. Thay đổi số lượng bằng dấu -",
               "timedOut": false,
               "duration": 2244,
               "state": "passed",
@@ -654,7 +654,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/2__thay___i_s__l__ng_b_ng_d_u___1777845797733.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/2__thay___i_s__l__ng_b_ng_d_u___1777845797733.png\"\n}",
               "code": "let minusBtn;\ntry {\n    minusBtn = await driver.findElement(By.xpath(minusButtonXPath));\n} catch (e) {\n    console.log(\"Không tìm thấy nút trừ, bỏ qua step này.\");\n    this.skip();\n}\nconst qtyBefore = await getQuantity();\nconst priceBefore = await getPrice();\nif (parseInt(qtyBefore) <= 1) {\n    console.log(\"Số lượng đang là 1, bỏ qua step trừ để tránh xoá sản phẩm khỏi giỏ.\");\n    this.skip();\n}\nawait driver.executeScript('arguments[0].click();', minusBtn);\nconst priceAfterMinus = await waitForPriceChange(priceBefore, 10000);\nconst qtyAfter = await getQuantity();\nconsole.log(`Số lượng: ${qtyBefore} -> ${qtyAfter}`);\nconsole.log(`Giá trị: ${priceBefore} -> ${priceAfterMinus}`);\nexpect(qtyBefore).to.not.equal(qtyAfter, 'Số lượng sản phẩm không giảm đi sau khi nhấn [-]');\nexpect(priceBefore).to.not.equal(priceAfterMinus, 'Giá tiền không cập nhật sau khi nhấn [-]');",
               "err": {},
               "uuid": "4eabc397-8ecb-4104-9870-94d78e7c8cce",
@@ -664,7 +664,7 @@
             },
             {
               "title": "3. Thay đổi số lượng bằng nhập trực tiếp 30",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) 3. Thay đổi số lượng bằng nhập trực tiếp 30",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) 3. Thay đổi số lượng bằng nhập trực tiếp 30",
               "timedOut": false,
               "duration": 2179,
               "state": "passed",
@@ -672,7 +672,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/3__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_30_1777845800011.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/3__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_30_1777845800011.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('30', priceBefore);\nexpect(priceBefore).to.not.equal(currentPrice, 'Giá tiền không cập nhật sau khi nhập 30');",
               "err": {},
               "uuid": "65988fc1-d736-466f-be05-b9e3f9ccd07a",
@@ -682,7 +682,7 @@
             },
             {
               "title": "4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) 4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) 4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
               "timedOut": false,
               "duration": 2153,
               "state": "passed",
@@ -690,7 +690,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/4__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_300000__1777845802261.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/4__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_300000__1777845802261.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('300000', priceBefore);\nif (currentPrice === priceBefore) {\n    // Nếu giá không load/cập nhật -> Hệ thống ngầm từ chối (hết hàng), lúc này BẮT BUỘC phải có cảnh báo\n    const hasAlert = await driver.executeScript(`\n    const alerts = document.querySelectorAll('.toast, .alert, .notification, .message, .error');\n    for(let a of alerts) {\n        let text = a.innerText.toLowerCase();\n        if(text.includes('tồn kho') || text.includes('hết hàng') || text.includes('không đủ') || text.includes('vượt quá')) {\n            return true;\n        }\n    }\n    return false;\n`);\n    expect(hasAlert).to.equal(true, 'Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho');\n} else {\n    // Nếu giá vẫn load bình thường -> Vẫn còn hàng, cho phép vượt qua\n    expect(priceBefore).to.not.equal(currentPrice);\n}",
               "err": {},
               "uuid": "638f0395-11c8-4f76-bb5c-53d7890fc1c7",
@@ -700,7 +700,7 @@
             },
             {
               "title": "5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) 5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 4 (Màn hình máy tính) 5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
               "timedOut": false,
               "duration": 2201,
               "state": "failed",
@@ -708,11 +708,11 @@
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc017/5__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_99999999999999_1777845804551.png\"\n}",
+              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc016/5__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_99999999999999_1777845804551.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('99999999999999', priceBefore, 2000);\nexpect(priceBefore).to.not.equal(\n    currentPrice,\n    'Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.'\n);",
               "err": {
                 "message": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '447.000.000.000đ' to not equal '447.000.000.000đ'",
-                "estack": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '447.000.000.000đ' to not equal '447.000.000.000đ'\n    at Context.<anonymous> (tests\\testModule4\\tc017.js:309:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "estack": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '447.000.000.000đ' to not equal '447.000.000.000đ'\n    at Context.<anonymous> (tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js:309:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": ""
               },
               "uuid": "b935f2c0-d78f-48dd-b76d-06448194ca59",
@@ -740,13 +740,13 @@
         },
         {
           "uuid": "f95727b6-4034-464b-9e67-f97fdd1fca5b",
-          "title": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)",
-          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc017.js",
-          "file": "\\tests\\testModule4\\tc017.js",
+          "title": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js",
+          "file": "\\tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) \"before all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)\"",
+              "title": "\"before all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) \"before all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)\"",
               "timedOut": false,
               "duration": 13661,
               "state": null,
@@ -765,8 +765,8 @@
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) \"after all\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)\"",
+              "title": "\"after all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) \"after all\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)\"",
               "timedOut": false,
               "duration": 61,
               "state": null,
@@ -783,8 +783,8 @@
               "skipped": false
             },
             {
-              "title": "\"after each\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)\"",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) \"after each\" hook in \"TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)\"",
+              "title": "\"after each\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)\"",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) \"after each\" hook in \"TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn)\"",
               "timedOut": false,
               "duration": 95,
               "state": null,
@@ -793,7 +793,7 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "// Chụp màn hình cho mỗi step (cho cả pass và fail để lấy bằng chứng)\nconst screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc017');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
+              "code": "// Chụp màn hình cho mỗi step (cho cả pass và fail để lấy bằng chứng)\nconst screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc016');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
               "err": {},
               "uuid": "f0893f70-3e28-46c4-b922-6aebbff3c0dc",
               "parentUUID": "f95727b6-4034-464b-9e67-f97fdd1fca5b",
@@ -804,7 +804,7 @@
           "tests": [
             {
               "title": "1. Thay đổi số lượng bằng dấu +",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) 1. Thay đổi số lượng bằng dấu +",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) 1. Thay đổi số lượng bằng dấu +",
               "timedOut": false,
               "duration": 1385,
               "state": "failed",
@@ -812,11 +812,11 @@
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc017/1__thay___i_s__l__ng_b_ng_d_u___1777845819738.png\"\n}",
+              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc016/1__thay___i_s__l__ng_b_ng_d_u___1777845819738.png\"\n}",
               "code": "let plusBtn;\ntry {\n    plusBtn = await driver.findElement(By.xpath(plusButtonXPath));\n} catch (e) {\n    console.log(\"Không tìm thấy nút cộng, bỏ qua step này.\");\n    this.skip();\n}\nconst qtyBefore = await getQuantity();\nconst priceBefore = await getPrice();\nawait driver.executeScript('arguments[0].click();', plusBtn);\nconst priceAfterPlus = await waitForPriceChange(priceBefore, 10000);\nconst qtyAfter = await getQuantity();\nconsole.log(`Số lượng: ${qtyBefore} -> ${qtyAfter}`);\nconsole.log(`Giá trị: ${priceBefore} -> ${priceAfterPlus}`);\nexpect(qtyBefore).to.not.equal(qtyAfter, 'Số lượng sản phẩm không tăng lên sau khi nhấn [+]');\nexpect(priceBefore).to.not.equal(priceAfterPlus, 'Giá tiền không cập nhật sau khi nhấn [+]');",
               "err": {
                 "message": "AssertionError: Giá tiền không cập nhật sau khi nhấn [+]: expected '16.840.000đ' to not equal '16.840.000đ'",
-                "estack": "AssertionError: Giá tiền không cập nhật sau khi nhấn [+]: expected '16.840.000đ' to not equal '16.840.000đ'\n    at Context.<anonymous> (tests\\testModule4\\tc017.js:245:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "estack": "AssertionError: Giá tiền không cập nhật sau khi nhấn [+]: expected '16.840.000đ' to not equal '16.840.000đ'\n    at Context.<anonymous> (tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js:245:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": ""
               },
               "uuid": "1859d7ee-1f16-4cee-8945-98e196fb8f23",
@@ -826,7 +826,7 @@
             },
             {
               "title": "2. Thay đổi số lượng bằng dấu -",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) 2. Thay đổi số lượng bằng dấu -",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) 2. Thay đổi số lượng bằng dấu -",
               "timedOut": false,
               "duration": 2621,
               "state": "passed",
@@ -834,7 +834,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/2__thay___i_s__l__ng_b_ng_d_u___1777845822477.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/2__thay___i_s__l__ng_b_ng_d_u___1777845822477.png\"\n}",
               "code": "let minusBtn;\ntry {\n    minusBtn = await driver.findElement(By.xpath(minusButtonXPath));\n} catch (e) {\n    console.log(\"Không tìm thấy nút trừ, bỏ qua step này.\");\n    this.skip();\n}\nconst qtyBefore = await getQuantity();\nconst priceBefore = await getPrice();\nif (parseInt(qtyBefore) <= 1) {\n    console.log(\"Số lượng đang là 1, bỏ qua step trừ để tránh xoá sản phẩm khỏi giỏ.\");\n    this.skip();\n}\nawait driver.executeScript('arguments[0].click();', minusBtn);\nconst priceAfterMinus = await waitForPriceChange(priceBefore, 10000);\nconst qtyAfter = await getQuantity();\nconsole.log(`Số lượng: ${qtyBefore} -> ${qtyAfter}`);\nconsole.log(`Giá trị: ${priceBefore} -> ${priceAfterMinus}`);\nexpect(qtyBefore).to.not.equal(qtyAfter, 'Số lượng sản phẩm không giảm đi sau khi nhấn [-]');\nexpect(priceBefore).to.not.equal(priceAfterMinus, 'Giá tiền không cập nhật sau khi nhấn [-]');",
               "err": {},
               "uuid": "8b3d78fe-2348-4214-96c4-69f93c33a7f0",
@@ -844,7 +844,7 @@
             },
             {
               "title": "3. Thay đổi số lượng bằng nhập trực tiếp 30",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) 3. Thay đổi số lượng bằng nhập trực tiếp 30",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) 3. Thay đổi số lượng bằng nhập trực tiếp 30",
               "timedOut": false,
               "duration": 2171,
               "state": "passed",
@@ -852,7 +852,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/3__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_30_1777845824742.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc016/3__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_30_1777845824742.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('30', priceBefore);\nexpect(priceBefore).to.not.equal(currentPrice, 'Giá tiền không cập nhật sau khi nhập 30');",
               "err": {},
               "uuid": "6298d669-3598-4831-8bcc-46589880f583",
@@ -862,7 +862,7 @@
             },
             {
               "title": "4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) 4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) 4. Thay đổi số lượng bằng nhập trực tiếp 300000 ",
               "timedOut": false,
               "duration": 15451,
               "state": "failed",
@@ -870,11 +870,11 @@
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc017/4__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_300000__1777845840287.png\"\n}",
+              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc016/4__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_300000__1777845840287.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('300000', priceBefore);\nif (currentPrice === priceBefore) {\n    // Nếu giá không load/cập nhật -> Hệ thống ngầm từ chối (hết hàng), lúc này BẮT BUỘC phải có cảnh báo\n    const hasAlert = await driver.executeScript(`\n    const alerts = document.querySelectorAll('.toast, .alert, .notification, .message, .error');\n    for(let a of alerts) {\n        let text = a.innerText.toLowerCase();\n        if(text.includes('tồn kho') || text.includes('hết hàng') || text.includes('không đủ') || text.includes('vượt quá')) {\n            return true;\n        }\n    }\n    return false;\n`);\n    expect(hasAlert).to.equal(true, 'Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho');\n} else {\n    // Nếu giá vẫn load bình thường -> Vẫn còn hàng, cho phép vượt qua\n    expect(priceBefore).to.not.equal(currentPrice);\n}",
               "err": {
                 "message": "AssertionError: Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho: expected false to equal true",
-                "estack": "AssertionError: Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho: expected false to equal true\n    at Context.<anonymous> (tests\\testModule4\\tc017.js:299:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "estack": "AssertionError: Hệ thống từ chối số lượng 40000 (giá không đổi) nhưng lại KHÔNG hiển thị cảnh báo hết hàng/tồn kho: expected false to equal true\n    at Context.<anonymous> (tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js:299:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": "- false\n+ true\n"
               },
               "uuid": "edb46413-87af-4857-ad57-e894b1e1c80a",
@@ -884,7 +884,7 @@
             },
             {
               "title": "5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
-              "fullTitle": "TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) 5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
+              "fullTitle": "TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration 5 (Máy tính để bàn) 5. Thay đổi số lượng bằng nhập trực tiếp 99999999999999",
               "timedOut": false,
               "duration": 2272,
               "state": "failed",
@@ -892,11 +892,11 @@
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc017/5__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_99999999999999_1777845842654.png\"\n}",
+              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc016/5__thay___i_s__l__ng_b_ng_nh_p_tr_c_ti_p_99999999999999_1777845842654.png\"\n}",
               "code": "const priceBefore = await getPrice();\nconst { currentPrice } = await testQuantityInput('99999999999999', priceBefore, 2000);\nexpect(priceBefore).to.not.equal(\n    currentPrice,\n    'Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.'\n);",
               "err": {
                 "message": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '521.700.000đ' to not equal '521.700.000đ'",
-                "estack": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '521.700.000đ' to not equal '521.700.000đ'\n    at Context.<anonymous> (tests\\testModule4\\tc017.js:309:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "estack": "AssertionError: Hệ thống không cập nhật giá trị hoặc xử lý sai khi nhập số lượng siêu lớn (99999999999999). Lỗi bảo mật/logic hệ thống.: expected '521.700.000đ' to not equal '521.700.000đ'\n    at Context.<anonymous> (tests\\testModule4\\tc16_chinh_so_luong_san_pham.test.js:309:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": ""
               },
               "uuid": "70fcf3ca-f9a3-45fc-8a53-decbec77ab1d",
@@ -924,13 +924,13 @@
         },
         {
           "uuid": "972b8394-ec05-4e51-b403-09afa720f313",
-          "title": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)",
-          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc018.js",
-          "file": "\\tests\\testModule4\\tc018.js",
+          "title": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc17_gio_hang_luu_thay_doi_so_luong.test.js",
+          "file": "\\tests\\testModule4\\tc17_gio_hang_luu_thay_doi_so_luong.test.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)\"",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10) \"before all\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)\"",
+              "title": "\"before all\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)\"",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10) \"before all\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)\"",
               "timedOut": false,
               "duration": 38069,
               "state": null,
@@ -949,8 +949,8 @@
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)\"",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10) \"after all\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)\"",
+              "title": "\"after all\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)\"",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10) \"after all\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)\"",
               "timedOut": false,
               "duration": 50,
               "state": null,
@@ -967,8 +967,8 @@
               "skipped": false
             },
             {
-              "title": "\"after each\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)\"",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10) \"after each\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)\"",
+              "title": "\"after each\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)\"",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10) \"after each\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10)\"",
               "timedOut": false,
               "duration": 116,
               "state": null,
@@ -977,7 +977,7 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc018');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
+              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc017');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
               "err": {},
               "uuid": "d50253c4-6522-49ef-b71e-52588f68c783",
               "parentUUID": "972b8394-ec05-4e51-b403-09afa720f313",
@@ -988,7 +988,7 @@
           "tests": [
             {
               "title": "1. Thay đổi số lượng tất cả sản phẩm thành 10",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10) 1. Thay đổi số lượng tất cả sản phẩm thành 10",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10) 1. Thay đổi số lượng tất cả sản phẩm thành 10",
               "timedOut": false,
               "duration": 9700,
               "state": "passed",
@@ -996,7 +996,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc018/1__thay___i_s__l__ng_t_t_c__s_n_ph_m_th_nh_10_1777845890580.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/1__thay___i_s__l__ng_t_t_c__s_n_ph_m_th_nh_10_1777845890580.png\"\n}",
               "code": "// Bước 1: Click \"Đạ chọn tất cả\" để chọn tất cả sản phẩm trong giỏ\n// FPTShop dùng dynamic ID có dạng \"{random}-undefined\" cho checkbox \"Chọn tất cả\"\nconst selectAllXPath = \"//input[contains(@id, '-undefined')] | //label[contains(., 'Chọn tất cả')] | //span[contains(text(), 'Chọn tất cả')]\";\ntry {\n    const selectAllEl = await driver.wait(until.elementLocated(By.xpath(selectAllXPath)), 5000);\n    await driver.executeScript('arguments[0].scrollIntoView({ block: \"center\" });', selectAllEl);\n    await driver.executeScript('arguments[0].click();', selectAllEl);\n    await driver.sleep(1000);\n    console.log('Đã click \"Chọn tất cả\"');\n} catch (e) {\n    console.log('[WARN] Không tìm thấy nút \"Chọn tất cả\": ' + e.message);\n}\n// Bước 2: Lấy tất cả input số lượng trong giỏ hàng (sau khi chọn tất cả)\nawait driver.sleep(500);\nconst inputs = await driver.findElements(By.xpath(quantityInputXPath));\nconst visibleInputs = [];\nfor (let input of inputs) {\n    try { if (await input.isDisplayed()) visibleInputs.push(input); } catch (e) { }\n}\nexpect(visibleInputs.length).to.be.at.least(1, 'Không tìm thấy sản phẩm nào trong giỏ hàng');\nconsole.log(`Tìm thấy ${visibleInputs.length} sản phẩm trong giỏ hàng`);\n// Bước 3: Cập nhật số lượng từng sản phẩm một\nfor (let i = 0; i < visibleInputs.length; i++) {\n    const priceBefore = await getPrice();\n    const accepted = await setQuantityOnInput(visibleInputs[i], targetQty);\n    await waitForPriceChange(priceBefore, 15000);\n    console.log(`Sản phẩm ${i + 1}: đặt ${targetQty} -> UI ghi nhận ${accepted}`);\n    if (accepted !== String(targetQty)) {\n        console.log(`  [WARN] Sản phẩm ${i + 1} không nhận đúng giá trị (có thể bị giới hạn tồn kho)`);\n    }\n}\n// Xác nhận giá đã thay đổi\nconst finalPrice = await getPrice();\nexpect(finalPrice).to.not.equal('0đ', 'Giỏ hàng không hiển thị giá sau khi thay đổi số lượng');",
               "err": {},
               "uuid": "94b1074f-670e-40db-93b9-b3bf483ebcea",
@@ -1006,7 +1006,7 @@
             },
             {
               "title": "2. Về trang chủ rồi quay lại giỏ hàng",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10) 2. Về trang chủ rồi quay lại giỏ hàng",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10) 2. Về trang chủ rồi quay lại giỏ hàng",
               "timedOut": false,
               "duration": 6594,
               "state": "passed",
@@ -1014,7 +1014,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc018/2__v__trang_ch__r_i_quay_l_i_gi__h_ng_1777845897274.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/2__v__trang_ch__r_i_quay_l_i_gi__h_ng_1777845897274.png\"\n}",
               "code": "// Về trang chủ\nawait driver.get('https://fptshop.com.vn');\nawait driver.wait(until.elementLocated(By.tagName('body')), 10000);\nawait driver.sleep(2000);\nconst homeUrl = await driver.getCurrentUrl();\nexpect(homeUrl).to.include('fptshop.com.vn', 'Không điều hướng được về trang chủ');\nconsole.log(`Đã về trang chủ: ${homeUrl}`);\n// Quay lại giỏ hàng\nawait driver.get('https://fptshop.com.vn/gio-hang');\nawait driver.wait(until.urlContains('gio-hang'), 10000);\nawait driver.sleep(2000);\nconst cartUrl = await driver.getCurrentUrl();\nexpect(cartUrl).to.include('gio-hang', 'Không điều hướng được vào giỏ hàng');\nconsole.log(`Đã quay lại giỏ hàng: ${cartUrl}`);",
               "err": {},
               "uuid": "70189ec7-5e52-4ecb-9390-a5538468a508",
@@ -1024,7 +1024,7 @@
             },
             {
               "title": "3. Kiểm tra số lượng sản phẩm đã được lưu là 10",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10) 3. Kiểm tra số lượng sản phẩm đã được lưu là 10",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 1 (Số lượng: 10) 3. Kiểm tra số lượng sản phẩm đã được lưu là 10",
               "timedOut": false,
               "duration": 1043,
               "state": "passed",
@@ -1032,7 +1032,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc018/3__ki_m_tra_s__l__ng_s_n_ph_m_______c_l_u_l__10_1777845898425.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/3__ki_m_tra_s__l__ng_s_n_ph_m_______c_l_u_l__10_1777845898425.png\"\n}",
               "code": "// Đợi trang giỏ hàng load đủ\nawait driver.wait(until.elementLocated(By.xpath(quantityInputXPath)), 15000, 'Giỏ hàng không hiển thị sản phẩm sau khi reload');\nawait driver.sleep(1000);\nconst inputs = await driver.findElements(By.xpath(quantityInputXPath));\nconst visibleInputs = [];\nfor (let input of inputs) {\n    try { if (await input.isDisplayed()) visibleInputs.push(input); } catch (e) { }\n}\nexpect(visibleInputs.length).to.be.at.least(1, 'Giỏ hàng trống sau khi quay lại - dữ liệu không được lưu');\nlet savedCount = 0;\nlet notSavedList = [];\nfor (let i = 0; i < visibleInputs.length; i++) {\n    const actualVal = parseInt(await visibleInputs[i].getAttribute('value'));\n    console.log(`Sản phẩm ${i + 1}: Giá trị lưu = ${actualVal}, Mong đợi = ${targetQty}`);\n    if (actualVal === targetQty) {\n        savedCount++;\n    } else {\n        notSavedList.push(`Sản phẩm ${i + 1}: lưu ${actualVal}, mong đợi ${targetQty}`);\n    }\n}\nif (notSavedList.length > 0) {\n    // Fail với thông tin chi tiết sản phẩm nào không được lưu\n    expect.fail(\n        `Giỏ hàng KHÔNG lưu đúng số lượng sau khi điều hướng đi và quay lại:\\n` +\n        notSavedList.join('\\n') +\n        `\\n(${savedCount}/${visibleInputs.length} sản phẩm được lưu đúng)`\n    );\n} else {\n    console.log(`✓ Tất cả ${visibleInputs.length} sản phẩm đều lưu đúng số lượng ${targetQty}`);\n}",
               "err": {},
               "uuid": "d4c47cbe-9d65-46be-9116-fb709b63903c",
@@ -1057,13 +1057,13 @@
         },
         {
           "uuid": "68030010-e4bd-441f-a7bb-9ec31d4b3fd3",
-          "title": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)",
-          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc018.js",
-          "file": "\\tests\\testModule4\\tc018.js",
+          "title": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc17_gio_hang_luu_thay_doi_so_luong.test.js",
+          "file": "\\tests\\testModule4\\tc17_gio_hang_luu_thay_doi_so_luong.test.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)\"",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000) \"before all\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)\"",
+              "title": "\"before all\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)\"",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000) \"before all\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)\"",
               "timedOut": false,
               "duration": 38223,
               "state": null,
@@ -1082,8 +1082,8 @@
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)\"",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000) \"after all\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)\"",
+              "title": "\"after all\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)\"",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000) \"after all\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)\"",
               "timedOut": false,
               "duration": 96,
               "state": null,
@@ -1100,8 +1100,8 @@
               "skipped": false
             },
             {
-              "title": "\"after each\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)\"",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000) \"after each\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)\"",
+              "title": "\"after each\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)\"",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000) \"after each\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000)\"",
               "timedOut": false,
               "duration": 93,
               "state": null,
@@ -1110,7 +1110,7 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc018');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
+              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc017');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
               "err": {},
               "uuid": "de62e7b3-7666-4895-b8bd-1918603015ee",
               "parentUUID": "68030010-e4bd-441f-a7bb-9ec31d4b3fd3",
@@ -1121,7 +1121,7 @@
           "tests": [
             {
               "title": "1. Thay đổi số lượng tất cả sản phẩm thành 1,000",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000) 1. Thay đổi số lượng tất cả sản phẩm thành 1,000",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000) 1. Thay đổi số lượng tất cả sản phẩm thành 1,000",
               "timedOut": false,
               "duration": 10254,
               "state": "passed",
@@ -1129,7 +1129,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc018/1__thay___i_s__l__ng_t_t_c__s_n_ph_m_th_nh_1_000_1777845947070.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/1__thay___i_s__l__ng_t_t_c__s_n_ph_m_th_nh_1_000_1777845947070.png\"\n}",
               "code": "// Bước 1: Click \"Đạ chọn tất cả\" để chọn tất cả sản phẩm trong giỏ\n// FPTShop dùng dynamic ID có dạng \"{random}-undefined\" cho checkbox \"Chọn tất cả\"\nconst selectAllXPath = \"//input[contains(@id, '-undefined')] | //label[contains(., 'Chọn tất cả')] | //span[contains(text(), 'Chọn tất cả')]\";\ntry {\n    const selectAllEl = await driver.wait(until.elementLocated(By.xpath(selectAllXPath)), 5000);\n    await driver.executeScript('arguments[0].scrollIntoView({ block: \"center\" });', selectAllEl);\n    await driver.executeScript('arguments[0].click();', selectAllEl);\n    await driver.sleep(1000);\n    console.log('Đã click \"Chọn tất cả\"');\n} catch (e) {\n    console.log('[WARN] Không tìm thấy nút \"Chọn tất cả\": ' + e.message);\n}\n// Bước 2: Lấy tất cả input số lượng trong giỏ hàng (sau khi chọn tất cả)\nawait driver.sleep(500);\nconst inputs = await driver.findElements(By.xpath(quantityInputXPath));\nconst visibleInputs = [];\nfor (let input of inputs) {\n    try { if (await input.isDisplayed()) visibleInputs.push(input); } catch (e) { }\n}\nexpect(visibleInputs.length).to.be.at.least(1, 'Không tìm thấy sản phẩm nào trong giỏ hàng');\nconsole.log(`Tìm thấy ${visibleInputs.length} sản phẩm trong giỏ hàng`);\n// Bước 3: Cập nhật số lượng từng sản phẩm một\nfor (let i = 0; i < visibleInputs.length; i++) {\n    const priceBefore = await getPrice();\n    const accepted = await setQuantityOnInput(visibleInputs[i], targetQty);\n    await waitForPriceChange(priceBefore, 15000);\n    console.log(`Sản phẩm ${i + 1}: đặt ${targetQty} -> UI ghi nhận ${accepted}`);\n    if (accepted !== String(targetQty)) {\n        console.log(`  [WARN] Sản phẩm ${i + 1} không nhận đúng giá trị (có thể bị giới hạn tồn kho)`);\n    }\n}\n// Xác nhận giá đã thay đổi\nconst finalPrice = await getPrice();\nexpect(finalPrice).to.not.equal('0đ', 'Giỏ hàng không hiển thị giá sau khi thay đổi số lượng');",
               "err": {},
               "uuid": "c2044f1f-d6f6-435e-8ed4-d407fd0f170a",
@@ -1139,7 +1139,7 @@
             },
             {
               "title": "2. Về trang chủ rồi quay lại giỏ hàng",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000) 2. Về trang chủ rồi quay lại giỏ hàng",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000) 2. Về trang chủ rồi quay lại giỏ hàng",
               "timedOut": false,
               "duration": 6293,
               "state": "passed",
@@ -1147,7 +1147,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc018/2__v__trang_ch__r_i_quay_l_i_gi__h_ng_1777845953461.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/2__v__trang_ch__r_i_quay_l_i_gi__h_ng_1777845953461.png\"\n}",
               "code": "// Về trang chủ\nawait driver.get('https://fptshop.com.vn');\nawait driver.wait(until.elementLocated(By.tagName('body')), 10000);\nawait driver.sleep(2000);\nconst homeUrl = await driver.getCurrentUrl();\nexpect(homeUrl).to.include('fptshop.com.vn', 'Không điều hướng được về trang chủ');\nconsole.log(`Đã về trang chủ: ${homeUrl}`);\n// Quay lại giỏ hàng\nawait driver.get('https://fptshop.com.vn/gio-hang');\nawait driver.wait(until.urlContains('gio-hang'), 10000);\nawait driver.sleep(2000);\nconst cartUrl = await driver.getCurrentUrl();\nexpect(cartUrl).to.include('gio-hang', 'Không điều hướng được vào giỏ hàng');\nconsole.log(`Đã quay lại giỏ hàng: ${cartUrl}`);",
               "err": {},
               "uuid": "35b0319a-4ad7-408c-9f78-c982fbca7e01",
@@ -1157,7 +1157,7 @@
             },
             {
               "title": "3. Kiểm tra số lượng sản phẩm đã được lưu là 1,000",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000) 3. Kiểm tra số lượng sản phẩm đã được lưu là 1,000",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 2 (Số lượng: 1,000) 3. Kiểm tra số lượng sản phẩm đã được lưu là 1,000",
               "timedOut": false,
               "duration": 1051,
               "state": "passed",
@@ -1165,7 +1165,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc018/3__ki_m_tra_s__l__ng_s_n_ph_m_______c_l_u_l__1_000_1777845954611.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/3__ki_m_tra_s__l__ng_s_n_ph_m_______c_l_u_l__1_000_1777845954611.png\"\n}",
               "code": "// Đợi trang giỏ hàng load đủ\nawait driver.wait(until.elementLocated(By.xpath(quantityInputXPath)), 15000, 'Giỏ hàng không hiển thị sản phẩm sau khi reload');\nawait driver.sleep(1000);\nconst inputs = await driver.findElements(By.xpath(quantityInputXPath));\nconst visibleInputs = [];\nfor (let input of inputs) {\n    try { if (await input.isDisplayed()) visibleInputs.push(input); } catch (e) { }\n}\nexpect(visibleInputs.length).to.be.at.least(1, 'Giỏ hàng trống sau khi quay lại - dữ liệu không được lưu');\nlet savedCount = 0;\nlet notSavedList = [];\nfor (let i = 0; i < visibleInputs.length; i++) {\n    const actualVal = parseInt(await visibleInputs[i].getAttribute('value'));\n    console.log(`Sản phẩm ${i + 1}: Giá trị lưu = ${actualVal}, Mong đợi = ${targetQty}`);\n    if (actualVal === targetQty) {\n        savedCount++;\n    } else {\n        notSavedList.push(`Sản phẩm ${i + 1}: lưu ${actualVal}, mong đợi ${targetQty}`);\n    }\n}\nif (notSavedList.length > 0) {\n    // Fail với thông tin chi tiết sản phẩm nào không được lưu\n    expect.fail(\n        `Giỏ hàng KHÔNG lưu đúng số lượng sau khi điều hướng đi và quay lại:\\n` +\n        notSavedList.join('\\n') +\n        `\\n(${savedCount}/${visibleInputs.length} sản phẩm được lưu đúng)`\n    );\n} else {\n    console.log(`✓ Tất cả ${visibleInputs.length} sản phẩm đều lưu đúng số lượng ${targetQty}`);\n}",
               "err": {},
               "uuid": "5933f5d0-0bdc-45b3-aeb8-15ad29c3a319",
@@ -1190,13 +1190,13 @@
         },
         {
           "uuid": "e8da7957-f437-43cf-a8c9-ea518d82ae2b",
-          "title": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)",
-          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc018.js",
-          "file": "\\tests\\testModule4\\tc018.js",
+          "title": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc17_gio_hang_luu_thay_doi_so_luong.test.js",
+          "file": "\\tests\\testModule4\\tc17_gio_hang_luu_thay_doi_so_luong.test.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)\"",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000) \"before all\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)\"",
+              "title": "\"before all\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)\"",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000) \"before all\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)\"",
               "timedOut": false,
               "duration": 38159,
               "state": null,
@@ -1215,8 +1215,8 @@
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)\"",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000) \"after all\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)\"",
+              "title": "\"after all\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)\"",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000) \"after all\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)\"",
               "timedOut": false,
               "duration": 71,
               "state": null,
@@ -1233,8 +1233,8 @@
               "skipped": false
             },
             {
-              "title": "\"after each\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)\"",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000) \"after each\" hook in \"TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)\"",
+              "title": "\"after each\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)\"",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000) \"after each\" hook in \"TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000)\"",
               "timedOut": false,
               "duration": 100,
               "state": null,
@@ -1243,7 +1243,7 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc018');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
+              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc017');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
               "err": {},
               "uuid": "713314c6-e78f-4ca2-af0b-0877543e236a",
               "parentUUID": "e8da7957-f437-43cf-a8c9-ea518d82ae2b",
@@ -1254,7 +1254,7 @@
           "tests": [
             {
               "title": "1. Thay đổi số lượng tất cả sản phẩm thành 100,000",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000) 1. Thay đổi số lượng tất cả sản phẩm thành 100,000",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000) 1. Thay đổi số lượng tất cả sản phẩm thành 100,000",
               "timedOut": false,
               "duration": 44654,
               "state": "passed",
@@ -1262,7 +1262,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc018/1__thay___i_s__l__ng_t_t_c__s_n_ph_m_th_nh_100_000_1777846037613.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/1__thay___i_s__l__ng_t_t_c__s_n_ph_m_th_nh_100_000_1777846037613.png\"\n}",
               "code": "// Bước 1: Click \"Đạ chọn tất cả\" để chọn tất cả sản phẩm trong giỏ\n// FPTShop dùng dynamic ID có dạng \"{random}-undefined\" cho checkbox \"Chọn tất cả\"\nconst selectAllXPath = \"//input[contains(@id, '-undefined')] | //label[contains(., 'Chọn tất cả')] | //span[contains(text(), 'Chọn tất cả')]\";\ntry {\n    const selectAllEl = await driver.wait(until.elementLocated(By.xpath(selectAllXPath)), 5000);\n    await driver.executeScript('arguments[0].scrollIntoView({ block: \"center\" });', selectAllEl);\n    await driver.executeScript('arguments[0].click();', selectAllEl);\n    await driver.sleep(1000);\n    console.log('Đã click \"Chọn tất cả\"');\n} catch (e) {\n    console.log('[WARN] Không tìm thấy nút \"Chọn tất cả\": ' + e.message);\n}\n// Bước 2: Lấy tất cả input số lượng trong giỏ hàng (sau khi chọn tất cả)\nawait driver.sleep(500);\nconst inputs = await driver.findElements(By.xpath(quantityInputXPath));\nconst visibleInputs = [];\nfor (let input of inputs) {\n    try { if (await input.isDisplayed()) visibleInputs.push(input); } catch (e) { }\n}\nexpect(visibleInputs.length).to.be.at.least(1, 'Không tìm thấy sản phẩm nào trong giỏ hàng');\nconsole.log(`Tìm thấy ${visibleInputs.length} sản phẩm trong giỏ hàng`);\n// Bước 3: Cập nhật số lượng từng sản phẩm một\nfor (let i = 0; i < visibleInputs.length; i++) {\n    const priceBefore = await getPrice();\n    const accepted = await setQuantityOnInput(visibleInputs[i], targetQty);\n    await waitForPriceChange(priceBefore, 15000);\n    console.log(`Sản phẩm ${i + 1}: đặt ${targetQty} -> UI ghi nhận ${accepted}`);\n    if (accepted !== String(targetQty)) {\n        console.log(`  [WARN] Sản phẩm ${i + 1} không nhận đúng giá trị (có thể bị giới hạn tồn kho)`);\n    }\n}\n// Xác nhận giá đã thay đổi\nconst finalPrice = await getPrice();\nexpect(finalPrice).to.not.equal('0đ', 'Giỏ hàng không hiển thị giá sau khi thay đổi số lượng');",
               "err": {},
               "uuid": "9b34c8f6-7485-46f4-8722-b787f23313a2",
@@ -1272,7 +1272,7 @@
             },
             {
               "title": "2. Về trang chủ rồi quay lại giỏ hàng",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000) 2. Về trang chủ rồi quay lại giỏ hàng",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000) 2. Về trang chủ rồi quay lại giỏ hàng",
               "timedOut": false,
               "duration": 6465,
               "state": "passed",
@@ -1280,7 +1280,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc018/2__v__trang_ch__r_i_quay_l_i_gi__h_ng_1777846044191.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc017/2__v__trang_ch__r_i_quay_l_i_gi__h_ng_1777846044191.png\"\n}",
               "code": "// Về trang chủ\nawait driver.get('https://fptshop.com.vn');\nawait driver.wait(until.elementLocated(By.tagName('body')), 10000);\nawait driver.sleep(2000);\nconst homeUrl = await driver.getCurrentUrl();\nexpect(homeUrl).to.include('fptshop.com.vn', 'Không điều hướng được về trang chủ');\nconsole.log(`Đã về trang chủ: ${homeUrl}`);\n// Quay lại giỏ hàng\nawait driver.get('https://fptshop.com.vn/gio-hang');\nawait driver.wait(until.urlContains('gio-hang'), 10000);\nawait driver.sleep(2000);\nconst cartUrl = await driver.getCurrentUrl();\nexpect(cartUrl).to.include('gio-hang', 'Không điều hướng được vào giỏ hàng');\nconsole.log(`Đã quay lại giỏ hàng: ${cartUrl}`);",
               "err": {},
               "uuid": "e50b531f-0612-46bd-8298-410849a5e360",
@@ -1290,7 +1290,7 @@
             },
             {
               "title": "3. Kiểm tra số lượng sản phẩm đã được lưu là 100,000",
-              "fullTitle": "TC018: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000) 3. Kiểm tra số lượng sản phẩm đã được lưu là 100,000",
+              "fullTitle": "TC017: Giỏ hàng lưu thay đổi số lượng - Iteration 3 (Số lượng: 100,000) 3. Kiểm tra số lượng sản phẩm đã được lưu là 100,000",
               "timedOut": false,
               "duration": 1042,
               "state": "failed",
@@ -1298,11 +1298,11 @@
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc018/3__ki_m_tra_s__l__ng_s_n_ph_m_______c_l_u_l__100_000_1777846045321.png\"\n}",
+              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc017/3__ki_m_tra_s__l__ng_s_n_ph_m_______c_l_u_l__100_000_1777846045321.png\"\n}",
               "code": "// Đợi trang giỏ hàng load đủ\nawait driver.wait(until.elementLocated(By.xpath(quantityInputXPath)), 15000, 'Giỏ hàng không hiển thị sản phẩm sau khi reload');\nawait driver.sleep(1000);\nconst inputs = await driver.findElements(By.xpath(quantityInputXPath));\nconst visibleInputs = [];\nfor (let input of inputs) {\n    try { if (await input.isDisplayed()) visibleInputs.push(input); } catch (e) { }\n}\nexpect(visibleInputs.length).to.be.at.least(1, 'Giỏ hàng trống sau khi quay lại - dữ liệu không được lưu');\nlet savedCount = 0;\nlet notSavedList = [];\nfor (let i = 0; i < visibleInputs.length; i++) {\n    const actualVal = parseInt(await visibleInputs[i].getAttribute('value'));\n    console.log(`Sản phẩm ${i + 1}: Giá trị lưu = ${actualVal}, Mong đợi = ${targetQty}`);\n    if (actualVal === targetQty) {\n        savedCount++;\n    } else {\n        notSavedList.push(`Sản phẩm ${i + 1}: lưu ${actualVal}, mong đợi ${targetQty}`);\n    }\n}\nif (notSavedList.length > 0) {\n    // Fail với thông tin chi tiết sản phẩm nào không được lưu\n    expect.fail(\n        `Giỏ hàng KHÔNG lưu đúng số lượng sau khi điều hướng đi và quay lại:\\n` +\n        notSavedList.join('\\n') +\n        `\\n(${savedCount}/${visibleInputs.length} sản phẩm được lưu đúng)`\n    );\n} else {\n    console.log(`✓ Tất cả ${visibleInputs.length} sản phẩm đều lưu đúng số lượng ${targetQty}`);\n}",
               "err": {
                 "message": "AssertionError: Giỏ hàng KHÔNG lưu đúng số lượng sau khi điều hướng đi và quay lại:\nSản phẩm 2: lưu 1, mong đợi 100000\nSản phẩm 3: lưu 1, mong đợi 100000\n(1/3 sản phẩm được lưu đúng)",
-                "estack": "AssertionError: Giỏ hàng KHÔNG lưu đúng số lượng sau khi điều hướng đi và quay lại:\nSản phẩm 2: lưu 1, mong đợi 100000\nSản phẩm 3: lưu 1, mong đợi 100000\n(1/3 sản phẩm được lưu đúng)\n    at Context.<anonymous> (tests\\testModule4\\tc018.js:268:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "estack": "AssertionError: Giỏ hàng KHÔNG lưu đúng số lượng sau khi điều hướng đi và quay lại:\nSản phẩm 2: lưu 1, mong đợi 100000\nSản phẩm 3: lưu 1, mong đợi 100000\n(1/3 sản phẩm được lưu đúng)\n    at Context.<anonymous> (tests\\testModule4\\tc17_gio_hang_luu_thay_doi_so_luong.test.js:268:24)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": null
               },
               "uuid": "89d2b913-8e77-441f-820d-60537cc2e47d",
@@ -1328,13 +1328,13 @@
         },
         {
           "uuid": "3758adfb-fe06-4798-9ef1-31a86e58996d",
-          "title": "TC022: Chọn dịch vụ đi kèm cùng sản phẩm",
-          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc019.js",
-          "file": "\\tests\\testModule4\\tc019.js",
+          "title": "TC018: Chọn dịch vụ đi kèm cùng sản phẩm",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc18_chon_dich_vu_di_kem.test.js",
+          "file": "\\tests\\testModule4\\tc18_chon_dich_vu_di_kem.test.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"TC022: Chọn dịch vụ đi kèm cùng sản phẩm\"",
-              "fullTitle": "TC022: Chọn dịch vụ đi kèm cùng sản phẩm \"before all\" hook in \"TC022: Chọn dịch vụ đi kèm cùng sản phẩm\"",
+              "title": "\"before all\" hook in \"TC018: Chọn dịch vụ đi kèm cùng sản phẩm\"",
+              "fullTitle": "TC018: Chọn dịch vụ đi kèm cùng sản phẩm \"before all\" hook in \"TC018: Chọn dịch vụ đi kèm cùng sản phẩm\"",
               "timedOut": false,
               "duration": 16612,
               "state": null,
@@ -1353,8 +1353,8 @@
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"TC022: Chọn dịch vụ đi kèm cùng sản phẩm\"",
-              "fullTitle": "TC022: Chọn dịch vụ đi kèm cùng sản phẩm \"after all\" hook in \"TC022: Chọn dịch vụ đi kèm cùng sản phẩm\"",
+              "title": "\"after all\" hook in \"TC018: Chọn dịch vụ đi kèm cùng sản phẩm\"",
+              "fullTitle": "TC018: Chọn dịch vụ đi kèm cùng sản phẩm \"after all\" hook in \"TC018: Chọn dịch vụ đi kèm cùng sản phẩm\"",
               "timedOut": false,
               "duration": 64,
               "state": null,
@@ -1371,8 +1371,8 @@
               "skipped": false
             },
             {
-              "title": "\"after each\" hook in \"TC022: Chọn dịch vụ đi kèm cùng sản phẩm\"",
-              "fullTitle": "TC022: Chọn dịch vụ đi kèm cùng sản phẩm \"after each\" hook in \"TC022: Chọn dịch vụ đi kèm cùng sản phẩm\"",
+              "title": "\"after each\" hook in \"TC018: Chọn dịch vụ đi kèm cùng sản phẩm\"",
+              "fullTitle": "TC018: Chọn dịch vụ đi kèm cùng sản phẩm \"after each\" hook in \"TC018: Chọn dịch vụ đi kèm cùng sản phẩm\"",
               "timedOut": false,
               "duration": 91,
               "state": null,
@@ -1381,7 +1381,7 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc019');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
+              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc018');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
               "err": {},
               "uuid": "167fd8e6-bd25-4fe8-a6b6-4b54c3a3aaee",
               "parentUUID": "3758adfb-fe06-4798-9ef1-31a86e58996d",
@@ -1392,7 +1392,7 @@
           "tests": [
             {
               "title": "1. Bấm vào giỏ hàng và xác nhận có sản phẩm",
-              "fullTitle": "TC022: Chọn dịch vụ đi kèm cùng sản phẩm 1. Bấm vào giỏ hàng và xác nhận có sản phẩm",
+              "fullTitle": "TC018: Chọn dịch vụ đi kèm cùng sản phẩm 1. Bấm vào giỏ hàng và xác nhận có sản phẩm",
               "timedOut": false,
               "duration": 2,
               "state": "passed",
@@ -1400,7 +1400,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc019/1__b_m_v_o_gi__h_ng_v__x_c_nh_n_c__s_n_ph_m_1777846062106.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc018/1__b_m_v_o_gi__h_ng_v__x_c_nh_n_c__s_n_ph_m_1777846062106.png\"\n}",
               "code": "const url = await driver.getCurrentUrl();\nexpect(url).to.include('gio-hang', 'Không ở trang giỏ hàng');\nexpect(priceBefore).to.not.equal('0đ', 'Giỏ hàng trống hoặc không hiển thị giá');\nconsole.log(`Giỏ hàng hợp lệ, giá hiện tại: ${priceBefore}`);",
               "err": {},
               "uuid": "82ca4f9a-052e-4790-9576-9621ebf806ca",
@@ -1410,7 +1410,7 @@
             },
             {
               "title": "2. Chọn dịch vụ đi kèm (gói bảo hành / combo) và kiểm tra giá thay đổi",
-              "fullTitle": "TC022: Chọn dịch vụ đi kèm cùng sản phẩm 2. Chọn dịch vụ đi kèm (gói bảo hành / combo) và kiểm tra giá thay đổi",
+              "fullTitle": "TC018: Chọn dịch vụ đi kèm cùng sản phẩm 2. Chọn dịch vụ đi kèm (gói bảo hành / combo) và kiểm tra giá thay đổi",
               "timedOut": false,
               "duration": 8766,
               "state": "passed",
@@ -1418,7 +1418,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc019/2__ch_n_d_ch_v___i_k_m__g_i_b_o_h_nh___combo__v__ki_m_tra_gi__thay___i_1777846070983.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc018/2__ch_n_d_ch_v___i_k_m__g_i_b_o_h_nh___combo__v__ki_m_tra_gi__thay___i_1777846070983.png\"\n}",
               "code": "// Dịch vụ đi kèm trong FPTShop dùng input[type='radio'] với dynamic ID \"-undefined\"\n// Đây là pattern giống Chọn tất cả nhưng là radio (không phải checkbox)\nconst serviceXPaths = [\n    \"(//input[contains(@id, '-undefined') and @type='radio'])[1]\",\n    '/html/body/main/section/div[2]/div/div[1]/div/div[2]/div[2]/div[3]/div[2]/div[1]/div/input',\n    '/html/body/main/section/div[2]/div/div[1]/div/div[2]/div[2]/div[2]/div[4]/div[1]/div/input',\n];\nlet serviceEl = null;\nfor (const xp of serviceXPaths) {\n    try {\n        serviceEl = await driver.wait(until.elementLocated(By.xpath(xp)), 4000);\n        console.log(`Tìm thấy dịch vụ: ${xp.slice(0, 60)}...`);\n        break;\n    } catch (e) {}\n}\nexpect(serviceEl).to.not.equal(null, 'Không tìm thấy dịch vụ đi kèm trong giỏ hàng');\nawait driver.executeScript('arguments[0].scrollIntoView({ block: \"center\" });', serviceEl);\nawait driver.sleep(500);\n// Dùng native Selenium click + dispatch React events để toggle radio\nawait serviceEl.click();\nawait driver.executeScript(`\n    const input = arguments[0];\n    input.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));\n    input.dispatchEvent(new MouseEvent('mouseup',  { bubbles: true }));\n    input.dispatchEvent(new MouseEvent('click',    { bubbles: true }));\n    input.dispatchEvent(new Event('change', { bubbles: true }));\n`, serviceEl);\nconsole.log('Đã click và dispatch events cho dịch vụ đi kèm');\nawait driver.sleep(1500);\n// Giá phải thay đổi sau khi chọn dịch vụ\npriceAfter = await waitForPriceChange(priceBefore, 10000);\nconsole.log(`Giá trước: ${priceBefore} | Giá sau khi chọn dịch vụ: ${priceAfter}`);\nexpect(priceAfter).to.not.equal(priceBefore, 'Giá đơn hàng không thay đổi sau khi chọn dịch vụ đi kèm');",
               "err": {},
               "uuid": "aec9fd75-ea4e-4fbd-b13b-c794b24573c9",
@@ -1442,13 +1442,13 @@
         },
         {
           "uuid": "17f4e2a0-48dc-4e0b-8e50-ca11c5c23576",
-          "title": "TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)",
-          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc020.js",
-          "file": "\\tests\\testModule4\\tc020.js",
+          "title": "TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc19_dat_hang_huy_giao_dich.test.js",
+          "file": "\\tests\\testModule4\\tc19_dat_hang_huy_giao_dich.test.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
-              "fullTitle": "TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code) \"before all\" hook in \"TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
+              "title": "\"before all\" hook in \"TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
+              "fullTitle": "TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code) \"before all\" hook in \"TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
               "timedOut": false,
               "duration": 611,
               "state": null,
@@ -1467,8 +1467,8 @@
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
-              "fullTitle": "TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code) \"after all\" hook in \"TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
+              "title": "\"after all\" hook in \"TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
+              "fullTitle": "TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code) \"after all\" hook in \"TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
               "timedOut": false,
               "duration": 76,
               "state": null,
@@ -1485,8 +1485,8 @@
               "skipped": false
             },
             {
-              "title": "\"after each\" hook in \"TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
-              "fullTitle": "TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code) \"after each\" hook in \"TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
+              "title": "\"after each\" hook in \"TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
+              "fullTitle": "TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code) \"after each\" hook in \"TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
               "timedOut": false,
               "duration": 126,
               "state": null,
@@ -1495,7 +1495,7 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc020');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
+              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc019');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
               "err": {},
               "uuid": "4bb7434b-685d-4749-b342-4246e4ac5230",
               "parentUUID": "17f4e2a0-48dc-4e0b-8e50-ca11c5c23576",
@@ -1506,7 +1506,7 @@
           "tests": [
             {
               "title": "Đặt hàng bằng QR code và hủy giao dịch",
-              "fullTitle": "TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code) Đặt hàng bằng QR code và hủy giao dịch",
+              "fullTitle": "TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code) Đặt hàng bằng QR code và hủy giao dịch",
               "timedOut": false,
               "duration": 38828,
               "state": "passed",
@@ -1514,7 +1514,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc020/__t_h_ng_b_ng_qr_code_v__h_y_giao_d_ch_1777846110578.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc019/__t_h_ng_b_ng_qr_code_v__h_y_giao_d_ch_1777846110578.png\"\n}",
               "code": "// 1) Bấm vào giỏ hàng + chọn sản phẩm (thêm 1 sản phẩm vào giỏ)\nawait addProductToCart();\nconsole.log('Đã có sản phẩm trong giỏ hàng.');\n// 2) Tiến hành đặt hàng\nconst checkoutBtnXPath = \"//button[contains(., 'Xác nhận đơn')] | //button[contains(., 'Tiến hành đặt hàng')] | //button[contains(., 'Đặt hàng')]\";\nawait clickVisible(checkoutBtnXPath, 15000, 'Tiến hành đặt hàng');\nawait driver.sleep(2000);\n// 3) Điền thông tin cá nhân (nếu có form)\nconst filledName = await setInputIfPresent(\n    \"//*[@id='order-form']//input[@placeholder='Nhập họ tên'] | //*[@id='order-form']//input[contains(@placeholder,'Họ và tên')] | //*[@id='order-form']//input[contains(@placeholder,'họ và tên')] | //*[@id='order-form']//input[@id='name'] | //*[@id='order-form']//input[contains(@name,'name')] | //input[@placeholder='Nhập họ tên'] | //input[contains(@placeholder,'Họ và tên')] | //input[contains(@placeholder,'họ và tên')] | //input[@id='name'] | //input[contains(@name,'name')]\",\n    'Automation Test'\n);\nconst phoneValue = `093${randomDigits(7)}`;\nconst phoneXPath = \"//input[@placeholder='Số điện thoại' or contains(@placeholder,'Số điện thoại') or contains(@placeholder,'số điện thoại') or contains(@placeholder,'điện thoại') or @id='phone' or contains(@name,'phone') or @type='tel' or @inputmode='numeric' or @inputmode='tel'][not(ancestor::*[@id='address-form']) and not(ancestor::div[contains(@class,'fixed') and contains(@class,'z-')]) and not(contains(@placeholder,'Tìm') or contains(@placeholder,'tìm') or contains(@placeholder,'shop') or contains(@placeholder,'Shop'))] | //*[self::label or self::span or self::p][contains(normalize-space(.), 'Số điện thoại')]/following::input[1]\";\nconst filledPhone = await setInputRequired(phoneXPath, phoneValue, 'Số điện thoại', 9);\nconst fakeEmail = `automation.${Date.now()}@example.com`;\nconst filledEmail = await setInputIfPresent(\n    \"//input[@type='email' or @id='email' or contains(@name,'email') or contains(@placeholder,'Email') or contains(@placeholder,'email')][not(ancestor::div[contains(@class,'fixed') and contains(@class,'z-')])]\",\n    fakeEmail\n);\nif (filledName || filledPhone) {\n    console.log('Đã điền thông tin cá nhân (nếu hệ thống yêu cầu).');\n    await driver.sleep(800);\n}\nif (filledEmail) {\n    console.log(`Đã điền email: ${fakeEmail}`);\n    await driver.sleep(400);\n}\n// 4) Chọn Nhận hàng tại cửa hàng + chọn cửa hàng\nconst atStoreXPath = \"//label[contains(., 'Nhận tại cửa hàng')] | //span[contains(., 'Nhận tại cửa hàng')]\";\nawait clickVisible(atStoreXPath, 15000, 'Nhận tại cửa hàng');\nawait driver.sleep(1200);\n// Chọn cửa hàng từ address-form (tránh click nhầm dropdown khác như quà tặng)\nconst addressFormReady = await waitForAnyLocated([\"//*[@id='address-form']\"], 15000);\nexpect(addressFormReady, 'Không thấy form chọn cửa hàng (address-form) sau khi chọn \"Nhận tại cửa hàng\"').to.not.equal(null);\nconst pickedStore = await pickRandomStoreFromAddressForm(25000);\nconsole.log(`Chọn cửa hàng: ${pickedStore}`);\nexpect(pickedStore, 'Không chọn được shop có hàng gần nhất').to.equal(true);\n// 5) Chọn Chuyển khoản ngân hàng (QR code) (best-effort)\nconst qrSelected = await selectQRPayment(20000);\nconsole.log(`QR selected: ${qrSelected}`);\nawait driver.sleep(500);\n// Sau khi chọn QR, bấm nút bước tiếp theo (user-provided XPath)\nconst nextStepXPath = \"/html/body/main/section/div/div[2]/div[2]/div/div/button\";\nconst nextBtn = await findFirstVisible(nextStepXPath);\nif (nextBtn) {\n    let btnText = '';\n    try { btnText = (await nextBtn.getText()).trim(); } catch (e) { }\n    // Only treat it as a separate \"next\" if it isn't the final \"Đặt hàng/Hoàn tất\" button.\n    const looksLikeFinal = /đặt hàng|hoàn tất|thanh toán/i.test(btnText);\n    if (!looksLikeFinal) {\n        try { await driver.executeScript('arguments[0].scrollIntoView({block:\"center\"});', nextBtn); } catch (e) { }\n        try { await driver.executeScript('arguments[0].click();', nextBtn); } catch (e) { await nextBtn.click(); }\n        await driver.sleep(1200);\n        // Some re-renders revert payment method; try to enforce QR again (best-effort)\n        await selectQRPayment(15000);\n        await driver.sleep(500);\n    }\n}\n// 6) Bấm Hoàn tất đặt hàng / Thanh toán (use exact user-provided Dat hang XPath first)\nconst finishBtnXPath = `${DAT_HANG_XPATH} | //button[contains(., 'Hoàn tất đặt hàng')] | //button[contains(., 'THANH TOÁN')] | //button[contains(., 'Thanh toán')] | //button[contains(., 'Đặt hàng')]`;\nconst originalHandle = await driver.getWindowHandle();\nconst beforePlaceUrl = await driver.getCurrentUrl();\nawait acceptTermsIfPresent();\n// Prefer clicking the exact checkout button the user provided\nconst exactDatHang = await findFirstVisible(DAT_HANG_XPATH);\nif (exactDatHang) {\n    try { await driver.executeScript('arguments[0].scrollIntoView({block:\"center\"});', exactDatHang); } catch (e) { }\n    try {\n        await exactDatHang.click();\n    } catch (e1) {\n        try {\n            await driver.actions({ async: true }).move({ origin: exactDatHang }).click().perform();\n        } catch (e2) {\n            await driver.executeScript('arguments[0].click();', exactDatHang);\n        }\n    }\n} else {\n    await clickVisible(finishBtnXPath, 20000, 'Đặt hàng');\n}\nconsole.log('Đã nhấn Hoàn tất đặt hàng. Chờ điều hướng sang cổng thanh toán...');\nconst progressed = await waitForGatewayAfterPlaceOrder(beforePlaceUrl, 90000);\nexpect(progressed, 'Không thấy trang/QR thanh toán sau khi đặt hàng (có thể bị validation hoặc cần đăng nhập)').to.not.equal(null);\nconst handles = await driver.getAllWindowHandles();\nif (handles.length > 1) {\n    const next = handles.find(h => h !== originalHandle);\n    if (next) {\n        await driver.switchTo().window(next);\n        await driver.sleep(1000);\n    }\n}\nconst gatewayUrl = await driver.getCurrentUrl();\nexpect(gatewayUrl.includes('gio-hang')).to.equal(false, 'Vẫn ở trang giỏ hàng sau khi đặt hàng (có thể click chưa trúng nút, bị validation, hoặc chưa điều hướng sang cổng thanh toán)');\n// Give the gateway page time to finish loading (user observed ~20s)\nconst okGateway = await waitForGatewaySignal(20000);\nexpect(okGateway, 'Đã đặt hàng nhưng không thấy UI QR/cổng thanh toán sau 20s').to.equal(true);\nconsole.log('Trang hiện tại sau đặt hàng (kỳ vọng cổng/QR): ' + gatewayUrl);\n// 7) Hủy giao dịch\nconst canceled = await tryCancelOnGateway();\nconsole.log(canceled ? 'Đã click nút Hủy giao dịch.' : '[WARN] Không tìm thấy nút Hủy trên cổng thanh toán, sẽ kiểm tra redirect/message.');\n// After cancelling, wait for either a redirect away from the QR page or for failure/unpaid texts to appear.\nif (canceled) {\n    const beforeCancelUrl = await driver.getCurrentUrl();\n    await driver.wait(async () => {\n        const url = await driver.getCurrentUrl();\n        if (url !== beforeCancelUrl) return true;\n        const failText = await findFirstVisible(\"//*[contains(., 'thất bại') or contains(., 'chưa thanh toán') or contains(., 'không thành công')]\");\n        return !!failText;\n    }, 60000);\n    await driver.sleep(1500);\n}\nconst afterUrl = await driver.getCurrentUrl();\nconsole.log('URL sau khi hủy: ' + afterUrl);\n// Verify: Đơn ở trạng thái xử lý + thanh toán thất bại / chưa thanh toán\nawait assertPaymentFailedOrUnpaid();",
               "err": {},
               "uuid": "1fe26a3f-c735-423d-8bab-37938a408f14",
@@ -1537,13 +1537,13 @@
         },
         {
           "uuid": "77b8a96a-ea4b-4c1a-9269-6f7171fe154c",
-          "title": "TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)",
-          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc021.js",
-          "file": "\\tests\\testModule4\\tc021.js",
+          "title": "TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc20_dat_hang_qr_code_va_doi.test.js",
+          "file": "\\tests\\testModule4\\tc20_dat_hang_qr_code_va_doi.test.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
-              "fullTitle": "TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch) \"before all\" hook in \"TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
+              "title": "\"before all\" hook in \"TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
+              "fullTitle": "TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch) \"before all\" hook in \"TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
               "timedOut": false,
               "duration": 613,
               "state": null,
@@ -1562,8 +1562,8 @@
           ],
           "afterHooks": [
             {
-              "title": "\"after all\" hook in \"TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
-              "fullTitle": "TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch) \"after all\" hook in \"TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
+              "title": "\"after all\" hook in \"TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
+              "fullTitle": "TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch) \"after all\" hook in \"TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
               "timedOut": false,
               "duration": 54,
               "state": null,
@@ -1580,8 +1580,8 @@
               "skipped": false
             },
             {
-              "title": "\"after each\" hook in \"TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
-              "fullTitle": "TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch) \"after each\" hook in \"TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
+              "title": "\"after each\" hook in \"TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
+              "fullTitle": "TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch) \"after each\" hook in \"TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
               "timedOut": false,
               "duration": 113,
               "state": null,
@@ -1590,7 +1590,7 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc021');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
+              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc020');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
               "err": {},
               "uuid": "97f3a365-0ea3-4388-96b1-bdb24ace5d96",
               "parentUUID": "77b8a96a-ea4b-4c1a-9269-6f7171fe154c",
@@ -1601,7 +1601,7 @@
           "tests": [
             {
               "title": "Đặt hàng QR code và đợi 15 phút để kiểm tra hết hạn",
-              "fullTitle": "TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch) Đặt hàng QR code và đợi 15 phút để kiểm tra hết hạn",
+              "fullTitle": "TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch) Đặt hàng QR code và đợi 15 phút để kiểm tra hết hạn",
               "timedOut": false,
               "duration": 966699,
               "state": "passed",
@@ -1609,7 +1609,7 @@
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc021/__t_h_ng_qr_code_v____i_15_ph_t____ki_m_tra_h_t_h_n_1777847078094.png\"\n}",
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc020/__t_h_ng_qr_code_v____i_15_ph_t____ki_m_tra_h_t_h_n_1777847078094.png\"\n}",
               "code": "// 1) Bấm vào giỏ hàng + chọn sản phẩm (thêm 1 sản phẩm vào giỏ)\nawait addProductToCart();\nconsole.log('Đã có sản phẩm trong giỏ hàng.');\n// 2) Tiến hành đặt hàng\nconst checkoutBtnXPath = \"//button[contains(., 'Xác nhận đơn')] | //button[contains(., 'Tiến hành đặt hàng')] | //button[contains(., 'Đặt hàng')]\";\nawait clickVisible(checkoutBtnXPath, 15000, 'Tiến hành đặt hàng');\nawait driver.sleep(2000);\n// 3) Điền thông tin cá nhân (nếu có form)\nconst filledName = await setInputIfPresent(\n    \"//*[@id='order-form']//input[@placeholder='Nhập họ tên'] | //*[@id='order-form']//input[contains(@placeholder,'Họ và tên')] | //*[@id='order-form']//input[contains(@placeholder,'họ và tên')] | //*[@id='order-form']//input[@id='name'] | //*[@id='order-form']//input[contains(@name,'name')] | //input[@placeholder='Nhập họ tên'] | //input[contains(@placeholder,'Họ và tên')] | //input[contains(@placeholder,'họ và tên')] | //input[@id='name'] | //input[contains(@name,'name')]\",\n    'Automation Test'\n);\nconst phoneValue = `093${randomDigits(7)}`;\nconst phoneXPath = \"//input[@placeholder='Số điện thoại' or contains(@placeholder,'Số điện thoại') or contains(@placeholder,'số điện thoại') or contains(@placeholder,'điện thoại') or @id='phone' or contains(@name,'phone') or @type='tel' or @inputmode='numeric' or @inputmode='tel'][not(ancestor::*[@id='address-form']) and not(ancestor::div[contains(@class,'fixed') and contains(@class,'z-')]) and not(contains(@placeholder,'Tìm') or contains(@placeholder,'tìm') or contains(@placeholder,'shop') or contains(@placeholder,'Shop'))] | //*[self::label or self::span or self::p][contains(normalize-space(.), 'Số điện thoại')]/following::input[1]\";\nconst filledPhone = await setInputRequired(phoneXPath, phoneValue, 'Số điện thoại', 9);\nconst fakeEmail = `automation.${Date.now()}@example.com`;\nconst filledEmail = await setInputIfPresent(\n    \"//input[@type='email' or @id='email' or contains(@name,'email') or contains(@placeholder,'Email') or contains(@placeholder,'email')][not(ancestor::div[contains(@class,'fixed') and contains(@class,'z-')])]\",\n    fakeEmail\n);\nif (filledName || filledPhone) {\n    console.log('Đã điền thông tin cá nhân (nếu hệ thống yêu cầu).');\n    await driver.sleep(800);\n}\nif (filledEmail) {\n    console.log(`Đã điền email: ${fakeEmail}`);\n    await driver.sleep(400);\n}\n// 4) Chọn Nhận hàng tại cửa hàng + chọn cửa hàng\nconst atStoreXPath = \"//label[contains(., 'Nhận tại cửa hàng')] | //span[contains(., 'Nhận tại cửa hàng')]\";\nawait clickVisible(atStoreXPath, 15000, 'Nhận tại cửa hàng');\nawait driver.sleep(1200);\n// Chọn cửa hàng từ address-form (tránh click nhầm dropdown khác như quà tặng)\nconst addressFormReady = await waitForAnyLocated([\"//*[@id='address-form']\"], 15000);\nexpect(addressFormReady, 'Không thấy form chọn cửa hàng (address-form) sau khi chọn \"Nhận tại cửa hàng\"').to.not.equal(null);\nconst pickedStore = await pickRandomStoreFromAddressForm(25000);\nconsole.log(`Chọn cửa hàng: ${pickedStore}`);\nexpect(pickedStore, 'Không chọn được shop có hàng gần nhất').to.equal(true);\n// 5) Chọn Chuyển khoản ngân hàng (QR code) (best-effort)\nconst qrSelected = await selectQRPayment(20000);\nconsole.log(`QR selected: ${qrSelected}`);\nawait driver.sleep(500);\n// Sau khi chọn QR, bấm nút bước tiếp theo (user-provided XPath)\nconst nextStepXPath = \"/html/body/main/section/div/div[2]/div[2]/div/div/button\";\nconst nextBtn = await findFirstVisible(nextStepXPath);\nif (nextBtn) {\n    let btnText = '';\n    try { btnText = (await nextBtn.getText()).trim(); } catch (e) { }\n    // Only treat it as a separate \"next\" if it isn't the final \"Đặt hàng/Hoàn tất\" button.\n    const looksLikeFinal = /đặt hàng|hoàn tất|thanh toán/i.test(btnText);\n    if (!looksLikeFinal) {\n        try { await driver.executeScript('arguments[0].scrollIntoView({block:\"center\"});', nextBtn); } catch (e) { }\n        try { await driver.executeScript('arguments[0].click();', nextBtn); } catch (e) { await nextBtn.click(); }\n        await driver.sleep(1200);\n        // Some re-renders revert payment method; try to enforce QR again (best-effort)\n        await selectQRPayment(15000);\n        await driver.sleep(500);\n    }\n}\n// 6) Bấm Hoàn tất đặt hàng / Thanh toán (use exact user-provided Dat hang XPath first)\nconst finishBtnXPath = `${DAT_HANG_XPATH} | //button[contains(., 'Hoàn tất đặt hàng')] | //button[contains(., 'THANH TOÁN')] | //button[contains(., 'Thanh toán')] | //button[contains(., 'Đặt hàng')]`;\nconst originalHandle = await driver.getWindowHandle();\nconst beforePlaceUrl = await driver.getCurrentUrl();\nawait acceptTermsIfPresent();\n// Prefer clicking the exact checkout button the user provided\nconst exactDatHang = await findFirstVisible(DAT_HANG_XPATH);\nif (exactDatHang) {\n    try { await driver.executeScript('arguments[0].scrollIntoView({block:\"center\"});', exactDatHang); } catch (e) { }\n    try {\n        await exactDatHang.click();\n    } catch (e1) {\n        try {\n            await driver.actions({ async: true }).move({ origin: exactDatHang }).click().perform();\n        } catch (e2) {\n            await driver.executeScript('arguments[0].click();', exactDatHang);\n        }\n    }\n} else {\n    await clickVisible(finishBtnXPath, 20000, 'Đặt hàng');\n}\nconsole.log('Đã nhấn Hoàn tất đặt hàng. Chờ điều hướng sang cổng thanh toán...');\nconst progressed = await waitForGatewayAfterPlaceOrder(beforePlaceUrl, 90000);\nexpect(progressed, 'Không thấy trang/QR thanh toán sau khi đặt hàng (có thể bị validation hoặc cần đăng nhập)').to.not.equal(null);\nconsole.log('Đã vào trang thanh toán. Bắt đầu đợi 15 phút (900 giây)...');\nfor (let i = 1; i <= 15; i++) {\n    await driver.sleep(60000);\n    console.log(`Đã đợi được ${i} phút...`);\n}\nconsole.log('Đã hết 15 phút. Kiểm tra thông báo hết hạn...');\n// Xử lý thông báo hết hạn\nconst timeoutAlertXPath = \"/html/body/div[6]/div[1]/div[3]/div/button[1]\";\ntry {\n    await driver.wait(until.elementLocated(By.xpath(timeoutAlertXPath)), 30000);\n    const cancelBtn = await findFirstVisible(timeoutAlertXPath);\n    if (cancelBtn) {\n        console.log('Đã thấy thông báo hết hạn. Nhấn \"Hủy bỏ\"...');\n        await driver.executeScript('arguments[0].click();', cancelBtn);\n        await driver.sleep(2000);\n    }\n} catch (e) {\n    console.log('Không tìm thấy thông báo hết hạn theo XPath.');\n}\nawait driver.navigate().refresh();\nawait driver.sleep(3000);\nconst urlFinal = await driver.getCurrentUrl();\nconsole.log('URL cuối cùng: ' + urlFinal);",
               "err": {},
               "uuid": "cb8ada85-74b7-4e12-8b68-d2a7d569bd7f",

@@ -5,7 +5,7 @@ const { takeScreenshot } = require('../../function/screenshotHelper');
 
 const totalPriceXPath = "//*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'cần thanh toán')]/following-sibling::* | //strong[contains(text(), 'đ') or contains(text(), '₫')] | //span[contains(text(), 'đ') and contains(@class, 'text-red')]";
 
-describe('TC022: Chọn dịch vụ đi kèm cùng sản phẩm', function () {
+describe('TC018: Chọn dịch vụ đi kèm cùng sản phẩm', function () {
     this.timeout(180000);
     let driver;
     let priceBefore = '0đ';
@@ -86,7 +86,7 @@ describe('TC022: Chọn dịch vụ đi kèm cùng sản phẩm', function () {
     });
 
     afterEach(async function () {
-        const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc019');
+        const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc018');
         addContext(this, {
             title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',
             value: `../../${screenshotPath}`

@@ -12,7 +12,7 @@ const testProducts = [
 ];
 
 testProducts.forEach((product, index) => {
-    describe(`TC017: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration ${index + 1} (${product.name})`, function () {
+    describe(`TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration ${index + 1} (${product.name})`, function () {
         this.timeout(150000); // Cài đặt timeout cho toàn bộ suite
         let driver;
 
@@ -43,7 +43,7 @@ testProducts.forEach((product, index) => {
 
         afterEach(async function () {
             // Chụp màn hình cho mỗi step (cho cả pass và fail để lấy bằng chứng)
-            const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc017');
+            const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc016');
             addContext(this, {
                 title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',
                 value: `../../${screenshotPath}`

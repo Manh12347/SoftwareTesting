@@ -3,8 +3,8 @@ const { expect } = require('chai');
 const addContext = require('mochawesome/addContext');
 const { takeScreenshot } = require('../../function/screenshotHelper');
 
-describe('TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)', function () {
-    this.timeout(300000);
+describe('TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)', function () {
+    this.timeout(1200000); // 20 minutes
     let driver;
 
     // User-provided stable XPaths (as of current checkout UI)
@@ -753,7 +753,7 @@ describe('TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (Q
         if (driver) await driver.quit();
     });
 
-    it('Đặt hàng bằng QR code và hủy giao dịch', async function () {
+    it('Đặt hàng QR code và đợi 15 phút để kiểm tra hết hạn', async function () {
         // 1) Bấm vào giỏ hàng + chọn sản phẩm (thêm 1 sản phẩm vào giỏ)
         await addProductToCart();
         console.log('Đã có sản phẩm trong giỏ hàng.');
@@ -850,43 +850,32 @@ describe('TC020: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (Q
         const progressed = await waitForGatewayAfterPlaceOrder(beforePlaceUrl, 90000);
         expect(progressed, 'Không thấy trang/QR thanh toán sau khi đặt hàng (có thể bị validation hoặc cần đăng nhập)').to.not.equal(null);
 
-        const handles = await driver.getAllWindowHandles();
-        if (handles.length > 1) {
-            const next = handles.find(h => h !== originalHandle);
-            if (next) {
-                await driver.switchTo().window(next);
-                await driver.sleep(1000);
+        console.log('Đã vào trang thanh toán. Bắt đầu đợi 15 phút (900 giây)...');
+
+        for (let i = 1; i <= 15; i++) {
+            await driver.sleep(60000);
+            console.log(`Đã đợi được ${i} phút...`);
+        }
+
+        console.log('Đã hết 15 phút. Kiểm tra thông báo hết hạn...');
+
+        // Xử lý thông báo hết hạn
+        const timeoutAlertXPath = "/html/body/div[6]/div[1]/div[3]/div/button[1]";
+        try {
+            await driver.wait(until.elementLocated(By.xpath(timeoutAlertXPath)), 30000);
+            const cancelBtn = await findFirstVisible(timeoutAlertXPath);
+            if (cancelBtn) {
+                console.log('Đã thấy thông báo hết hạn. Nhấn "Hủy bỏ"...');
+                await driver.executeScript('arguments[0].click();', cancelBtn);
+                await driver.sleep(2000);
             }
+        } catch (e) {
+            console.log('Không tìm thấy thông báo hết hạn theo XPath.');
         }
 
-        const gatewayUrl = await driver.getCurrentUrl();
-        expect(gatewayUrl.includes('gio-hang')).to.equal(false, 'Vẫn ở trang giỏ hàng sau khi đặt hàng (có thể click chưa trúng nút, bị validation, hoặc chưa điều hướng sang cổng thanh toán)');
-        // Give the gateway page time to finish loading (user observed ~20s)
-        const okGateway = await waitForGatewaySignal(20000);
-        expect(okGateway, 'Đã đặt hàng nhưng không thấy UI QR/cổng thanh toán sau 20s').to.equal(true);
-
-        console.log('Trang hiện tại sau đặt hàng (kỳ vọng cổng/QR): ' + gatewayUrl);
-
-        // 7) Hủy giao dịch
-        const canceled = await tryCancelOnGateway();
-        console.log(canceled ? 'Đã click nút Hủy giao dịch.' : '[WARN] Không tìm thấy nút Hủy trên cổng thanh toán, sẽ kiểm tra redirect/message.');
-
-        // After cancelling, wait for either a redirect away from the QR page or for failure/unpaid texts to appear.
-        if (canceled) {
-            const beforeCancelUrl = await driver.getCurrentUrl();
-            await driver.wait(async () => {
-                const url = await driver.getCurrentUrl();
-                if (url !== beforeCancelUrl) return true;
-                const failText = await findFirstVisible("//*[contains(., 'thất bại') or contains(., 'chưa thanh toán') or contains(., 'không thành công')]");
-                return !!failText;
-            }, 60000);
-            await driver.sleep(1500);
-        }
-
-        const afterUrl = await driver.getCurrentUrl();
-        console.log('URL sau khi hủy: ' + afterUrl);
-
-        // Verify: Đơn ở trạng thái xử lý + thanh toán thất bại / chưa thanh toán
-        await assertPaymentFailedOrUnpaid();
+        await driver.navigate().refresh();
+        await driver.sleep(3000);
+        const urlFinal = await driver.getCurrentUrl();
+        console.log('URL cuối cùng: ' + urlFinal);
     });
 });

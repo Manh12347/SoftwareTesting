@@ -17,7 +17,7 @@ const quantityInputXPath = "//input[@min='1'] | //input[contains(@class, 'text-c
 const totalPriceXPath = "//*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'cần thanh toán')]/following-sibling::* | //div[contains(@class, 'cart-summary')]//strong | //strong[contains(text(), 'đ') or contains(text(), '₫')] | //span[contains(text(), 'đ') and contains(@class, 'text-red')]";
 
 quantityIterations.forEach((targetQty, iterIdx) => {
-    describe(`TC018: Giỏ hàng lưu thay đổi số lượng - Iteration ${iterIdx + 1} (Số lượng: ${targetQty.toLocaleString()})`, function () {
+    describe(`TC017: Giỏ hàng lưu thay đổi số lượng - Iteration ${iterIdx + 1} (Số lượng: ${targetQty.toLocaleString()})`, function () {
         this.timeout(300000);
         let driver;
 
@@ -162,7 +162,7 @@ quantityIterations.forEach((targetQty, iterIdx) => {
         });
 
         afterEach(async function () {
-            const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc018');
+            const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc017');
             addContext(this, {
                 title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',
                 value: `../../${screenshotPath}`
