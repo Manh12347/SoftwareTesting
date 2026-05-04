@@ -29,5 +29,49 @@
       "keyword": "",
       "description": "Từ khóa rỗng - không tìm kiếm được"
     }
-  ]
+  ],
+  "module1": {
+    "url": "https://fptshop.com.vn/",
+    "selectors": {
+      "loginBtn": "//button[@title='Đăng ký / Đăng nhập']",
+      "escBtn": "//a[@class='primary-button']",
+      "googleBtn": "//img[@src='images/google.svg']",
+      "accountBtn": "//body/div[@class='X9monf']/div[@class='S7xv8 LZgQXe']/div[contains(@class,'TcuCfd NQ5OL')]/div[@id='yDmH0d']/c-wiz[@class='A77ntc']/main[@class='Svhjgc']/div[@class='UXFQgc']/div[@class='qWK5J']/div[@class='xKcayf']/div[@class='AcKKx']/span/section[contains(@class,'Em2Ord')]/div[@class='yTaH4c']/div/div[@class='BFymn']/div[@class='r4WGQb']/ul[@class='Dl08I']/li[1]/div[1]",
+      "profileBtn": "//*[name()='path' and contains(@d,'M22')]",
+      "logOutBtn": "//span[@class='flex cursor-pointer items-center pl-0 text-textOnWhitePrimary transition-all duration-[0.3s] ease-[ease] b2-regular hover:pl-1']",
+      "confirmBtn": "//button[@class='flex items-center justify-center text-base transition-all duration-300 ease-out relative font-medium border border-solid border-iconOnSpecialBrand bg-white text-textOnWhiteBrand hover:bg-bgSemantiRedDefault square-very-large-debug rounded-2 px-4 py-0 [&_small]:b2-regular h-[48px] flex-1 order-2 b1-medium']",
+      "generalBtn": "//a[contains(text(),'Tổng quan')]",
+      "profileDetailBtn": "//span[@class='text-textOnWhiteHyperLink f1-medium pc:b2-medium']",
+      "profileNameInput": "//input[@id=':r0:']",
+      "profileEmailInput": "//input[@id=':r8:']",
+      "profilePhoneInput": "//input[@id=':r1:']",
+      "genderMaleLabel": "//label[@for='radioButtonId-0.77674891307255990']",
+      "genderEmailLabel": "//label[@for='radioButtonId-0.52273193788938441']",
+      "dobDayBtn": "//button[@id='radix-:r2:']",
+      "dobMonthBtn": "//button[@id='radix-:r4:']",
+      "dobYearBtn": "//button[@id='radix-:r6:']",
+      "saveProfileBtn": "//button[@class='flex items-center justify-center text-base text-white transition-all duration-300 ease-out relative font-medium bg-bgSpecialRedDefault hover:bg-bgSpecialRedHover [&_svg]:m-0 h-11 p-2.5 mb-5 mt-3 w-full rounded-[8px]']"
+    },
+    "profileCheck": {
+      "name": "Quy Khach",
+      "email": "socola20050@gmail.com",
+      "phone": "0352335505",
+      "DateOfBirth": "1",
+      "MonthOfBirth": "1",
+      "YearOfBirth": "1901",
+      "gender": "Nam"
+    },
+    "profileChange": {
+      "name": "Khoa"
+    },
+    "profileChange1": {
+      "name": "Lê Ngọc Đăng Khoa",
+      "email": "socola200500@gmail.com",
+      "phone": "0352335504",
+      "DateOfBirth": "1",
+      "MonthOfBirth": "Tháng 10",
+      "YearOfBirth": "1901",
+      "gender": "Nữ"
+    }
+  }
 }
