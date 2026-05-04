@@ -3,6 +3,7 @@ const assert = require('assert');
 const addContext = require('mochawesome/addContext');
 const { takeScreenshot } = require('../../function/screenshotHelper');
 const { closeCookieBanner } = require('../../function/module3/filterHelper');
+const data = require('../../data/data.json');
 
 describe('TC008: Kiểm tra lọc theo hãng sản xuất', function () {
     this.timeout(60000);
@@ -17,21 +18,21 @@ describe('TC008: Kiểm tra lọc theo hãng sản xuất', function () {
         if (driver) await driver.quit();
     });
 
-    it('TC008 - Ấn chọn logo hãng "OPPO"', async function () {
-        await driver.get('https://fptshop.com.vn/dien-thoai');
+    it(`TC008 - Ấn chọn logo hãng "${data.brandName}"`, async function () {
+        await driver.get(data.urlDienThoai);
 
-        const oppoLogo = await driver.wait(
-            until.elementLocated(By.xpath("//img[@alt='OPPO']")),
+        const brandLogo = await driver.wait(
+            until.elementLocated(By.xpath(`//img[@alt='${data.brandName}']`)),
             10000
         );
-        await driver.executeScript("arguments[0].scrollIntoView({ block: 'center' });", oppoLogo);
-        await driver.executeScript("arguments[0].style.border='3px solid red'", oppoLogo);
-        await driver.executeScript("arguments[0].click();", oppoLogo);
+        await driver.executeScript("arguments[0].scrollIntoView({ block: 'center' });", brandLogo);
+        await driver.executeScript("arguments[0].style.border='3px solid red'", brandLogo);
+        await driver.executeScript("arguments[0].click();", brandLogo);
 
         await driver.wait(until.elementLocated(By.xpath("//h3")), 10000);
 
-        const bodyText = await driver.findElement(By.tagName('body')).getText();
-        assert.ok(bodyText.includes('OPPO'), 'Sản phẩm OPPO không hiển thị sau khi lọc.');
+        const bodyText = await driver.findElement(By.css('body')).getText();
+        assert.ok(bodyText.includes(data.brandName), `Sản phẩm ${data.brandName} không hiển thị sau khi lọc.`);
 
         await closeCookieBanner(driver);
         let filename = await takeScreenshot(driver, 'TC008');

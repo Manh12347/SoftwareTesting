@@ -3,6 +3,7 @@ const assert = require('assert');
 const addContext = require('mochawesome/addContext');
 const { takeScreenshot } = require('../../function/screenshotHelper');
 const { closeCookieBanner } = require('../../function/module3/filterHelper');
+const data = require('../../data/data.json');
 
 describe('TC007: Kiểm tra lọc sản phẩm theo danh mục', function () {
     this.timeout(60000);
@@ -18,17 +19,17 @@ describe('TC007: Kiểm tra lọc sản phẩm theo danh mục', function () {
     });
 
     it('TC007 - Hover vào "Danh mục" rồi click "Điện thoại"', async function () {
-        await driver.get('https://fptshop.com.vn/');
+        await driver.get(data.url);
 
         const danhMucBtn = await driver.wait(
-            until.elementLocated(By.xpath("//button[@aria-label='Danh mục']")),
+            until.elementLocated(By.xpath(`//button[@aria-label='${data.danhMucAriaLabel}']`)),
             10000
         );
         const actions = driver.actions({ async: true });
         await actions.move({ origin: danhMucBtn }).perform();
 
         const danhMucItem = await driver.wait(
-            until.elementLocated(By.xpath("//a[@href='/dien-thoai']")),
+            until.elementLocated(By.xpath(`//a[@href='${data.danhMucHref}']`)),
             10000
         );
         await driver.executeScript("arguments[0].style.border='3px solid red'", danhMucItem);
@@ -36,8 +37,8 @@ describe('TC007: Kiểm tra lọc sản phẩm theo danh mục', function () {
 
         await driver.wait(until.elementLocated(By.xpath("//h3")), 10000);
 
-        const bodyText = await driver.findElement(By.tagName('body')).getText();
-        assert.ok(bodyText.includes('Điện thoại'), 'Trang danh mục Điện thoại không hiển thị.');
+        const bodyText = await driver.findElement(By.css('body')).getText();
+        assert.ok(bodyText.includes(data.danhMucText), `Trang danh mục ${data.danhMucText} không hiển thị.`);
 
         await closeCookieBanner(driver);
         let filename = await takeScreenshot(driver, 'TC007');
