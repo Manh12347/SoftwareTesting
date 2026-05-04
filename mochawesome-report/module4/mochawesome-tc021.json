@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-03T20:48:29.461Z",
+    "end": "2026-05-03T20:48:50.491Z",
+    "duration": 21030,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1bc2eb74-4847-4ef8-b976-9ab43fd9d9d1",
+      "title": "",
+      "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc021.js",
+      "file": "\\tests\\testModule4\\tc021.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "709f96ef-3911-4963-afe8-de5e3735cbc8",
+          "title": "TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc021.js",
+          "file": "\\tests\\testModule4\\tc021.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
+              "fullTitle": "TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch) \"before all\" hook in \"TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
+              "timedOut": false,
+              "duration": 660,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "2c3522e1-1b39-4f0b-9b65-a7a25c16bb24",
+              "parentUUID": "709f96ef-3911-4963-afe8-de5e3735cbc8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
+              "fullTitle": "TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch) \"after all\" hook in \"TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
+              "timedOut": false,
+              "duration": 50,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "dd03b0b7-de7f-42f7-bf03-e30883a1138b",
+              "parentUUID": "709f96ef-3911-4963-afe8-de5e3735cbc8",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook in \"TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
+              "fullTitle": "TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch) \"after each\" hook in \"TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)\"",
+              "timedOut": false,
+              "duration": 324,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc021');\naddContext(this, { title: 'Bằng chứng thực thi', value: `../../${screenshotPath}` });",
+              "err": {},
+              "uuid": "829c8970-013b-4634-97a0-3c7680fc989d",
+              "parentUUID": "709f96ef-3911-4963-afe8-de5e3735cbc8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Đặt hàng QR code và đợi 15 phút để kiểm tra hết hạn",
+              "fullTitle": "TC021: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch) Đặt hàng QR code và đợi 15 phút để kiểm tra hết hạn",
+              "timedOut": false,
+              "duration": 19991,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"Bằng chứng thực thi\",\n  \"value\": \"../../screenshots/tc021/__t_h_ng_qr_code_v____i_15_ph_t____ki_m_tra_h_t_h_n_1777841330116.png\"\n}",
+              "code": "await addProductToCart();\nawait clickVisible(\"//button[contains(., 'Tiến hành đặt hàng')]\", 15000);\nawait driver.sleep(2000);\nawait setInputIfPresent(\"//input[@placeholder='Nhập họ tên']\", 'Automation Wait Test');\nawait setInputRequired(\"//input[@type='tel']\", `093${randomDigits(7)}`, 'Số điện thoại', 9);\nawait clickVisible(\"//label[contains(., 'Nhận tại cửa hàng')]\", 10000);\nawait driver.sleep(1000);\nawait pickRandomStoreFromAddressForm();\nawait selectQRPayment();\nawait driver.sleep(1000);\nconst checkoutBtn = await findFirstVisible(DAT_HANG_XPATH);\nawait driver.executeScript('arguments[0].click();', checkoutBtn);\nconsole.log('Đã đặt hàng. Chờ trang QR thanh toán...');\n// Đợi chuyển sang trang QR\nawait driver.wait(async () => {\n    const url = await driver.getCurrentUrl();\n    return !url.includes('gio-hang');\n}, 60000);\nconsole.log('Đã vào trang thanh toán. Bắt đầu đợi 15 phút (900 giây)...');\n\n// Vòng lặp đợi 15 phút, log mỗi phút để theo dõi\nfor (let i = 1; i <= 15; i++) {\n    await driver.sleep(60000);\n    console.log(`Đã đợi được ${i} phút...`);\n}\nconsole.log('Đã hết 15 phút. Kiểm tra trạng thái đơn hàng...');\n\n// Sau 15 phút, load lại trang hoặc kiểm tra text thông báo hết hạn\nawait driver.navigate().refresh();\nawait driver.sleep(3000);\nconst expiredText = await driver.findElements(By.xpath(\"//*[contains(., 'hết hạn') or contains(., 'Hết hạn') or contains(., 'thất bại')]\"));\nconsole.log(`Tìm thấy ${expiredText.length} thông báo liên quan đến hết hạn/thất bại.`);\n\nconst urlFinal = await driver.getCurrentUrl();\nconsole.log('URL cuối cùng: ' + urlFinal);",
+              "err": {
+                "message": "TimeoutError: Waiting for element to be located By(xpath, (//div[contains(@class, 'product-info')]//h3)[1])\nWait timed out after 15211ms",
+                "estack": "TimeoutError: Waiting for element to be located By(xpath, (//div[contains(@class, 'product-info')]//h3)[1])\nWait timed out after 15211ms\n    at C:\\Users\\trest\\source\\repos\\SoftwareTesting\\node_modules\\selenium-webdriver\\lib\\webdriver.js:929:22\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "2b220369-4121-4c1c-a9a6-a2b8aa653d5f",
+              "parentUUID": "709f96ef-3911-4963-afe8-de5e3735cbc8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2b220369-4121-4c1c-a9a6-a2b8aa653d5f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 19991,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 1200000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome-tc021",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report/module4",
+        "reportFilename": "mochawesome-tc021"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

@@ -11,17 +11,15 @@ const { search } = require('./module2/module2Helper');
  * @param {string} testTitle - Tiêu đề của test case, dùng để đặt tên file.
  * @returns {Promise<string>} - Trả về đường dẫn tương đối của file ảnh đã lưu.
  */
-async function takeScreenshot(driver, testTitle) {
+async function takeScreenshot(driver, testTitle, subDir = '') {
     // Tạo tên file hợp lệ từ tiêu đề test
     const sanitizedTitle = testTitle.replace(/[^a-z0-9]/gi, '_').toLowerCase();
     const fileName = `${sanitizedTitle}_${Date.now()}.png`;
-    const screenshotDir = 'screenshots';
+    const screenshotDir = path.join('screenshots', subDir).replace(/\\/g, '/');
     const screenshotPath = path.join(screenshotDir, fileName).replace(/\\/g, '/');
 
     // Đảm bảo thư mục screenshots tồn tại
-    if (!fs.existsSync(screenshotDir)) {
-        fs.mkdirSync(screenshotDir);
-    }
+    fs.mkdirSync(screenshotDir, { recursive: true });
 
     // Chụp ảnh và lưu file
     const image = await driver.takeScreenshot();

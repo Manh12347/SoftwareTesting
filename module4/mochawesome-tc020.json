@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-03T20:25:52.719Z",
+    "end": "2026-05-03T20:26:28.714Z",
+    "duration": 35995,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ea825338-c740-42c6-b15c-ea606e27516f",
+      "title": "",
+      "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc020.js",
+      "file": "\\tests\\testModule4\\tc020.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6f0c5796-a4e5-4c73-9e04-2e51453baed2",
+          "title": "TC027: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)",
+          "fullFile": "C:\\Users\\trest\\source\\repos\\SoftwareTesting\\tests\\testModule4\\tc020.js",
+          "file": "\\tests\\testModule4\\tc020.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"TC027: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
+              "fullTitle": "TC027: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code) \"before all\" hook in \"TC027: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
+              "timedOut": false,
+              "duration": 644,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser('chrome').build();\nawait driver.manage().window().maximize();",
+              "err": {},
+              "uuid": "068c955f-704a-48ff-b29e-9f13d683e8c8",
+              "parentUUID": "6f0c5796-a4e5-4c73-9e04-2e51453baed2",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"TC027: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
+              "fullTitle": "TC027: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code) \"after all\" hook in \"TC027: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
+              "timedOut": false,
+              "duration": 110,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) await driver.quit();",
+              "err": {},
+              "uuid": "854a852a-45b9-4e96-96d1-4160bc90b910",
+              "parentUUID": "6f0c5796-a4e5-4c73-9e04-2e51453baed2",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook in \"TC027: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
+              "fullTitle": "TC027: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code) \"after each\" hook in \"TC027: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)\"",
+              "timedOut": false,
+              "duration": 138,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const screenshotPath = await takeScreenshot(driver, this.currentTest.title, 'tc020');\naddContext(this, {\n    title: this.currentTest.state === 'failed' ? 'Screenshot khi thất bại' : 'Bằng chứng thực thi',\n    value: `../../${screenshotPath}`\n});",
+              "err": {},
+              "uuid": "887306aa-2ec8-462f-9351-1ea263723fbe",
+              "parentUUID": "6f0c5796-a4e5-4c73-9e04-2e51453baed2",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Đặt hàng bằng QR code và hủy giao dịch",
+              "fullTitle": "TC027: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code) Đặt hàng bằng QR code và hủy giao dịch",
+              "timedOut": false,
+              "duration": 35096,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"Screenshot khi thất bại\",\n  \"value\": \"../../screenshots/tc020/__t_h_ng_b_ng_qr_code_v__h_y_giao_d_ch_1777839988464.png\"\n}",
+              "code": "// 1) Bấm vào giỏ hàng + chọn sản phẩm (thêm 1 sản phẩm vào giỏ)\nawait addProductToCart();\nconsole.log('Đã có sản phẩm trong giỏ hàng.');\n// 2) Tiến hành đặt hàng\nconst checkoutBtnXPath = \"//button[contains(., 'Xác nhận đơn')] | //button[contains(., 'Tiến hành đặt hàng')] | //button[contains(., 'Đặt hàng')]\";\nawait clickVisible(checkoutBtnXPath, 15000, 'Tiến hành đặt hàng');\nawait driver.sleep(2000);\n// 3) Điền thông tin cá nhân (nếu có form)\nconst filledName = await setInputIfPresent(\n    \"//*[@id='order-form']//input[@placeholder='Nhập họ tên'] | //*[@id='order-form']//input[contains(@placeholder,'Họ và tên')] | //*[@id='order-form']//input[contains(@placeholder,'họ và tên')] | //*[@id='order-form']//input[@id='name'] | //*[@id='order-form']//input[contains(@name,'name')] | //input[@placeholder='Nhập họ tên'] | //input[contains(@placeholder,'Họ và tên')] | //input[contains(@placeholder,'họ và tên')] | //input[@id='name'] | //input[contains(@name,'name')]\",\n    'Automation Test'\n);\nconst phoneValue = `093${randomDigits(7)}`;\nconst phoneXPath = \"//input[@placeholder='Số điện thoại' or contains(@placeholder,'Số điện thoại') or contains(@placeholder,'số điện thoại') or contains(@placeholder,'điện thoại') or @id='phone' or contains(@name,'phone') or @type='tel' or @inputmode='numeric' or @inputmode='tel'][not(ancestor::*[@id='address-form']) and not(ancestor::div[contains(@class,'fixed') and contains(@class,'z-')]) and not(contains(@placeholder,'Tìm') or contains(@placeholder,'tìm') or contains(@placeholder,'shop') or contains(@placeholder,'Shop'))] | //*[self::label or self::span or self::p][contains(normalize-space(.), 'Số điện thoại')]/following::input[1]\";\nconst filledPhone = await setInputRequired(phoneXPath, phoneValue, 'Số điện thoại', 9);\nconst fakeEmail = `automation.${Date.now()}@example.com`;\nconst filledEmail = await setInputIfPresent(\n    \"//input[@type='email' or @id='email' or contains(@name,'email') or contains(@placeholder,'Email') or contains(@placeholder,'email')][not(ancestor::div[contains(@class,'fixed') and contains(@class,'z-')])]\",\n    fakeEmail\n);\nif (filledName || filledPhone) {\n    console.log('Đã điền thông tin cá nhân (nếu hệ thống yêu cầu).');\n    await driver.sleep(800);\n}\nif (filledEmail) {\n    console.log(`Đã điền email: ${fakeEmail}`);\n    await driver.sleep(400);\n}\n// 4) Chọn Nhận hàng tại cửa hàng + chọn cửa hàng\nconst atStoreXPath = \"//label[contains(., 'Nhận tại cửa hàng')] | //span[contains(., 'Nhận tại cửa hàng')]\";\nawait clickVisible(atStoreXPath, 15000, 'Nhận tại cửa hàng');\nawait driver.sleep(1200);\n// Chọn cửa hàng từ address-form (tránh click nhầm dropdown khác như quà tặng)\nconst addressFormReady = await waitForAnyLocated([\"//*[@id='address-form']\"], 15000);\nexpect(addressFormReady, 'Không thấy form chọn cửa hàng (address-form) sau khi chọn \"Nhận tại cửa hàng\"').to.not.equal(null);\nconst pickedStore = await pickRandomStoreFromAddressForm(25000);\nconsole.log(`Chọn cửa hàng: ${pickedStore}`);\nexpect(pickedStore, 'Không chọn được shop có hàng gần nhất').to.equal(true);\n// 5) Chọn Chuyển khoản ngân hàng (QR code) (best-effort)\nconst qrSelected = await selectQRPayment(20000);\nconsole.log(`QR selected: ${qrSelected}`);\nawait driver.sleep(500);\n// Sau khi chọn QR, bấm nút bước tiếp theo (user-provided XPath)\nconst nextStepXPath = \"/html/body/main/section/div/div[2]/div[2]/div/div/button\";\nconst nextBtn = await findFirstVisible(nextStepXPath);\nif (nextBtn) {\n    let btnText = '';\n    try { btnText = (await nextBtn.getText()).trim(); } catch (e) { }\n    // Only treat it as a separate \"next\" if it isn't the final \"Đặt hàng/Hoàn tất\" button.\n    const looksLikeFinal = /đặt hàng|hoàn tất|thanh toán/i.test(btnText);\n    if (!looksLikeFinal) {\n        try { await driver.executeScript('arguments[0].scrollIntoView({block:\"center\"});', nextBtn); } catch (e) { }\n        try { await driver.executeScript('arguments[0].click();', nextBtn); } catch (e) { await nextBtn.click(); }\n        await driver.sleep(1200);\n        // Some re-renders revert payment method; try to enforce QR again (best-effort)\n        await selectQRPayment(15000);\n        await driver.sleep(500);\n    }\n}\n// 6) Bấm Hoàn tất đặt hàng / Thanh toán (use exact user-provided Dat hang XPath first)\nconst finishBtnXPath = `${DAT_HANG_XPATH} | //button[contains(., 'Hoàn tất đặt hàng')] | //button[contains(., 'THANH TOÁN')] | //button[contains(., 'Thanh toán')] | //button[contains(., 'Đặt hàng')]`;\nconst originalHandle = await driver.getWindowHandle();\nconst beforePlaceUrl = await driver.getCurrentUrl();\nawait acceptTermsIfPresent();\n// Prefer clicking the exact checkout button the user provided\nconst exactDatHang = await findFirstVisible(DAT_HANG_XPATH);\nif (exactDatHang) {\n    try { await driver.executeScript('arguments[0].scrollIntoView({block:\"center\"});', exactDatHang); } catch (e) { }\n    try {\n        await exactDatHang.click();\n    } catch (e1) {\n        try {\n            await driver.actions({ async: true }).move({ origin: exactDatHang }).click().perform();\n        } catch (e2) {\n            await driver.executeScript('arguments[0].click();', exactDatHang);\n        }\n    }\n} else {\n    await clickVisible(finishBtnXPath, 20000, 'Đặt hàng');\n}\nconsole.log('Đã nhấn Hoàn tất đặt hàng. Chờ điều hướng sang cổng thanh toán...');\nconst progressed = await waitForGatewayAfterPlaceOrder(beforePlaceUrl, 90000);\nexpect(progressed, 'Không thấy trang/QR thanh toán sau khi đặt hàng (có thể bị validation hoặc cần đăng nhập)').to.not.equal(null);\nconst handles = await driver.getAllWindowHandles();\nif (handles.length > 1) {\n    const next = handles.find(h => h !== originalHandle);\n    if (next) {\n        await driver.switchTo().window(next);\n        await driver.sleep(1000);\n    }\n}\nconst gatewayUrl = await driver.getCurrentUrl();\nexpect(gatewayUrl.includes('gio-hang')).to.equal(false, 'Vẫn ở trang giỏ hàng sau khi đặt hàng (có thể click chưa trúng nút, bị validation, hoặc chưa điều hướng sang cổng thanh toán)');\n// Give the gateway page time to finish loading (user observed ~20s)\nconst okGateway = await waitForGatewaySignal(20000);\nexpect(okGateway, 'Đã đặt hàng nhưng không thấy UI QR/cổng thanh toán sau 20s').to.equal(true);\nconsole.log('Trang hiện tại sau đặt hàng (kỳ vọng cổng/QR): ' + gatewayUrl);\n// 7) Hủy giao dịch\nconst canceled = await tryCancelOnGateway();\nconsole.log(canceled ? 'Đã click nút Hủy giao dịch.' : '[WARN] Không tìm thấy nút Hủy trên cổng thanh toán, sẽ kiểm tra redirect/message.');\n// Chờ redirect về FPTShop hoặc trang thông báo\nawait driver.wait(async () => {\n    const url = await driver.getCurrentUrl();\n    return url.includes('fptshop.com.vn') || url.includes('return') || url.includes('callback') || url.includes('cancel');\n}, 60000);\nawait driver.sleep(2000);\nconst afterUrl = await driver.getCurrentUrl();\nconsole.log('URL sau khi hủy: ' + afterUrl);\n// Verify: Đơn ở trạng thái xử lý + thanh toán thất bại / chưa thanh toán\nawait assertPaymentFailedOrUnpaid();",
+              "err": {
+                "message": "AssertionError: Không tìm thấy trạng thái thanh toán thất bại/chưa thanh toán sau khi hủy giao dịch: expected +0 to be at least 1",
+                "estack": "AssertionError: Không tìm thấy trạng thái thanh toán thất bại/chưa thanh toán sau khi hủy giao dịch: expected +0 to be at least 1\n    at assertPaymentFailedOrUnpaid (tests\\testModule4\\tc020.js:695:43)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Context.<anonymous> (tests\\testModule4\\tc020.js:845:9)",
+                "diff": "- 0\n+ 1\n"
+              },
+              "uuid": "d93caf08-4e23-4e77-956c-ac8d29eca043",
+              "parentUUID": "6f0c5796-a4e5-4c73-9e04-2e51453baed2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d93caf08-4e23-4e77-956c-ac8d29eca043"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 35096,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 300000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome-tc020",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "module4",
+        "reportFilename": "mochawesome-tc020"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
