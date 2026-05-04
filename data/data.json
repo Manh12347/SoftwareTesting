@@ -1,5 +1,14 @@
 {
   "url": "https://fptshop.com.vn/",
+  "urlDienThoai": "https://fptshop.com.vn/dien-thoai",
+  "danhMucAriaLabel": "Danh mục",
+  "danhMucHref": "/dien-thoai",
+  "danhMucText": "Điện thoại",
+  "brandName": "OPPO",
+  "sortText": "Giá giảm dần",
+  "filterPin": "pin-trau-tren-5500-mah",
+  "filter5G": "5G",
+  "filterRam": "12 GB",
   "bannerCloseXPath": "//button[@aria-label='Đóng']",
   "commentData": {
     "comment": "Sản phẩm tốt, giá cả hợp lý",
