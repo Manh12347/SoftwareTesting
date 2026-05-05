@@ -8,21 +8,17 @@ const data = require('../../data/data.json');
 describe('TC007: Kiểm tra lọc sản phẩm theo danh mục', function () {
     this.timeout(60000);
     let driver;
-
     before(async function () {
         driver = await new Builder().forBrowser('chrome').build();
         await driver.manage().window().maximize();
     });
-
     after(async function () {
         if (driver) await driver.quit();
     });
-
     it('TC007 - Hover vào "Danh mục" rồi click "Điện thoại"', async function () {
         await driver.get(data.shared.url);
         await closeBanner(driver);
         await closeCookieBanner(driver);
-
         // Hover vào nút Danh mục
         const danhMucBtn = await driver.wait(
             until.elementLocated(By.xpath(`//button[@aria-label='${data.module3.danhMucAriaLabel}']`)),
