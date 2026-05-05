@@ -23,26 +23,28 @@ describe('TC007: Kiểm tra lọc sản phẩm theo danh mục', function () {
         await closeBanner(driver);
         await closeCookieBanner(driver);
 
+        // Hover vào nút Danh mục
         const danhMucBtn = await driver.wait(
             until.elementLocated(By.xpath(`//button[@aria-label='${data.module3.danhMucAriaLabel}']`)),
             10000
         );
-        const actions = driver.actions({ async: true });
-        await actions.move({ origin: danhMucBtn }).perform();
+        await driver.actions({ async: true }).move({ origin: danhMucBtn }).perform();
 
+        // Click vào item Điện thoại trong dropdown
         const danhMucItem = await driver.wait(
             until.elementLocated(By.xpath(`//a[@href='${data.module3.danhMucHref}']`)),
             10000
         );
         await driver.executeScript("arguments[0].style.border='3px solid red'", danhMucItem);
-        await driver.executeScript("arguments[0].click();", danhMucItem);
+        await danhMucItem.click();
 
-        await driver.wait(until.elementLocated(By.xpath("//h3")), 10000);
+        // Xác minh đã vào đúng trang Điện thoại
+        await driver.wait(until.urlIs(data.shared.urlDienThoai), 10000);
 
         const bodyText = await driver.findElement(By.css('body')).getText();
-        assert.ok(bodyText.includes(data.module3.danhMucText), `Trang danh mục ${data.module3.danhMucText} không hiển thị.`);
+        assert.ok(bodyText.includes(data.module3.danhMucText), `Trang danh mục "${data.module3.danhMucText}" không hiển thị.`);
 
-        let filename = await takeScreenshot(driver, 'TC007');
-        addContext(this, "../../" + filename);
+        const filename = await takeScreenshot(driver, 'TC007');
+        addContext(this, '../../' + filename);
     });
 });
