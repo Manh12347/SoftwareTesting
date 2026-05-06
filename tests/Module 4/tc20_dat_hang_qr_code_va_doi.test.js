@@ -12,6 +12,7 @@ const {
     acceptTermsIfPresent, pickRandomStoreFromAddressForm
 } = require('../../function/module4/checkoutHelper');
 const { quantityInputXPath } = require('../../function/module4/cartHelper');
+const { closeBanner, closeCookieBanner } = require('../../function/functions/helper');
 
 describe('TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạn giao dịch)', function () {
     this.timeout(1200000); // 20 minutes
@@ -76,6 +77,10 @@ describe('TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạ
     before(async function () {
         driver = await new Builder().forBrowser('chrome').build();
         await driver.manage().window().maximize();
+
+        // Đóng banner / cookie nếu xuất hiện ngay sau khi mở trình duyệt
+        await closeBanner(driver);
+        await closeCookieBanner(driver);
     });
 
     afterEach(async function () {
@@ -86,6 +91,8 @@ describe('TC020: Đặt hàng QR code và đợi 15 phút (Kiểm tra hết hạ
     after(async function () { if (driver) await driver.quit(); });
 
     it('1. Đặt hàng bằng QR code và xác nhận cổng thanh toán xuất hiện', async function () {
+        await closeBanner(driver);
+        await closeCookieBanner(driver);
         await addProductToCart();
         console.log('Đã có sản phẩm trong giỏ hàng.');
 

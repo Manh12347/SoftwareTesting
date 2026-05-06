@@ -13,6 +13,7 @@ const {
     tryCancelOnGateway, assertPaymentFailedOrUnpaid
 } = require('../../function/module4/checkoutHelper');
 const { quantityInputXPath } = require('../../function/module4/cartHelper');
+const { closeBanner, closeCookieBanner } = require('../../function/functions/helper');
 
 describe('TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (QR code)', function () {
     this.timeout(300000);
@@ -88,6 +89,8 @@ describe('TC019: Đặt hàng, hủy giao dịch Chuyển khoản ngân hàng (Q
     after(async function () { if (driver) await driver.quit(); });
 
     it('1. Đặt hàng bằng QR code và xác nhận cổng thanh toán xuất hiện', async function () {
+        await closeBanner(driver);
+        await closeCookieBanner(driver);
         await addProductToCart();
         console.log('Đã có sản phẩm trong giỏ hàng.');
 

@@ -9,6 +9,7 @@ const {
     setQuantityOnInput,
     quantityInputXPath
 } = require('../../function/module4/cartHelper');
+const { closeBanner, closeCookieBanner } = require('../../function/functions/helper');
 
 // 3 sản phẩm từ 3 danh mục khác nhau để thêm vào giỏ
 const targetProducts = [
@@ -24,7 +25,7 @@ quantityIterations.forEach((targetQty, iterIdx) => {
     describe(`TC017: Giỏ hàng lưu thay đổi số lượng - Iteration ${iterIdx + 1} (Số lượng: ${targetQty.toLocaleString()})`, function () {
         this.timeout(300000);
         let driver;
-
+   
         before(async function () {
             driver = await new Builder().forBrowser('chrome').build();
             await driver.manage().window().maximize();
@@ -44,6 +45,11 @@ quantityIterations.forEach((targetQty, iterIdx) => {
             // Vào trang giỏ hàng để bắt đầu test
             await driver.get('https://fptshop.com.vn/gio-hang');
             await driver.wait(until.urlContains('gio-hang'), 10000);
+
+            // Đóng banner/cookie nếu xuất hiện ngay khi trang giỏ hàng load
+            await closeBanner(driver);
+            await closeCookieBanner(driver);
+
             await driver.sleep(2000);
 
             console.log(`[Setup] Đã thêm ${targetProducts.length} sản phẩm vào giỏ. Bắt đầu iteration số lượng: ${targetQty}`);
@@ -64,6 +70,8 @@ quantityIterations.forEach((targetQty, iterIdx) => {
         // --- TEST CASES ---
 
         it(`1. Thay đổi số lượng tất cả sản phẩm thành ${targetQty.toLocaleString()}`, async function () {
+            await closeBanner(driver);
+            await closeCookieBanner(driver);
             // Bước 1: Click "Chọn tất cả"
             const selectAllXPath = "//input[contains(@id, '-undefined')] | //label[contains(., 'Chọn tất cả')] | //span[contains(text(), 'Chọn tất cả')]";
             try {

@@ -100,20 +100,36 @@ async function search(driver, keyword) {
     const productXPath = "//h3[contains(@class,'line-clamp')]";
     
     try {
-        await driver.wait(until.elementLocated(By.xpath(productXPath)), 3000);
+        await driver.wait(async () => {
+            const productElements = await driver.findElements(By.xpath(productXPath));
+            for (const productElement of productElements) {
+                const text = await productElement.getText().catch(() => '');
+                if (text && text.trim()) {
+                    return true;
+                }
+            }
+            return false;
+        }, 15000, 'Danh sách sản phẩm chưa load xong.');
         
         // Scroll xuống để render tất cả sản phẩm
         let prevCount = 0;
         let currentCount = 0;
         let scrollAttempts = 0;
-        const maxScrollAttempts = 10;
+        let stableCountRounds = 0;
+        const maxScrollAttempts = 12;
         
         while (scrollAttempts < maxScrollAttempts) {
             const currentElements = await driver.findElements(By.xpath(productXPath));
             currentCount = currentElements.length;
             
-            // Nếu số lượng sản phẩm không thay đổi, dừng scroll
-            if (currentCount === prevCount && scrollAttempts > 0) {
+            // Nếu số lượng sản phẩm không thay đổi nhiều vòng liên tiếp, dừng scroll
+            if (currentCount === prevCount) {
+                stableCountRounds++;
+            } else {
+                stableCountRounds = 0;
+            }
+
+            if (stableCountRounds >= 2 && scrollAttempts > 0) {
                 break;
             }
             
@@ -121,8 +137,10 @@ async function search(driver, keyword) {
             
             // Scroll đến sản phẩm cuối cùng
             if (currentElements.length > 0) {
-                await driver.executeScript("arguments[0].scrollIntoView({ block: 'end' });", currentElements[currentElements.length - 1]);
-                await driver.sleep(500);
+                const lastProduct = currentElements[currentElements.length - 1];
+                await driver.executeScript("arguments[0].scrollIntoView({ block: 'end' });", lastProduct);
+                await driver.wait(until.elementIsVisible(lastProduct), 5000).catch(() => {});
+                await driver.sleep(1200);
             }
             
             scrollAttempts++;

@@ -7,8 +7,24 @@ const mochaCli = path.join(rootDir, 'node_modules', 'mocha', 'bin', 'mocha.js');
 const reportHooks = path.join(rootDir, 'reportHooks.js');
 const reportDir = path.join('mochawesome-report', 'all').replace(/\\/g, '/');
 
+function collectTestFiles(dir) {
+    return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
+        const entryPath = path.join(dir, entry.name);
+
+        if (entry.isDirectory()) {
+            return collectTestFiles(entryPath);
+        }
+
+        return entry.name.endsWith('.test.js') ? [entryPath] : [];
+    });
+}
+
+const testFiles = collectTestFiles(path.join(rootDir, 'tests')).sort();
+
 const args = [
-    'tests/**/*.test.js',
+    ...testFiles,
+    '--timeout',
+    '20000',
     '--require',
     reportHooks,
     '--reporter',
@@ -22,13 +38,5 @@ const result = spawnSync(process.execPath, [mochaCli, ...args], {
     stdio: 'inherit',
     shell: false
 });
-
-const sourceScreenshotsDir = path.join(rootDir, 'screenshots');
-const mirroredScreenshotsDir = path.join(rootDir, 'mochawesome-report', 'screenshots');
-
-if (fs.existsSync(sourceScreenshotsDir)) {
-    fs.mkdirSync(mirroredScreenshotsDir, { recursive: true });
-    fs.cpSync(sourceScreenshotsDir, mirroredScreenshotsDir, { recursive: true });
-}
 
 process.exit(result.status ?? 1);

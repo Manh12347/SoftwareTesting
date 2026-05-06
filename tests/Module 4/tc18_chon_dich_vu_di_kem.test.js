@@ -3,6 +3,7 @@ const { expect } = require('chai');
 const addContext = require('mochawesome/addContext');
 const { takeScreenshot } = require('../../function/screenshotHelper');
 const { getPrice, waitForPriceChange, addProductToCart } = require('../../function/module4/cartHelper');
+const { closeBanner, closeCookieBanner } = require('../../function/functions/helper');
 
 describe('TC018: Chọn dịch vụ đi kèm cùng sản phẩm', function () {
     this.timeout(180000);
@@ -16,6 +17,10 @@ describe('TC018: Chọn dịch vụ đi kèm cùng sản phẩm', function () {
 
         // Dùng máy tính xách tay để có dịch vụ bảo hành đi kèm
         await addProductToCart(driver, 'https://fptshop.com.vn/may-tinh-xach-tay');
+
+        // Đóng banner / cookie nếu xuất hiện ngay sau khi trang load
+        await closeBanner(driver);
+        await closeCookieBanner(driver);
 
         // Đọc giá ban đầu trong giỏ hàng
         for (let i = 0; i < 10; i++) {
@@ -41,6 +46,8 @@ describe('TC018: Chọn dịch vụ đi kèm cùng sản phẩm', function () {
     // --- TEST CASES ---
 
     it('1. Bấm vào giỏ hàng và xác nhận có sản phẩm', async function () {
+        await closeBanner(driver);
+        await closeCookieBanner(driver);
         const url = await driver.getCurrentUrl();
         expect(url).to.include('gio-hang', 'Không ở trang giỏ hàng');
         expect(priceBefore).to.not.equal('0đ', 'Giỏ hàng trống hoặc không hiển thị giá');

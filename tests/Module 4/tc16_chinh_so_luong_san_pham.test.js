@@ -2,6 +2,7 @@ const { Builder, By, until, Key } = require('selenium-webdriver');
 const { expect } = require('chai');
 const addContext = require('mochawesome/addContext');
 const { takeScreenshot } = require('../../function/screenshotHelper');
+const { closeBanner, closeCookieBanner } = require('../../function/functions/helper');
 
 const testProducts = [
     { name: 'Điện thoại', url: 'https://fptshop.com.vn/dien-thoai' },
@@ -15,7 +16,7 @@ testProducts.forEach((product, index) => {
     describe(`TC016: Chỉnh số lượng sản phẩm trong giỏ hàng - Iteration ${index + 1} (${product.name})`, function () {
         this.timeout(150000); // Cài đặt timeout cho toàn bộ suite
         let driver;
-
+        
         // Import helpers from cartHelper
         const { getPrice, getQuantity, waitForPriceChange, addProductToCart, testQuantityInput, quantityInputXPath, totalPriceXPath } = require('../../function/module4/cartHelper');
 
@@ -27,7 +28,8 @@ testProducts.forEach((product, index) => {
         before(async function () {
             driver = await new Builder().forBrowser('chrome').build();
             await driver.manage().window().maximize();
-
+            await closeBanner(driver);
+            await closeCookieBanner(driver);
             await addProductToCart(driver, product.url);
 
             for (let i = 0; i < 10; i++) {

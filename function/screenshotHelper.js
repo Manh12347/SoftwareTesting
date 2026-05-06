@@ -4,38 +4,55 @@ const { By, until } = require('selenium-webdriver');
 
 const { search } = require('./module2/module2Helper');
 
+function normalizeTcCode(value) {
+    const match = String(value || '').match(/TC0*(\d+)/i);
+    if (!match) {
+        return '';
+    }
+
+    return `TC${match[1].padStart(3, '0')}`;
+}
+
 /**
- * Chụp ảnh màn hình và lưu vào thư mục 'screenshots'.
- * Đảm bảo thư mục tồn tại trước khi lưu.
- * @param {import('selenium-webdriver').WebDriver} driver - The WebDriver instance.
- * @param {string} testTitle - Tiêu đề của test case, dùng để đặt tên file.
- * @returns {Promise<string>} - Trả về đường dẫn tương đối của file ảnh đã lưu.
+ * Chụp ảnh màn hình và lưu vào thư mục 'screenshots' ở root repo.
+ * Trả về đường dẫn tương đối dùng trong báo cáo (vd: 'screenshots/tc016/img.png').
  */
 async function takeScreenshot(driver, testTitle, subDir = '') {
-    // Tạo tên file hợp lệ - chỉ loại bỏ các ký tự không hợp lệ trong đường dẫn
-    // Thay khoảng trắng bằng dấu gạch dưới, loại bỏ chỉ ký tự đặc biệt nguy hiểm
-    const sanitizedTitle = testTitle
-        .replace(/[\\/:"*?<>|]/g, '') // Loại bỏ ký tự không hợp lệ
-        .replace(/\s+/g, '_')         // Thay khoảng trắng bằng _
-        .substring(0, 50);             // Giới hạn độ dài
-    
-    const fileName = `${sanitizedTitle}_${Date.now()}.png`;
-    const screenshotDir = path.join('screenshots', subDir).replace(/\\/g, '/');
-    const screenshotPath = path.join(screenshotDir, fileName).replace(/\\/g, '/');
-    const mirroredScreenshotDir = path.join('mochawesome-report', 'screenshots', subDir).replace(/\\/g, '/');
-    const mirroredScreenshotPath = path.join(mirroredScreenshotDir, fileName).replace(/\\/g, '/');
+    const tcCodeFromTitle = normalizeTcCode(testTitle);
+    const tcCodeFromDir = normalizeTcCode(subDir);
+    const tcCode = tcCodeFromTitle || tcCodeFromDir;
+    const tcPrefix = tcCode ? `${tcCode}_` : '';
+    const screenshotSubDir = tcCodeFromDir ? tcCodeFromDir.toLowerCase() : String(subDir || '').toLowerCase();
+    const titleWithoutTcPrefix = String(testTitle || '')
+        .replace(/^\s*TC0*\d+\s*[:\-–—]?\s*/i, '');
 
-    // Đảm bảo thư mục screenshots tồn tại
-    fs.mkdirSync(screenshotDir, { recursive: true });
-    fs.mkdirSync(mirroredScreenshotDir, { recursive: true });
+    const sanitizedTitle = titleWithoutTcPrefix
+        .replace(/[\\/:"*?<>|]/g, '')
+        .replace(/\s+/g, '_')
+        .substring(0, 50);
 
-    // Chụp ảnh và lưu file
+    const fileName = `${tcPrefix}${sanitizedTitle}_${Date.now()}.png`;
+
+    // Xác định root của repo (một thư mục lên từ function/)
+    const repoRoot = path.resolve(__dirname, '..');
+
+    const screenshotDirAbs = path.join(repoRoot, 'screenshots', screenshotSubDir);
+    const mirroredDirAbs = path.join(repoRoot, 'mochawesome-report', 'screenshots', screenshotSubDir);
+
+    const screenshotPathAbs = path.join(screenshotDirAbs, fileName);
+    const mirroredPathAbs = path.join(mirroredDirAbs, fileName);
+
+    const screenshotPathRel = path.join('screenshots', screenshotSubDir, fileName).replace(/\\/g, '/');
+
+    fs.mkdirSync(screenshotDirAbs, { recursive: true });
+    fs.mkdirSync(mirroredDirAbs, { recursive: true });
+
     const image = await driver.takeScreenshot();
-    fs.writeFileSync(screenshotPath, image, 'base64');
-    fs.writeFileSync(mirroredScreenshotPath, image, 'base64');
+    fs.writeFileSync(screenshotPathAbs, image, 'base64');
+    fs.writeFileSync(mirroredPathAbs, image, 'base64');
 
-    console.log(`Screenshot saved to: ${screenshotPath}`);
-    return screenshotPath; // Trả về đường dẫn tương đối
+    console.log(`Screenshot saved to: ${screenshotPathAbs}`);
+    return screenshotPathRel;
 }
 
 module.exports = { takeScreenshot, search };

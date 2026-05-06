@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/**/*.test.js --reporter mochawesome",
-    "test:all": "node tests/index.js"
+    "test:all": "node tests/index.js",
+    "rerun:failed": "node tests/rerun_failed_and_merge.js"
   },
   "author": "",
   "license": "ISC",
